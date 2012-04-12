@@ -145,7 +145,7 @@
 		NSURL *url = [NSURL URLWithString:urlstring];
 		
 		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-		[request setPostValue:player._username forKey:@"device_id"];
+		[request setPostValue:player._username forKey:@"username"];
 		[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 		
 		[request setDidFinishSelector:@selector(DeleteVirusDidFinished:)];

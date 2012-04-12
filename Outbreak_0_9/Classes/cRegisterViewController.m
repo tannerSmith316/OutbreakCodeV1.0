@@ -87,7 +87,7 @@
 			NSURL *url = [NSURL URLWithString:urlstring];
 		
 			ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-			[request setPostValue:_usernameField.text forKey:@"device_id"];
+			[request setPostValue:_usernameField.text forKey:@"username"];
 			[request setPostValue:_passwordField.text forKey:@"password"];
 		
 			[request setDidFinishSelector:@selector(RegisterDidFinished:)];

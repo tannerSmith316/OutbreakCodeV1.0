@@ -6,6 +6,7 @@
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
+#import	"cPlayerManager.h"
 #import <UIKit/UIKit.h>
 
 
@@ -17,6 +18,7 @@
 	IBOutlet UILabel *_loginError;
 	IBOutlet UIButton *_registerButton;
 	
+	cPlayerManager *_playerMGR;
 	NSString *_username;
 	NSString *_password;
 
@@ -30,6 +32,7 @@
 @property (nonatomic, retain)UIButton *_registerButton;
 @property (nonatomic, retain)NSString *_username;
 @property (nonatomic, retain)NSString *_password;
+@property (nonatomic, retain)cPlayerManager *_playerMGR;
 
 - (IBAction)LoginButtonPressed:(id)sender;
 - (void)AttemptAutoLogin;

@@ -1,0 +1,1509 @@
+TOutbreak_0_9
+v7
+r0
+t355782840.066708
+cCheck dependencies
+cProcessInfoPlistFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Info.plist Outbreak_0_9-Info.plist
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib
+cCpResource build/Debug-iphonesimulator/Outbreak_0_9.app/credentials.txt credentials.txt
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib
+cCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib
+cProcessPCH /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch.gch Outbreak_0_9_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/main.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9AppDelegate.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLoginViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataCompressor.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataDecompressor.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDownloadCache.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIFormDataRequest.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIHTTPRequest.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIInputStream.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASINetworkQueue.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Reachability.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerSingleton.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirus.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cRegisterViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cMainScreenViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLocationManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/CoreLocationController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVictim.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/JSONKit.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusSelectionViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusCreationViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionReportViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9 normal i386
+cGenerateDSYMFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9
+cTouch /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004E77C2B90000000000000110
+t1316471481
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004D54CF7C00000000001C41F0
+t1297403772
+s1851888
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D54CF5900000000000004CF
+t1297403737
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
+c000000004D54CEB30000000000007AC8
+t1297403571
+s31432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
+c000000004D54CEB300000000000080D0
+t1297403571
+s32976
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFNumber.h
+c000000004D54CEB30000000000000EDF
+t1297403571
+s3807
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
+c000000004D54CEB4000000000000B7CA
+t1297403572
+s47050
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D54CEB40000000000000AB3
+t1297403572
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004D54DEBC00000000000778F0
+t1297407676
+s489712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
+c000000004D54DEB600000000000001D0
+t1297407670
+s464
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h
+c000000004D54CFB80000000000001B27
+t1297403832
+s6951
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSAutoreleasePool.h
+c000000004D54CFB800000000000001CB
+t1297403832
+s459
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSData.h
+c000000004D54CFB90000000000001777
+t1297403833
+s6007
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h
+c000000004D54CFBA0000000000000E3B
+t1297403834
+s3643
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h
+c000000004D54CFBA0000000000001DE5
+t1297403834
+s7653
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h
+c000000004D54CFBA0000000000002033
+t1297403834
+s8243
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSNull.h
+c000000004D54CFBC00000000000000B8
+t1297403836
+s184
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h
+c000000004D54CFBC0000000000002E87
+t1297403836
+s11911
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h
+c000000004D54CFBD0000000000006506
+t1297403837
+s25862
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
+c000000004D54D0BA00000000000000EB
+t1297404090
+s235
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004D54D0BC000000000005C090
+t1297404092
+s376976
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D54D2DD00000000000000C4
+t1297404637
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
+c000000004D54CEF80000000000001A58
+t1297403640
+s6744
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004D54CF0700000000000689C0
+t1297403655
+s428480
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
+c000000004D4F7A2B0000000000001B19
+t1297054251
+s6937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/AvailabilityMacros.h
+c000000004D4F7A2B0000000000007A5E
+t1297054251
+s31326
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004A11E8210000000000000DE2
+t1242687521
+s3554
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/TargetConditionals.h
+c000000004D4F7A2B00000000000031E9
+t1297054251
+s12777
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
+c000000004D54C5040000000000001533
+t1297401092
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/assert.h
+c000000004D4F6E990000000000000F6E
+t1297051289
+s3950
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/ifaddrs.h
+c000000004D54C50400000000000008F5
+t1297401092
+s2293
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/math.h
+c000000004A5C14A000000000000004F1
+t1247548576
+s1265
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
+c000000004D54C504000000000000307F
+t1297401092
+s12415
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
+c000000004D54D0E60000000000006BAC
+t1297404134
+s27564
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet6/in6.h
+c000000004D54D0E6000000000000638F
+t1297404134
+s25487
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/objc/runtime.h
+c000000004D54CB4300000000000063AF
+t1297402691
+s25519
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdio.h
+c000000004D4F6E9A0000000000004763
+t1297051290
+s18275
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdlib.h
+c000000004D4F6E9A00000000000030A7
+t1297051290
+s12455
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/string.h
+c000000004D4F6E9A0000000000001A3A
+t1297051290
+s6714
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/errno.h
+c000000004D54D0E90000000000002A36
+t1297404137
+s10806
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
+c000000004D54D0EB0000000000005ACF
+t1297404139
+s23247
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/zlib.h
+c000000004D54CB4600000000000102A5
+t1297402694
+s66213
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
+c000000004A1198340000000000000C7E
+t1242667060
+s3198
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004A1198340000000000003197
+t1242667060
+s12695
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libz.1.2.3.dylib
+c000000004D54CB4700000000000123C0
+t1297402695
+s74688
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.h
+c000000004F1C3F6F0000000000000453
+t1327251311
+s1107
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m
+c000000004F1C3F6F0000000000003F4A
+t1327251311
+s16202
+i"ASIAuthenticationDialog.h"
+i"ASIHTTPRequest.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASICacheDelegate.h
+c000000004F1C3F6F000000000000141F
+t1327251311
+s5151
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.h
+c000000004F1C3F6F000000000000072C
+t1327251311
+s1836
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m
+c000000004F1C3F6F0000000000001A63
+t1327251311
+s6755
+i"ASIDataCompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.h
+c000000004F1C3F6F00000000000006A3
+t1327251311
+s1699
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m
+c000000004F1C3F6F0000000000001916
+t1327251311
+s6422
+i"ASIDataDecompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.h
+c000000004F1C3F6F00000000000007CC
+t1327251311
+s1996
+i<Foundation/Foundation.h>
+i"ASICacheDelegate.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m
+c000000004F1C3F6F0000000000004561
+t1327251311
+s17761
+i"ASIDownloadCache.h"
+i"ASIHTTPRequest.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.h
+c000000004F1C3F6F0000000000000A85
+t1327251311
+s2693
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+i"ASIHTTPRequestConfig.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m
+c000000004F1C3F6F0000000000002C02
+t1327251311
+s11266
+i"ASIFormDataRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.h
+c000000004F1C3F6F000000000000AFE9
+t1327251311
+s45033
+i<Foundation/Foundation.h>
+i<CFNetwork/CFNetwork.h>
+i<UIKit/UIKit.h>
+i<stdio.h>
+i"ASIHTTPRequestConfig.h"
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+i"ASICacheDelegate.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m
+c000000004F1C3F6F000000000002D115
+t1327251311
+s184597
+i"ASIHTTPRequest.h"
+i"Reachability.h"
+i"ASIAuthenticationDialog.h"
+i<MobileCoreServices/MobileCoreServices.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i"ASIInputStream.h"
+i"ASIDataDecompressor.h"
+i"ASIDataCompressor.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequestConfig.h
+c000000004F1C3F6F0000000000000511
+t1327251311
+s1297
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequestDelegate.h
+c000000004F1C3F6F000000000000063E
+t1327251311
+s1598
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.h
+c000000004F1C3F6F00000000000003C9
+t1327251311
+s969
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m
+c000000004F1C3F6F0000000000000C32
+t1327251311
+s3122
+i"ASIInputStream.h"
+i"ASIHTTPRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.h
+c000000004F1C3F6F000000000000120D
+t1327251311
+s4621
+i<Foundation/Foundation.h>
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m
+c000000004F1C3F6F0000000000002C8D
+t1327251311
+s11405
+i"ASINetworkQueue.h"
+i"ASIHTTPRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIProgressDelegate.h
+c000000004F1C3F6F0000000000000678
+t1327251311
+s1656
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.h
+c000000004EB0AFF4000000000000026D
+t1320202228
+s621
+i<Foundation/Foundation.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m
+c000000004F56E77A0000000000000469
+t1331095418
+s1129
+i"CoreLocationController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.h
+c000000004F49386F0000000000002DBE
+t1330198639
+s11710
+i<stddef.h>
+i<stdint.h>
+i<limits.h>
+i<TargetConditionals.h>
+i<AvailabilityMacros.h>
+i<Foundation/NSArray.h>
+i<Foundation/NSData.h>
+i<Foundation/NSDictionary.h>
+i<Foundation/NSError.h>
+i<Foundation/NSObjCRuntime.h>
+i<Foundation/NSString.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m
+c000000004F49386F000000000002B24E
+t1330198639
+s176718
+i<stdio.h>
+i<stdlib.h>
+i<stdint.h>
+i<string.h>
+i<assert.h>
+i<sys/errno.h>
+i<math.h>
+i<limits.h>
+i<objc/runtime.h>
+i"JSONKit.h"
+i<CoreFoundation/CFString.h>
+i<CoreFoundation/CFArray.h>
+i<CoreFoundation/CFDictionary.h>
+i<CoreFoundation/CFNumber.h>
+i<Foundation/NSArray.h>
+i<Foundation/NSAutoreleasePool.h>
+i<Foundation/NSData.h>
+i<Foundation/NSDictionary.h>
+i<Foundation/NSException.h>
+i<Foundation/NSNull.h>
+i<Foundation/NSObjCRuntime.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.h
+c000000004F4E69DB00000000000001F1
+t1330538971
+s497
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m
+c000000004F56E77A0000000000000C03
+t1331095418
+s3075
+i"Outbreak_0_9AppDelegate.h"
+i"cLoginViewController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.h
+c000000004F1C3F6F0000000000001D25
+t1327251311
+s7461
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i<netinet/in.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m
+c000000004F1C3F6F0000000000005E0C
+t1327251311
+s24076
+i<sys/socket.h>
+i<netinet/in.h>
+i<netinet6/in6.h>
+i<arpa/inet.h>
+i<ifaddrs.h>
+i<netdb.h>
+i<CoreFoundation/CoreFoundation.h>
+i"Reachability.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.h
+c000000004F669400000000000000021A
+t1332122624
+s538
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m
+c000000004F5FEE3A0000000000000E8F
+t1331686970
+s3727
+i"cInfectViewController.h"
+i"cVictim.h"
+i"cPlayerSingleton.h"
+i"cInfectionManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib
+c000000004F581DFF0000000000005722
+t1331174911
+s22306
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.h
+c000000004F60034B00000000000001E1
+t1331692363
+s481
+i<Foundation/Foundation.h>
+i"cVictim.h"
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m
+c000000004F6003980000000000001207
+t1331692440
+s4615
+i"cInfectionManager.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+i"cPlayerSingleton.h"
+i"cInfectionReportViewController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.h
+c000000004F5D8CDF00000000000001DD
+t1331530975
+s477
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m
+c000000004F5D8CDF000000000000067B
+t1331530975
+s1659
+i"cInfectionReportViewController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib
+c000000004F5D8D020000000000005282
+t1331531010
+s21122
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.h
+c000000004F66940000000000000002C5
+t1332122624
+s709
+i<Foundation/Foundation.h>
+i"CoreLocationController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m
+c000000004F6694000000000000001C27
+t1332122624
+s7207
+i"cLocationManager.h"
+i"cPlayerSingleton.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+i"cVictim.h"
+i"JSONKit.h"
+i"cInfectionManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.h
+c000000004F56F22200000000000004AE
+t1331098146
+s1198
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m
+c000000004F8499330000000000002098
+t1334090035
+s8344
+i"cLoginViewController.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+i"cPlayerSingleton.h"
+i"cRegisterViewController.h"
+i"cMainScreenViewController.h"
+i"JSONKit.h"
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib
+c000000004F51C5690000000000008A68
+t1330759017
+s35432
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.h
+c000000004F5FF7B10000000000000333
+t1331689393
+s819
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m
+c000000004F5FFAEC0000000000000CB5
+t1331690220
+s3253
+i"cMainScreenViewController.h"
+i"cPlayerSingleton.h"
+i"cInfectViewController.h"
+i"cVirusSelectionViewController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib
+c000000004F5FF7CE00000000000073A1
+t1331689422
+s29601
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.h
+c000000004F4FB7910000000000000132
+t1330624401
+s306
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m
+c000000004F4E6B7400000000000000E4
+t1330539380
+s228
+i"cPlayerManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.h
+c000000004F5FEAE100000000000008CE
+t1331686113
+s2254
+i<Foundation/Foundation.h>
+i"cVirus.h"
+i"cLocationManager.h"
+i"cInfectionManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m
+c000000004F60DD070000000000000B4E
+t1331748103
+s2894
+i"cPlayerSingleton.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.h
+c000000004F5193B1000000000000038E
+t1330746289
+s910
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m
+c000000004F8499330000000000000F36
+t1334090035
+s3894
+i"cRegisterViewController.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+i"cPlayerSingleton.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib
+c000000004F51948C0000000000008C75
+t1330746508
+s35957
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.h
+c000000004F5D8B1D00000000000001AA
+t1331530525
+s426
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m
+c000000004F5D8B1D000000000000019B
+t1331530525
+s411
+i"cVictim.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.h
+c000000004F5EB2B5000000000000028C
+t1331606197
+s652
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m
+c000000004F5EB2B5000000000000025B
+t1331606197
+s603
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.h
+c000000004F66940000000000000005CE
+t1332122624
+s1486
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m
+c000000004F6001F80000000000001B1E
+t1331692024
+s6942
+i"cVirusCreationViewController.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+i"cPlayerSingleton.h"
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib
+c000000004F5EA565000000000000BAFF
+t1331602789
+s47871
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.h
+c000000004F66945100000000000000F5
+t1332122705
+s245
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m
+c000000004F66942D00000000000000E1
+t1332122669
+s225
+i"cVirusManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.h
+c000000004F5D83970000000000000371
+t1331528599
+s881
+i<UIKit/UIKit.h>
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m
+c000000004F6005CB000000000000164F
+t1331693003
+s5711
+i"cVirusSelectionViewController.h"
+i"cVirusCreationViewController.h"
+i"cPlayerSingleton.h"
+i"cVirus.h"
+i"ASIHTTPRequest.h"
+i"ASIFormDataRequest.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib
+c000000004F5D8472000000000000828F
+t1331528818
+s33423
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib
+c000000004F4E69DB0000000000006008
+t1330538971
+s24584
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Outbreak_0_9_Prefix.pch
+c000000004F4E69DB000000000000014A
+t1330538971
+s330
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app
+t1334090040
+s476
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM
+t1334090040
+s102
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Info.plist
+t1334090035
+s603
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/MainWindow.nib
+t1334090036
+s2461
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9
+t1334090039
+s642136
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/PkgInfo
+t1334090035
+s8
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cInfectViewController.nib
+t1334090036
+s3317
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cInfectionReportViewController.nib
+t1334090036
+s3382
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cLoginViewController.nib
+t1334090036
+s5696
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cMainScreenViewController.nib
+t1334090036
+s4520
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cRegisterViewController.nib
+t1334090036
+s5623
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cVirusCreationViewController.nib
+t1334090037
+s7969
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cVirusSelectionViewController.nib
+t1334090036
+s5046
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/credentials.txt
+t1334090035
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIAuthenticationDialog.o
+t1334090038
+s109108
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataCompressor.o
+t1334090038
+s23368
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataDecompressor.o
+t1334090038
+s23328
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDownloadCache.o
+t1334090038
+s60856
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIFormDataRequest.o
+t1334090038
+s48088
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIHTTPRequest.o
+t1334090039
+s517676
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIInputStream.o
+t1334090038
+s29152
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASINetworkQueue.o
+t1334090038
+s61520
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/CoreLocationController.o
+t1334090038
+s16104
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/JSONKit.o
+t1334090039
+s242896
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9.LinkFileList
+c000000004F849933000000000000118C
+t1334090035
+s4492
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9AppDelegate.o
+t1334090038
+s55472
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Reachability.o
+t1334090038
+s33808
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectViewController.o
+t1334090038
+s55172
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionManager.o
+t1334090039
+s64380
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionReportViewController.o
+t1334090039
+s41900
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLocationManager.o
+t1334090038
+s72448
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLoginViewController.o
+t1334090038
+s79708
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cMainScreenViewController.o
+t1334090038
+s52604
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerManager.o
+t1334090038
+s5140
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerSingleton.o
+t1334090038
+s38316
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cRegisterViewController.o
+t1334090038
+s64568
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVictim.o
+t1334090038
+s8824
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirus.o
+t1334090038
+s12448
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusCreationViewController.o
+t1334090039
+s80476
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusManager.o
+t1334090039
+s5136
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusSelectionViewController.o
+t1334090038
+s70152
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/main.o
+t1334090038
+s6352
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/credentials.txt
+c000000004F518B610000000000000000
+t1330744161
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m
+c000000004F4E69DB000000000000017D
+t1330538971
+s381
+i<UIKit/UIKit.h>
+
+N/var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch.gch
+t1334090038
+s15814064
+
+NOutbreak_0_9-Info.plist
+c000000004F5427D20000000000000385
+t1330915282
+s901
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies355782835#355782835#0(0"0(0#1#0"27866456492998768#0"0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.245997
+e355782838.463816
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m: In function '+[ASIAuthenticationDialog dismiss]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: 'ASIAuthenticationDialog' may not respond to '-presentingViewController'
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: (Messages without a matching method signature
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: will be assumed to return 'id' and accept
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: '...' as arguments.)
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m: In function '-[ASIAuthenticationDialog dismiss]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:240: warning: 'ASIAuthenticationDialog' may not respond to '-presentingViewController'
+lSLF07#2@101"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m355782838#355782838#0(1085"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m: In function '+[ASIAuthenticationDialog dismiss]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: 'ASIAuthenticationDialog' may not respond to '-presentingViewController'/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: (Messages without a matching method signature/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: will be assumed to return 'id' and accept/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:220: warning: '...' as arguments.)/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m: In function '-[ASIAuthenticationDialog dismiss]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m:240: warning: 'ASIAuthenticationDialog' may not respond to '-presentingViewController'3(22@72"'ASIAuthenticationDialog' may not respond to '-presentingViewController'355782838#145#181#0(6@93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m348944111#220#0#220#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)355782838#326#154#0(6@93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m348944111#220#0#220#0#0"0(22@72"'ASIAuthenticationDialog' may not respond to '-presentingViewController'355782838#904#181#0(6@93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m348944111#240#0#240#0#26"'*' may not respond to '*'0(0#0#93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m7801130902992478208#2291"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIAuthenticationDialog.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIAuthenticationDialog.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataCompressor.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.247857
+e355782838.354153
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m355782838#355782838#0(0"0(0#0#87"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m8607560704#2279"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataCompressor.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataCompressor.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataDecompressor.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.266606
+e355782838.386864
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@97"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m355782838#355782838#0(0"0(0#0#89"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m8606805664#2283"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDataDecompressor.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDataDecompressor.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDownloadCache.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.332051
+e355782838.509278
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m355782838#355782838#0(0"0(0#0#86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m8605185248#2277"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIDownloadCache.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIDownloadCache.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIFormDataRequest.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.354290
+e355782838.487285
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m355782838#355782838#0(0"0(0#0#88"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m8598997984#2281"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIFormDataRequest.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIFormDataRequest.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIHTTPRequest.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.387005
+e355782839.456543
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m355782838#355782839#0(0"0(0#0#84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m8607480224#2273"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIHTTPRequest.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIHTTPRequest.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIInputStream.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.463937
+e355782838.554738
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIInputStream.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m355782838#355782838#0(0"0(0#0#84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m8607373536#2273"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASIInputStream.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASIInputStream.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASINetworkQueue.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.487412
+e355782838.639702
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m355782838#355782838#0(0"0(0#0#85"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m8606906528#2275"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/ASINetworkQueue.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/ASINetworkQueue.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/CoreLocationController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.761388
+e355782838.832981
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/CoreLocationController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@100"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m355782838#355782838#0(0"0(0#0#92"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m8607357536#2289"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/CoreLocationController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/JSONKit.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.860494
+e355782839.441634
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/JSONKit.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m355782838#355782839#0(0"0(0#0#77"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m8607281536#2259"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/JSONKit.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/JSONKit.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9AppDelegate.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.066377
+e355782838.266474
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9AppDelegate.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m355782838#355782838#0(0"0(0#0#93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m8605411776#2291"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Outbreak_0_9AppDelegate.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9AppDelegate.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Reachability.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.509410
+e355782838.651164
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Reachability.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m355782838#355782838#0(0"0(0#0#82"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m8606984064#2269"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/Reachability.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Reachability.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.762864
+e355782838.860349
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m: In function '-[cInfectViewController tableView:cellForRowAtIndexPath:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m:103: warning: unused variable 'nm'
+lSLF07#2@99"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m355782838#355782838#0(293"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m: In function '-[cInfectViewController tableView:cellForRowAtIndexPath:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m:103: warning: unused variable 'nm'1(22@20"Unused variable 'nm'355782838#166#127#0(6@91"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m353379770#103#0#103#0#19"unused variable '*'0(0#0#91"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m8607486528#2287"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.986434
+e355782839.119043
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionManager.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m355782838#355782839#0(0"0(0#0#87"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m8605170816#2279"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionManager.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionReportViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782839.021392
+e355782839.084418
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionReportViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@108"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m355782839#355782839#0(0"0(0#0#100"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m8606919456#2305"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cInfectionReportViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLocationManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.707688
+e355782838.861579
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLocationManager.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager PersistLocationDidFinished:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: 'cLocationManager' may not respond to '-parseVirusJson:'
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: (Messages without a matching method signature
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: will be assumed to return 'id' and accept
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: '...' as arguments.)
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager GetNearbyFinished:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:185: warning: no '-UpdateVictimTable:' method found
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager parseVirusJson:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:206: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'set_zonePoints:' from distinct Objective-C type
+lSLF07#2@94"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m355782838#355782838#0(1399"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager PersistLocationDidFinished:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: 'cLocationManager' may not respond to '-parseVirusJson:'/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: (Messages without a matching method signature/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: will be assumed to return 'id' and accept/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:104: warning: '...' as arguments.)/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager GetNearbyFinished:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:185: warning: no '-UpdateVictimTable:' method found/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m: In function '-[cLocationManager parseVirusJson:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m:206: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'set_zonePoints:' from distinct Objective-C type4(22@56"'cLocationManager' may not respond to '-parseVirusJson:'355782838#151#158#0(6@86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m353815424#104#0#104#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)355782838#309#147#0(6@86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m353815424#104#0#104#0#0"0(22@37"No '-UpdateVictimTable:' method found355782838#863#139#0(6@86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m353815424#185#0#185#0#19"no '*' method found0(22@156"Incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'set_zonePoints:' from distinct Objective-C type355782838#1141#258#0(6@86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m353815424#206#0#206#0#0"0(0#0#86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m8604310624#2277"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLocationManager.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLoginViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.067527
+e355782838.331930
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLoginViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController AttemptAutoLogin]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:81: warning: 'stringWithContentsOfFile:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:383)
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController LoginButtonPressed:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:131: warning: unused variable 'player'
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController LoginDidFinished:]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:162: warning: 'writeToFile:atomically:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:378)
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: 'cLoginViewController' may not respond to '-parsePlayerJson:'
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: (Messages without a matching method signature
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: will be assumed to return 'id' and accept
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: '...' as arguments.)
+lSLF07#2@98"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782838#355782838#0(1796"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController AttemptAutoLogin]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:81: warning: 'stringWithContentsOfFile:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:383)/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController LoginButtonPressed:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:131: warning: unused variable 'player'/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m: In function '-[cLoginViewController LoginDidFinished:]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:162: warning: 'writeToFile:atomically:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:378)/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: 'cLoginViewController' may not respond to '-parsePlayerJson:'/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: (Messages without a matching method signature/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: will be assumed to return 'id' and accept/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m:172: warning: '...' as arguments.)5(22@209"'stringWithContentsOfFile:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:383)355782838#148#314#0(6@90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782835#81#0#81#0#33"'*' is deprecated (declared at *)0(22@24"Unused variable 'player'355782838#613#130#0(6@90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782835#131#0#131#0#19"unused variable '*'0(22@207"'writeToFile:atomically:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:378)355782838#892#313#0(6@90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782835#162#0#162#0#33"'*' is deprecated (declared at *)0(22@61"'cLoginViewController' may not respond to '-parsePlayerJson:'355782838#1205#167#0(6@90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782835#172#0#172#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)355782838#1372#151#0(6@90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m355782835#172#0#172#0#0"0(0#0#90"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m8604875168#2285"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cLoginViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cMainScreenViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.674993
+e355782838.762749
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cMainScreenViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m355782838#355782838#0(0"0(0#0#95"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m8607053568#2295"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cMainScreenViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.069118
+e355782838.245842
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerManager.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: incomplete implementation of class 'cPlayerManager'
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-Logout' not found
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-Login' not found
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-AttemptAutoLogin' not found
+lSLF07#2@92"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m355782838#355782838#0(579"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: incomplete implementation of class 'cPlayerManager'/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-Logout' not found/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-Login' not found/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m:14: warning: method definition for '-AttemptAutoLogin' not found4(22@51"Incomplete implementation of class 'cPlayerManager'355782838#0#150#0(6@84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m352232180#14#0#14#0#38"incomplete implementation of class '*'0(22@41"Method definition for '-Logout' not found355782838#150#140#0(6@84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m352232180#14#0#14#0#35"method definition for '*' not found0(22@40"Method definition for '-Login' not found355782838#290#139#0(6@84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m352232180#14#0#14#0#35"method definition for '*' not found0(22@51"Method definition for '-AttemptAutoLogin' not found355782838#429#150#0(6@84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m352232180#14#0#14#0#35"method definition for '*' not found0(0#0#84"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m8603969728#2273"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerManager.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerManager.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerSingleton.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.554872
+e355782838.674851
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerSingleton.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m355782838#355782838#0(0"0(0#0#86"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m8606797536#2277"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cPlayerSingleton.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cRegisterViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.651284
+e355782838.761255
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cRegisterViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m355782838#355782838#0(0"0(0#0#93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m8604014944#2291"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cRegisterViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVictim.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.833177
+e355782838.883271
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVictim.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m355782838#355782838#0(0"0(0#0#77"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m8605009152#2259"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVictim.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirus.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.639816
+e355782838.707558
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirus.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m355782838#355782838#0(0"0(0#0#76"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m8590458464#2257"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirus.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusCreationViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.883392
+e355782839.021275
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusCreationViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@106"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m355782838#355782839#0(0"0(0#0#98"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m8604382944#2301"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusCreationViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusManager.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782839.084547
+e355782839.127093
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusManager.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m355782839#355782839#0(0"0(0#0#83"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m8605188928#2271"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusManager.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusManager.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusSelectionViewController.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.861690
+e355782838.986303
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusSelectionViewController.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m: In function '-[cVirusSelectionViewController DeleteVirusButtonPressed]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: no '-initWithVirus:' method found
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: (Messages without a matching method signature
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: will be assumed to return 'id' and accept
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: '...' as arguments.)
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m: In function '-[cVirusSelectionViewController SelectVirusButtonPressed]':
+o/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:208: warning: no '-initWithVirus:' method found
+lSLF07#2@107"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m355782838#355782839#0(1095"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m: In function '-[cVirusSelectionViewController DeleteVirusButtonPressed]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: no '-initWithVirus:' method found/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: (Messages without a matching method signature/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: will be assumed to return 'id' and accept/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:138: warning: '...' as arguments.)/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m: In function '-[cVirusSelectionViewController SelectVirusButtonPressed]':/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m:208: warning: no '-initWithVirus:' method found3(22@33"No '-initWithVirus:' method found355782838#174#148#0(6@99"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m353385803#138#0#138#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)355782838#322#160#0(6@99"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m353385803#138#0#138#0#0"0(22@33"No '-initWithVirus:' method found355782838#947#148#0(6@99"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m353385803#208#0#208#0#19"no '*' method found0(0#0#99"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m8604749600#2303"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/cVirusSelectionViewController.o0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/main.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782838.064836
+e355782838.247708
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/main.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m355782838#355782838#0(0"0(0#0#66"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m8607214880#2245"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -include /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/main.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib
+s355782836.295791
+e355782836.751728
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@44"CompileXIB Classes/cInfectViewController.xib355782836#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#93"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib8604361984#668"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cInfectViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib
+s355782836.375033
+e355782836.799274
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@53"CompileXIB Classes/cInfectionReportViewController.xib355782836#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#102"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib8598579104#686"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cInfectionReportViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionReportViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib
+s355782835.806208
+e355782836.351860
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@43"CompileXIB Classes/cLoginViewController.xib355782835#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#92"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib8605401312#666"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cLoginViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLoginViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib
+s355782835.833556
+e355782836.374925
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@48"CompileXIB Classes/cMainScreenViewController.xib355782835#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#97"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib8605646880#676"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cMainScreenViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cMainScreenViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib
+s355782835.807594
+e355782836.359073
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@46"CompileXIB Classes/cRegisterViewController.xib355782835#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#95"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib8604372736#672"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cRegisterViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib
+s355782836.359181
+e355782837.300283
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@51"CompileXIB Classes/cVirusCreationViewController.xib355782836#355782837#0(168"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#100"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib8602018368#682"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cVirusCreationViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusCreationViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib
+s355782836.351969
+e355782836.839191
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@52"CompileXIB Classes/cVirusSelectionViewController.xib355782836#355782836#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#101"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib8604150720#684"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/cVirusSelectionViewController.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirusSelectionViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib
+s355782835.797359
+e355782836.295689
+r1
+xCompileXIB
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib355782835#355782836#0(0"0(0#0#74"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib30962681237012596#638"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/MainWindow.nib /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCpResource build/Debug-iphonesimulator/Outbreak_0_9.app/credentials.txt credentials.txt
+s355782835.806878
+e355782835.833459
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Outbreak_0_9.app/credentials.txt
+xcredentials.txt
+lSLF07#2@20"Copy credentials.txt355782835#355782835#0(0"0(0#0#75"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/credentials.txt8605286240#541"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/credentials.txt /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app0#
+
+CGenerateDSYMFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9
+s355782839.949061
+e355782840.048422
+r1
+xGenerateDSYMFile
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9
+lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9355782839#355782840#0(0"0(0#0#117"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_98605195328#461"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9 -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app.dSYM0#
+
+CLd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9 normal i386
+s355782839.456619
+e355782839.948981
+r1
+xLd
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9
+xnormal
+xi386
+lSLF07#2@122"Link /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_9355782839#355782839#0(0"0(0#0#0"8605287488#1146"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -filelist /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Objects-normal/i386/Outbreak_0_9.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -framework MobileCoreServices -lz.1.2.3 -framework SystemConfiguration -framework CoreLocation -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Outbreak_0_90#
+
+CProcessInfoPlistFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Info.plist Outbreak_0_9-Info.plist
+s355782835.767344
+e355782835.797291
+r1
+xProcessInfoPlistFile
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Info.plist
+xOutbreak_0_9-Info.plist
+lSLF07#2@31"Process Outbreak_0_9-Info.plist355782835#355782835#0(0"0(0#0#83"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Outbreak_0_9-Info.plist27303506540101728#557"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Outbreak_0_9-Info.plist -genpkginfo /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app/Info.plist0#
+
+CProcessPCH /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch.gch Outbreak_0_9_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s355782837.300528
+e355782838.064644
+r1
+xProcessPCH
+x/var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch.gch
+xOutbreak_0_9_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@34"Precompile Outbreak_0_9_Prefix.pch355782837#355782838#0(0"0(0#0#83"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Outbreak_0_9_Prefix.pch8605590688#2111"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/Outbreak_0_9-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/Outbreak_0_9.build/DerivedSources -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Outbreak_0_9_Prefix.pch -o /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Outbreak_0_9_Prefix-ewhrfdqdnvqxchavvihelegptvum/Outbreak_0_9_Prefix.pch.gch0#
+
+CTouch /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app
+s355782840.048498
+e355782840.066641
+r1
+xTouch
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app
+lSLF07#2@110"Touch /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app355782840#355782840#0(0"0(0#0#0"8604423296#325"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/Outbreak_0_9.app0#
+

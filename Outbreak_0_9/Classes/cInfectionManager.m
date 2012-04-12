@@ -10,7 +10,6 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "cPlayerSingleton.h"
-#import "cInfectionReportViewController.h"
 
 
 @implementation cInfectionManager
@@ -50,7 +49,7 @@
 	
 	[request setPostValue:aVictim._username forKey:@"victim_id"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
-	[request setPostValue:aVirus._owner forKey:@"device_id"];
+	[request setPostValue:aVirus._owner forKey:@"username"];
 	[request setDelegate:self];
 	[request startAsynchronous];
 	
@@ -60,18 +59,7 @@
 
 - (void)InfectionDidFinished:(ASIHTTPRequest *)request {
 	
-	//
-	cInfectionReportViewController *infectReport = [[cInfectionReportViewController alloc] init];
-	if ([[request responseString] isEqualToString:@"TRUE"])
-	{
-		infectReport._reportMessage = @"Infection Success";
-	}
-	else
-	{
-		infectReport._reportMessage = @"Infection Failure";
-	}
-	
-	//[self.navi
+
 
 }
 
@@ -109,7 +97,7 @@
 	[request setPostValue:player._currentVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
-	[request setPostValue:player._username forKey:@"device_id"];
+	[request setPostValue:player._username forKey:@"username"];
 	
 
 	 //	[request setPostValue forKey:

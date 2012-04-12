@@ -62,8 +62,7 @@
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setPostValue:latitude forKey:@"latitude"];
 	[request setPostValue:longitude forKey:@"longitude"];
-	//TODO: CHANGE THE PHP device_id now = username
-	[request setPostValue:player._username forKey:@"device_id"];
+	[request setPostValue:player._username forKey:@"username"];
 	
 	[request setDidFinishSelector:@selector(PersistLocationDidFinished:)];
 	[request setDidFailSelector:@selector(PersistLocationDidFailed:)];
@@ -147,7 +146,7 @@
 	NSURL *url = [NSURL URLWithString:urlappended];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setDidFinishSelector:@selector(GetNearbyFinished:)];
-	[request setPostValue:player._username forKey:@"device_id"];
+	[request setPostValue:player._username forKey:@"username"];
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
 	[request setPostValue:range forKey:@"range"];
@@ -170,7 +169,7 @@
 	NSMutableArray *victims = [[NSMutableArray alloc] init];
 	//Retrieve information from the deserialized json string
 	for (NSDictionary * dataDict in deserializedData) {
-		NSString * victimName = [dataDict objectForKey:@"device_id"];
+		NSString * victimName = [dataDict objectForKey:@"username"];
 		NSString * victimDistance = [dataDict objectForKey:@"distance"];
 		
 		cVictim *aVictim = [[cVictim alloc] init];
@@ -237,6 +236,10 @@
 		
 		
 		[virus release];
+	}
+	if ([infectedWithViruses count] == 0 )
+	{
+		player._infectedWith = nil;
 	}
 	
 	/*for ( NSDictionary * each_virus in jsonDict ) 

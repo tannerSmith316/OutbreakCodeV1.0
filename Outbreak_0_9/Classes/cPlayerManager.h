@@ -11,11 +11,13 @@
 
 @interface cPlayerManager : NSObject {
 
+	id delegate;
 	
 }
 
-- (BOOL)AttemptAutoLogin;
-- (void)Login;
+@property (nonatomic, assign) id delegate;
+
+- (void)LoginWithUsername:(NSString *)username Password:(NSString *)password;
 - (void)Logout;
 
 @end

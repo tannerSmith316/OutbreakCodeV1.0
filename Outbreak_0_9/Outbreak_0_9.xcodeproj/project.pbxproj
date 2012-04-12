@@ -49,8 +49,6 @@
 		72A3B3B71505816A00A4A2AB /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B61505816A00A4A2AB /* CoreLocationController.m */; };
 		72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8581516CBAD00ECACEB /* cVirusManager.m */; };
 		72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932B150D9A6000F67811 /* cInfectionManager.m */; };
-		72E09451150DC3A000F67811 /* cInfectionReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0944F150DC3A000F67811 /* cInfectionReportViewController.m */; };
-		72E09452150DC3A000F67811 /* cInfectionReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E09450150DC3A000F67811 /* cInfectionReportViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,9 +125,6 @@
 		72C4C8581516CBAD00ECACEB /* cVirusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cVirusManager.m; sourceTree = "<group>"; };
 		72E0932A150D9A6000F67811 /* cInfectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cInfectionManager.h; sourceTree = "<group>"; };
 		72E0932B150D9A6000F67811 /* cInfectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cInfectionManager.m; sourceTree = "<group>"; };
-		72E0944E150DC3A000F67811 /* cInfectionReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cInfectionReportViewController.h; sourceTree = "<group>"; };
-		72E0944F150DC3A000F67811 /* cInfectionReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cInfectionReportViewController.m; sourceTree = "<group>"; };
-		72E09450150DC3A000F67811 /* cInfectionReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cInfectionReportViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Outbreak_0_9-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,7 +287,6 @@
 		729F7036150087FC0046355F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				72E09450150DC3A000F67811 /* cInfectionReportViewController.xib */,
 				72233CAE150C299300DD393D /* cVirusCreationViewController.xib */,
 				72233BF7150C115900DD393D /* cVirusSelectionViewController.xib */,
 				728DEA0C15084560008E980E /* cInfectViewController.xib */,
@@ -318,8 +312,6 @@
 				72233BF6150C115900DD393D /* cVirusSelectionViewController.m */,
 				72233CAC150C299300DD393D /* cVirusCreationViewController.h */,
 				72233CAD150C299300DD393D /* cVirusCreationViewController.m */,
-				72E0944E150DC3A000F67811 /* cInfectionReportViewController.h */,
-				72E0944F150DC3A000F67811 /* cInfectionReportViewController.m */,
 			);
 			name = UIL;
 			sourceTree = "<group>";
@@ -382,7 +374,6 @@
 				728DEA0E15084560008E980E /* cInfectViewController.xib in Resources */,
 				72233BF9150C115900DD393D /* cVirusSelectionViewController.xib in Resources */,
 				72233CB0150C299300DD393D /* cVirusCreationViewController.xib in Resources */,
-				72E09452150DC3A000F67811 /* cInfectionReportViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +409,6 @@
 				72233BF8150C115900DD393D /* cVirusSelectionViewController.m in Sources */,
 				72233CAF150C299300DD393D /* cVirusCreationViewController.m in Sources */,
 				72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */,
-				72E09451150DC3A000F67811 /* cInfectionReportViewController.m in Sources */,
 				72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

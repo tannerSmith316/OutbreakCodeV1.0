@@ -144,7 +144,7 @@
 		NSURL *url = [NSURL URLWithString:urlstring];
 		
 		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-		[request setPostValue:player._username forKey:@"device_id"];
+		[request setPostValue:player._username forKey:@"username"];
 		[request setPostValue:self._virusName forKey:@"virus_name"];
 		[request setPostValue:self._instantPoints forKey:@"instant_points"];
 		[request setPostValue:self._zonePoints forKey:@"zone_points"];

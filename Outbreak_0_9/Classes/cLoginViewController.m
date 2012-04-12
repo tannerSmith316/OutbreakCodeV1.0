@@ -6,6 +6,7 @@
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
+#import "cPlayerManager.h"
 #import "cLoginViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
@@ -16,6 +17,7 @@
 #import "cVirus.h"
 
 @implementation cLoginViewController
+@synthesize _playerMGR;
 @synthesize _usernameField;
 @synthesize _passwordField;
 @synthesize _loginButton;
@@ -24,6 +26,21 @@
 @synthesize _registerButton;
 @synthesize _username;
 @synthesize _password;
+
+
+- (id)init {
+	
+	self = [super init];
+	if (self != nil)
+	{
+		//custom inits here
+		_playerMGR = [[cPlayerManager alloc]init];
+		_playerMGR.delegate = self;
+	}
+	
+	return self;
+	
+}
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -68,7 +85,9 @@
 }
 
 
+
 - (void)dealloc {
+	[_playerMGR release];
     [super dealloc];
 }
 
@@ -90,7 +109,10 @@
 		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", self._username, self._password);
 		//autologin here
 		
-		[self LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
+		//[self LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
+		
+		[_playerMGR LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
+		
 		
 	}
 }
@@ -104,7 +126,7 @@
 	
 	NSLog(@"POST: Login; Username=%@ ; Password=%@", username, password);
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setPostValue:username forKey:@"device_id"];
+	[request setPostValue:username forKey:@"username"];
 	[request setPostValue:password forKey:@"password"];
 	
 	[request setDidFinishSelector:@selector(LoginDidFinished:)];
@@ -129,79 +151,56 @@
 	self._password = _passwordField.text;
 	self._username = _usernameField.text;
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	
-	//if (player._isTimerActive)
-	{
-		//self._loginError.text = @"Try again later";
-	}
-	//else
-	{
-		[self LoginWithUsername:self._username Password:self._password];
-	}
 
+	_loginIndicator.hidden = FALSE;
+	[_loginIndicator startAnimating];
+		
+		//make call to 
+		
+	self.navigationItem.backBarButtonItem.enabled = FALSE;
+	_loginButton.enabled = FALSE;
+	_registerButton.enabled = FALSE;
+	[_playerMGR LoginWithUsername:self._username Password:self._password];
 	
-
 }
 
-- (void)LoginDidFinished:(ASIHTTPRequest *)request {
+- (void)CallBackLoginDidFinished {
 	
 	//Response will return TRUE or FALSE
-	NSString *loginSuccess = [request responseString];
-	
-	//If the login doesnt fail
-	if ( ![loginSuccess isEqualToString:@"FALSE"] )
-	{
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
+	mainScreen.title = @"Main";
 		
-		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-		player._username = self._username;
-		player._password = self._password;
-		//Save succesful credentials to flat file for auto-login
-		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
-		NSString *successfulCredentials = [NSString stringWithFormat:@"%@\n%@", self._username, self._password];
-		[successfulCredentials writeToFile:myFilePath atomically:YES];
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
 		
-		
-		//Load JSON data into singleton
-		NSString *jsonString = [NSString stringWithString:[request responseString]];
-		//Parse the json
-		NSLog(@"Login Succesful Return Packet: %@", jsonString);
-		NSDictionary *deserializedData = [[NSDictionary alloc] init];
-		deserializedData = [jsonString objectFromJSONString];
-		
-		[self parsePlayerJson:deserializedData];
-				
-		
-		//Push main VC
-		cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
-		mainScreen.title = @"Main";
-		
-		UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
-		
-		mainScreen.navigationItem.leftBarButtonItem = backButton;
-		[backButton release];
-		NSLog(@"POST: Login Succesful");
+	mainScreen.navigationItem.leftBarButtonItem = backButton;
+	[backButton release];
+	NSLog(@"POST: Login Succesful");
 
-		self._usernameField.text = nil;
-		self._passwordField.text = nil;
-		[player StartUpdateTimer];
-		[self.navigationController pushViewController:mainScreen animated:YES];
-		[mainScreen release];
-	}
-	else
-	{
-		NSLog(@"Invalid Login Credentials");
-		_loginError.text = @"Invalid Login Credentials";
-	}
+	self._usernameField.text = nil;
+	self._passwordField.text = nil;
+	[player StartUpdateTimer];
+	[self.navigationController pushViewController:mainScreen animated:YES];
+	[mainScreen release];
 
 
 	//posted back here
 	//if passed login check
+	self.navigationItem.backBarButtonItem.enabled = TRUE;
 	_loginButton.enabled = TRUE;
 	_registerButton.enabled = TRUE;
 	[_loginIndicator stopAnimating];
 	_loginIndicator.hidden = TRUE;
 	
+}
+
+- (void)CallBackLoginFailed {
+	
+	self._loginError.text = @"Bad login credentials";
+	_loginButton.enabled = TRUE;
+	_registerButton.enabled = TRUE;
+	[_loginIndicator stopAnimating];
+	_loginIndicator.hidden = TRUE;
 }
 										  
 - (void)LoginDidFailed:(ASIHTTPRequest *)request {
@@ -236,48 +235,6 @@
 	
 }
 
-//Parses returned json and sets playsingleton with data retrieved
-- (void)parsePlayerJson:(NSDictionary *)playerDict {
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	
-	NSMutableArray *viruses = [[NSMutableArray alloc] init];
-	
-	//Retrieve information from the deserialized json string
-	NSDictionary *playerViruses = [playerDict objectForKey:@"viruses"];
-	//Iterate through virus data
-	for ( NSDictionary * each_virus in playerViruses ) 
-	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		//Needs to retrieve more virus info
-		cVirus *virus = [[cVirus alloc] init];
-		virus._virusName = virusName;
-		virus._owner = player._username;
-		
-		[viruses addObject:virus];
-		[virus release];
-	}
-	//Set playerSingleton viruses
-	player._viruses = viruses;
-	
 
-		
-	NSDictionary *playerInfectedWith = [playerDict objectForKey:@"infected_with"];
-	
-	for( NSDictionary *each_virus in playerInfectedWith )
-	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		NSString *virusOwner = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_owner"]];
-		//Needs to retrieve more data
-		
-		cVirus *infectedWith = [[cVirus alloc] init];
-		infectedWith._virusName = virusName;
-		infectedWith._owner = virusOwner;
-		//Set playersingleton infectedWith
-		player._infectedWith = infectedWith;
-	}
-
-	
-}
 
 @end
