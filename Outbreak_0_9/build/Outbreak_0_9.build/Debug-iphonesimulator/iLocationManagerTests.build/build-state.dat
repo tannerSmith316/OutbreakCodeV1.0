@@ -1,0 +1,31 @@
+TiLocationManagerTests
+v7
+r1
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/iLocationManagerTests.octest
+t2
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/iLocationManagerTests.octest/Info.plist
+t2
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/iLocationManagerTests.build/Script-72A2E86315367B7F0024B2D3.sh
+c00000000000000000000000000000000
+t2
+s0
+
+NiLocationManagerTests-Info.plist
+c000000004F8643FF0000000000000281
+t1334199295
+s641
+
+CPhaseScriptExecution "Run Script" /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/iLocationManagerTests.build/Script-72A2E86315367B7F0024B2D3.sh
+r0
+
+CProcessInfoPlistFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/iLocationManagerTests.octest/Info.plist iLocationManagerTests-Info.plist
+r0
+
+CTouch /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/iLocationManagerTests.octest
+r0
+

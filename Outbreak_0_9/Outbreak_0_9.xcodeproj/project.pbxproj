@@ -44,12 +44,70 @@
 		729F6FAA15007BDB0046355F /* credentials.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729F6FA915007BDB0046355F /* credentials.txt */; };
 		729F703A150088540046355F /* cRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F7038150088540046355F /* cRegisterViewController.m */; };
 		729F703B150088540046355F /* cRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729F7039150088540046355F /* cRegisterViewController.xib */; };
+		72A2E89615367C2C0024B2D3 /* iLocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */; };
+		72A2E906153680100024B2D3 /* cPlayerSingleton.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F95150073BA0046355F /* cPlayerSingleton.h */; };
+		72A2E907153680100024B2D3 /* cPlayerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F96150073BA0046355F /* cPlayerSingleton.m */; };
+		72A2E90C1536802E0024B2D3 /* cLocationManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B015057F8600A4A2AB /* cLocationManager.h */; };
+		72A2E90D1536802E0024B2D3 /* cLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B115057F8600A4A2AB /* cLocationManager.m */; };
+		72A2E90E1536802E0024B2D3 /* cInfectionManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932A150D9A6000F67811 /* cInfectionManager.h */; };
+		72A2E90F1536802E0024B2D3 /* cInfectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932B150D9A6000F67811 /* cInfectionManager.m */; };
+		72A2E912153680510024B2D3 /* CoreLocationController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B51505816A00A4A2AB /* CoreLocationController.h */; };
+		72A2E913153680510024B2D3 /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B61505816A00A4A2AB /* CoreLocationController.m */; };
+		72A2E914153680510024B2D3 /* cVictim.h in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA2715084AFA008E980E /* cVictim.h */; };
+		72A2E915153680510024B2D3 /* cVictim.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA2815084AFA008E980E /* cVictim.m */; };
+		72A2E916153680510024B2D3 /* cVirus.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F98150074FD0046355F /* cVirus.h */; };
+		72A2E917153680510024B2D3 /* cVirus.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F99150074FD0046355F /* cVirus.m */; };
+		72A2E91A153680780024B2D3 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6C15006FBC0046355F /* Reachability.h */; };
+		72A2E91B153680780024B2D3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6D15006FBC0046355F /* Reachability.m */; };
+		72A2E91C153680780024B2D3 /* ASIAuthenticationDialog.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5015006EA30046355F /* ASIAuthenticationDialog.h */; };
+		72A2E91D153680780024B2D3 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5115006EA30046355F /* ASIAuthenticationDialog.m */; };
+		72A2E91E153680780024B2D3 /* ASICacheDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5215006EA30046355F /* ASICacheDelegate.h */; };
+		72A2E91F153680780024B2D3 /* ASIDataCompressor.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5315006EA30046355F /* ASIDataCompressor.h */; };
+		72A2E920153680780024B2D3 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5415006EA30046355F /* ASIDataCompressor.m */; };
+		72A2E921153680780024B2D3 /* ASIDataDecompressor.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5515006EA30046355F /* ASIDataDecompressor.h */; };
+		72A2E922153680780024B2D3 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5615006EA30046355F /* ASIDataDecompressor.m */; };
+		72A2E923153680780024B2D3 /* ASIDownloadCache.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5715006EA30046355F /* ASIDownloadCache.h */; };
+		72A2E924153680780024B2D3 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5815006EA30046355F /* ASIDownloadCache.m */; };
+		72A2E925153680780024B2D3 /* ASIFormDataRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5915006EA30046355F /* ASIFormDataRequest.h */; };
+		72A2E926153680780024B2D3 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5A15006EA30046355F /* ASIFormDataRequest.m */; };
+		72A2E927153680780024B2D3 /* ASIHTTPRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5B15006EA30046355F /* ASIHTTPRequest.h */; };
+		72A2E928153680780024B2D3 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5C15006EA30046355F /* ASIHTTPRequest.m */; };
+		72A2E929153680780024B2D3 /* ASIHTTPRequestConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5D15006EA30046355F /* ASIHTTPRequestConfig.h */; };
+		72A2E92A153680780024B2D3 /* ASIHTTPRequestDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5E15006EA30046355F /* ASIHTTPRequestDelegate.h */; };
+		72A2E92B153680780024B2D3 /* ASIInputStream.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F5F15006EA30046355F /* ASIInputStream.h */; };
+		72A2E92C153680780024B2D3 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6015006EA30046355F /* ASIInputStream.m */; };
+		72A2E92D153680780024B2D3 /* ASINetworkQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6115006EA30046355F /* ASINetworkQueue.h */; };
+		72A2E92E153680780024B2D3 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6215006EA30046355F /* ASINetworkQueue.m */; };
+		72A2E92F153680780024B2D3 /* ASIProgressDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F6315006EA30046355F /* ASIProgressDelegate.h */; };
+		72A2E932153680A80024B2D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3B3B31505805100A4A2AB /* CoreLocation.framework */; };
+		72A2E933153680BC0024B2D3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729F6F7E150070190046355F /* MobileCoreServices.framework */; };
+		72A2E934153680D40024B2D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729F6F7A150070110046355F /* CFNetwork.framework */; };
+		72A2E935153680E00024B2D3 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 729F6F82150070550046355F /* libz.1.2.3.dylib */; };
+		72A2E936153680E70024B2D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729F6F84150070640046355F /* SystemConfiguration.framework */; };
+		72A2E9391536810E0024B2D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		72A2E93A153681130024B2D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		72A2E93B1536811C0024B2D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		72A2E94F1536826D0024B2D3 /* iInfectionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */; };
+		72A2E9531536848F0024B2D3 /* iPlayerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */; };
+		72A2E9571536851F0024B2D3 /* iVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E9561536851F0024B2D3 /* iVirusManager.m */; };
+		72A2EA411536A2090024B2D3 /* cVirusManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8571516CBAD00ECACEB /* cVirusManager.h */; };
+		72A2EA421536A2090024B2D3 /* cVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8581516CBAD00ECACEB /* cVirusManager.m */; };
 		72A3B3B215057F8600A4A2AB /* cLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B115057F8600A4A2AB /* cLocationManager.m */; };
 		72A3B3B41505805100A4A2AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3B3B31505805100A4A2AB /* CoreLocation.framework */; };
 		72A3B3B71505816A00A4A2AB /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B61505816A00A4A2AB /* CoreLocationController.m */; };
 		72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8581516CBAD00ECACEB /* cVirusManager.m */; };
 		72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932B150D9A6000F67811 /* cInfectionManager.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72A2E8DA15367E690024B2D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6058900D05DD3D006BFB54;
+			remoteInfo = Outbreak_0_9;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +174,12 @@
 		729F7037150088540046355F /* cRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cRegisterViewController.h; sourceTree = "<group>"; };
 		729F7038150088540046355F /* cRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cRegisterViewController.m; sourceTree = "<group>"; };
 		729F7039150088540046355F /* cRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cRegisterViewController.xib; sourceTree = "<group>"; };
+		72A2E88F15367BFB0024B2D3 /* InterfaceUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaceUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A2E89015367BFB0024B2D3 /* InterfaceUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterfaceUnitTests-Info.plist"; sourceTree = "<group>"; };
+		72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLocationManagerTests.m; sourceTree = "<group>"; };
+		72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iInfectionManagerTests.m; sourceTree = "<group>"; };
+		72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPlayerManagerTests.m; sourceTree = "<group>"; };
+		72A2E9561536851F0024B2D3 /* iVirusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVirusManager.m; sourceTree = "<group>"; };
 		72A3B3B015057F8600A4A2AB /* cLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cLocationManager.h; sourceTree = "<group>"; };
 		72A3B3B115057F8600A4A2AB /* cLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cLocationManager.m; sourceTree = "<group>"; };
 		72A3B3B31505805100A4A2AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -144,12 +208,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A2E88C15367BFB0024B2D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A2E932153680A80024B2D3 /* CoreLocation.framework in Frameworks */,
+				72A2E933153680BC0024B2D3 /* MobileCoreServices.framework in Frameworks */,
+				72A2E934153680D40024B2D3 /* CFNetwork.framework in Frameworks */,
+				72A2E935153680E00024B2D3 /* libz.1.2.3.dylib in Frameworks */,
+				72A2E936153680E70024B2D3 /* SystemConfiguration.framework in Frameworks */,
+				72A2E9391536810E0024B2D3 /* Foundation.framework in Frameworks */,
+				72A2E93A153681130024B2D3 /* UIKit.framework in Frameworks */,
+				72A2E93B1536811C0024B2D3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				72A2E85F15367A660024B2D3 /* Tests */,
 				728DEA77150854D5008E980E /* JSON */,
 				729F703E150088AA0046355F /* UIL */,
 				729F7036150087FC0046355F /* UI */,
@@ -166,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Outbreak_0_9.app */,
+				72A2E88F15367BFB0024B2D3 /* InterfaceUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +264,7 @@
 				729F6F82150070550046355F /* libz.1.2.3.dylib */,
 				729F6F84150070640046355F /* SystemConfiguration.framework */,
 				72A3B3B31505805100A4A2AB /* CoreLocation.framework */,
+				72A2E89015367BFB0024B2D3 /* InterfaceUnitTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -190,6 +272,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */,
 				28A0AAE50D9B0CCF005BE974 /* Outbreak_0_9_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -200,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */,
 				729F6FA915007BDB0046355F /* credentials.txt */,
 			);
 			name = Resources;
@@ -316,6 +398,17 @@
 			name = UIL;
 			sourceTree = "<group>";
 		};
+		72A2E85F15367A660024B2D3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */,
+				72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */,
+				72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */,
+				72A2E9561536851F0024B2D3 /* iVirusManager.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +428,25 @@
 			productName = Outbreak_0_9;
 			productReference = 1D6058910D05DD3D006BFB54 /* Outbreak_0_9.app */;
 			productType = "com.apple.product-type.application";
+		};
+		72A2E88E15367BFB0024B2D3 /* InterfaceUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A2E89315367BFC0024B2D3 /* Build configuration list for PBXNativeTarget "InterfaceUnitTests" */;
+			buildPhases = (
+				72A2E88A15367BFB0024B2D3 /* Resources */,
+				72A2E88B15367BFB0024B2D3 /* Sources */,
+				72A2E88C15367BFB0024B2D3 /* Frameworks */,
+				72A2E88D15367BFB0024B2D3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72A2E8DB15367E690024B2D3 /* PBXTargetDependency */,
+			);
+			name = InterfaceUnitTests;
+			productName = InterfaceUnitTests;
+			productReference = 72A2E88F15367BFB0024B2D3 /* InterfaceUnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -357,6 +469,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Outbreak_0_9 */,
+				72A2E88E15367BFB0024B2D3 /* InterfaceUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -377,7 +490,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A2E88A15367BFB0024B2D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72A2E88D15367BFB0024B2D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -413,7 +549,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72A2E88B15367BFB0024B2D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A2E912153680510024B2D3 /* CoreLocationController.h in Sources */,
+				72A2EA411536A2090024B2D3 /* cVirusManager.h in Sources */,
+				72A2EA421536A2090024B2D3 /* cVirusManager.m in Sources */,
+				72A2E913153680510024B2D3 /* CoreLocationController.m in Sources */,
+				72A2E91A153680780024B2D3 /* Reachability.h in Sources */,
+				72A2E91B153680780024B2D3 /* Reachability.m in Sources */,
+				72A2E91C153680780024B2D3 /* ASIAuthenticationDialog.h in Sources */,
+				72A2E91D153680780024B2D3 /* ASIAuthenticationDialog.m in Sources */,
+				72A2E91E153680780024B2D3 /* ASICacheDelegate.h in Sources */,
+				72A2E91F153680780024B2D3 /* ASIDataCompressor.h in Sources */,
+				72A2E920153680780024B2D3 /* ASIDataCompressor.m in Sources */,
+				72A2E921153680780024B2D3 /* ASIDataDecompressor.h in Sources */,
+				72A2E922153680780024B2D3 /* ASIDataDecompressor.m in Sources */,
+				72A2E923153680780024B2D3 /* ASIDownloadCache.h in Sources */,
+				72A2E924153680780024B2D3 /* ASIDownloadCache.m in Sources */,
+				72A2E925153680780024B2D3 /* ASIFormDataRequest.h in Sources */,
+				72A2E926153680780024B2D3 /* ASIFormDataRequest.m in Sources */,
+				72A2E927153680780024B2D3 /* ASIHTTPRequest.h in Sources */,
+				72A2E928153680780024B2D3 /* ASIHTTPRequest.m in Sources */,
+				72A2E929153680780024B2D3 /* ASIHTTPRequestConfig.h in Sources */,
+				72A2E92A153680780024B2D3 /* ASIHTTPRequestDelegate.h in Sources */,
+				72A2E92B153680780024B2D3 /* ASIInputStream.h in Sources */,
+				72A2E92C153680780024B2D3 /* ASIInputStream.m in Sources */,
+				72A2E92D153680780024B2D3 /* ASINetworkQueue.h in Sources */,
+				72A2E92E153680780024B2D3 /* ASINetworkQueue.m in Sources */,
+				72A2E92F153680780024B2D3 /* ASIProgressDelegate.h in Sources */,
+				72A2E914153680510024B2D3 /* cVictim.h in Sources */,
+				72A2E915153680510024B2D3 /* cVictim.m in Sources */,
+				72A2E916153680510024B2D3 /* cVirus.h in Sources */,
+				72A2E917153680510024B2D3 /* cVirus.m in Sources */,
+				72A2E90C1536802E0024B2D3 /* cLocationManager.h in Sources */,
+				72A2E90D1536802E0024B2D3 /* cLocationManager.m in Sources */,
+				72A2E90E1536802E0024B2D3 /* cInfectionManager.h in Sources */,
+				72A2E90F1536802E0024B2D3 /* cInfectionManager.m in Sources */,
+				72A2E906153680100024B2D3 /* cPlayerSingleton.h in Sources */,
+				72A2E907153680100024B2D3 /* cPlayerSingleton.m in Sources */,
+				72A2E89615367C2C0024B2D3 /* iLocationManagerTests.m in Sources */,
+				72A2E94F1536826D0024B2D3 /* iInfectionManagerTests.m in Sources */,
+				72A2E9531536848F0024B2D3 /* iPlayerManagerTests.m in Sources */,
+				72A2E9571536851F0024B2D3 /* iVirusManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72A2E8DB15367E690024B2D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6058900D05DD3D006BFB54 /* Outbreak_0_9 */;
+			targetProxy = 72A2E8DA15367E690024B2D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -440,6 +631,66 @@
 				INFOPLIST_FILE = "Outbreak_0_9-Info.plist";
 				PRODUCT_NAME = Outbreak_0_9;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72A2E89115367BFC0024B2D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "InterfaceUnitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = InterfaceUnitTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		72A2E89215367BFC0024B2D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "InterfaceUnitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = InterfaceUnitTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -478,6 +729,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A2E89315367BFC0024B2D3 /* Build configuration list for PBXNativeTarget "InterfaceUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A2E89115367BFC0024B2D3 /* Debug */,
+				72A2E89215367BFC0024B2D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

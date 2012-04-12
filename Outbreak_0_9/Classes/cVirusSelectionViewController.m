@@ -12,14 +12,34 @@
 #import "cVirus.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "cPlayerManager.h"
+#import "cVirusManager.h"
 
 
 @implementation cVirusSelectionViewController
 
+@synthesize _virusMGR;
 @synthesize _viruses;
 @synthesize _deletingVirus;
 @synthesize _currentVirusLabel;
+@synthesize _createVirusButton;
+@synthesize _deleteVirusButton;
+@synthesize _selectVirusButton;
 @synthesize _virusSelectTable;
+
+- (id)init {
+	
+	self = [super init];
+	if (self != nil)
+	{
+		//custom inits here
+		_virusMGR = [[cVirusManager alloc]init];
+		_virusMGR.delegate = self;
+	}
+	
+	return self;
+	
+}
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -137,62 +157,26 @@
 	{
 		cVirus *aVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
 		
-		self._deletingVirus = aVirus;
-		//HTTP POST Delete Virus
-		//post call
-		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-		NSString *urlstring = [NSString stringWithFormat:@"%@deleteVirus.php",player._serverIP];
-		NSURL *url = [NSURL URLWithString:urlstring];
+		self.navigationItem.leftBarButtonItem.enabled = FALSE;
+		self._createVirusButton.enabled = FALSE;
+		self._deleteVirusButton.enabled = FALSE;
+		self._selectVirusButton.enabled = FALSE;
 		
-		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-		[request setPostValue:player._username forKey:@"username"];
-		[request setPostValue:aVirus._virusName forKey:@"virus_name"];
-		
-		[request setDidFinishSelector:@selector(DeleteVirusDidFinished:)];
-		[request setDidFailSelector:@selector(DeleteVirusDidFailed:)];
-		
-		[request setDelegate:self];
-		[request startAsynchronous];
-		
-		[aVirus release];
+		[self._virusMGR DeleteVirus:aVirus];
 	}
 	
 
 }
 
+- (void)UpdateCallBack {
 
-
-- (void)DeleteVirusDidFinished:(ASIHTTPRequest *)request {
-	
-	if ([[request responseString] isEqualToString:@"TRUE"])
-	{
-		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-		
-		for( cVirus *virus in player._viruses )
-		{
-			if ([virus._virusName isEqualToString:self._deletingVirus._virusName])
-			{
-				[player._viruses removeObject:virus];
-				if ([player._currentVirus._virusName isEqualToString:self._deletingVirus._virusName])
-				{
-					player._currentVirus = nil;
-					self._currentVirusLabel.text = @"";
-				}
-				break;
-			}
-		}
-		
-		[self._virusSelectTable reloadData];
-	}
-	
-	
-	
-}
-
-- (void)DeleteVirusDidFailed:(ASIHTTPRequest *)request {
-	
-	//CONNECTION FAILED
-	NSLog(@"Delete Error");
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	self._currentVirusLabel.text = player._currentVirus._virusName;
+	[self._virusSelectTable reloadData];
+	self.navigationItem.leftBarButtonItem.enabled = TRUE;
+	self._createVirusButton.enabled = TRUE;
+	self._deleteVirusButton.enabled = TRUE;
+	self._selectVirusButton.enabled = TRUE;
 }
 
 
@@ -200,6 +184,8 @@
 - (IBAction)SelectVirusButtonPressed {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	
+	//Must check for something in array or retrieving indexPath will crash
 	if ([player._viruses count] > 0)
 	{
 		NSIndexPath *indexPath = [self._virusSelectTable indexPathForSelectedRow];

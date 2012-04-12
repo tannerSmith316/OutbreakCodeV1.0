@@ -16,7 +16,43 @@
 
 @synthesize delegate;
 
+- (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password {
 
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	NSString *urlstring = [NSString stringWithFormat:@"%@createAccount.php",player._serverIP];
+	NSURL *url = [NSURL URLWithString:urlstring];
+	
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	[request setPostValue:username forKey:@"username"];
+	[request setPostValue:password forKey:@"password"];
+	
+	[request setDidFinishSelector:@selector(RegisterDidFinished:)];
+	[request setDidFailSelector:@selector(RegisterDidFailed:)];
+	
+	[request setDelegate:self];
+	[request startAsynchronous];
+}
+
+- (void)RegisterDidFinished:(ASIHTTPRequest *)request {
+	
+	//Account name was not taken and has been registered for the user
+	if ([[request responseString] isEqualToString:@"TRUE"])
+	{
+		[delegate UpdateCallBack:@"HURRY UP AND LOGIN YOU COW"];
+	}
+	//The request account name is already in use, advise user to choose another
+	else
+	{
+		[delegate UpdateCallBack:@"PICK ANOTHER"];
+	}
+	
+}
+
+- (void)RegisterDidFailed:(ASIHTTPRequest *)request {
+	
+	[delegate UpdateCallBack:@"Cannot Connect to SERVER"];
+	
+}
 
 - (void)LoginWithUsername:(NSString *)username Password:(NSString *)password {
 	
@@ -40,12 +76,6 @@
 	[request setDelegate:self];
 	[request startAsynchronous];
 	
-	
-	/******************************
-	 RETURN THESE TO VIEW CONTROLLER
-	 
-	
-	 *******************************/
 }
 
 

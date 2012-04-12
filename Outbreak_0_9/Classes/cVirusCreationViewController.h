@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "cVirusManager.h"
 
 @interface cVirusCreationViewController : UIViewController {
 	
@@ -26,9 +26,11 @@
 	NSString *_zonePoints;
 	NSString *_virusType;
 	
+	cVirusManager *_virusMGR;
 	
 }
 
+@property (nonatomic, retain)cVirusManager *_virusMGR;
 @property (nonatomic, retain)NSString *_virusName;
 @property (nonatomic, retain)NSString *_instantPoints;
 @property (nonatomic, retain)NSString *_zonePoints;

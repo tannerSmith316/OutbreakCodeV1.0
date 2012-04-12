@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "cPlayerManager.h"
 
 @interface cRegisterViewController : UIViewController<UITextFieldDelegate> {
 
@@ -18,8 +18,11 @@
 	IBOutlet UILabel *_errorMessage;
 	IBOutlet UIActivityIndicatorView *_whirligig;
 	
+	cPlayerManager *_playerMGR;
+	
 }
 
+@property (nonatomic, retain)cPlayerManager *_playerMGR;
 @property (nonatomic, retain)UITextField *_usernameField;
 @property (nonatomic, retain)UITextField *_passwordField;
 @property (nonatomic, retain)UITextField *_passwordField2;
@@ -28,5 +31,5 @@
 @property (nonatomic, retain)UIActivityIndicatorView *_whirligig;
 
 
-- (IBAction)RegisterPost:(id) sender;
+- (IBAction)RegisterButtonPressed:(id) sender;
 @end

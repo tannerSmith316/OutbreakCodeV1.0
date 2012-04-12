@@ -19,5 +19,6 @@
 
 - (void)LoginWithUsername:(NSString *)username Password:(NSString *)password;
 - (void)Logout;
+- (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password;
 
 @end

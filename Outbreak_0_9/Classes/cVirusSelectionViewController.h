@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cVirus.h"
-
+@class cVirusManager;
 
 @interface cVirusSelectionViewController : UIViewController {
 
@@ -21,12 +21,17 @@
 	IBOutlet UILabel *_currentVirusLabel;
 	
 	cVirus *_deletingVirus;
+	cVirusManager *_virusMGR;
 }
 
+@property (nonatomic, retain)cVirusManager *_virusMGR;
 @property (nonatomic, retain)cVirus *_deletingVirus;
 @property (nonatomic, retain)UITableView *_virusSelectTable;
 @property (nonatomic, retain)UILabel *_currentVirusLabel;
 @property (nonatomic, retain)NSArray *_viruses;
+@property (nonatomic, retain)IBOutlet UIButton *_createVirusButton;
+@property (nonatomic, retain)IBOutlet UIButton *_deleteVirusButton;
+@property (nonatomic, retain)IBOutlet UIButton *_selectVirusButton;
 
 - (IBAction)CreateVirusButtonPressed;
 - (IBAction)DeleteVirusButtonPressed;

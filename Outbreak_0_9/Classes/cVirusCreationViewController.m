@@ -15,6 +15,7 @@
 
 @implementation cVirusCreationViewController
 
+@synthesize _virusMGR;
 @synthesize _instantSlider;
 @synthesize _zoneSlider;
 @synthesize _helpTextView;
@@ -28,6 +29,20 @@
 @synthesize _virusType;
 @synthesize _createButton;
 
+
+- (id)init {
+	
+	self = [super init];
+	if (self != nil)
+	{
+		//custom inits here
+		_virusMGR = [[cVirusManager alloc]init];
+		_virusMGR.delegate = self;
+	}
+	
+	return self;
+	
+}
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -130,73 +145,35 @@
 	else
 	{
 		//Save all ui fields to view controller variables
-		self._zonePoints =  [NSString stringWithFormat:@"%d", (int)self._zoneSlider.value];
-		self._instantPoints = [NSString stringWithFormat:@"%d", (int)self._instantSlider.value];
-		self._virusName = [NSString stringWithString:self._virusNameField.text];
-		self._virusType = [NSString stringWithString: [self._typeSwitcher titleForSegmentAtIndex:[self._typeSwitcher selectedSegmentIndex]]];
+		cVirus *aVirus = [[cVirus alloc]init];
+		aVirus._zonePoints =  [NSString stringWithFormat:@"%d", (int)self._zoneSlider.value];
+		aVirus._instantPoints = [NSString stringWithFormat:@"%d", (int)self._instantSlider.value];
+		aVirus._virusName = [NSString stringWithString:self._virusNameField.text];
+		aVirus._virusType = [NSString stringWithString: [self._typeSwitcher titleForSegmentAtIndex:[self._typeSwitcher selectedSegmentIndex]]];
 		
 		//disable button
 		self._createButton.enabled = FALSE;
 		
 		//post call
-		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-		NSString *urlstring = [NSString stringWithFormat:@"%@createVirus.php",player._serverIP];
-		NSURL *url = [NSURL URLWithString:urlstring];
-		
-		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-		[request setPostValue:player._username forKey:@"username"];
-		[request setPostValue:self._virusName forKey:@"virus_name"];
-		[request setPostValue:self._instantPoints forKey:@"instant_points"];
-		[request setPostValue:self._zonePoints forKey:@"zone_points"];
-		[request setPostValue:self._virusType forKey:@"virus_type"];
-		
-		[request setDidFinishSelector:@selector(CreationDidFinished:)];
-		[request setDidFailSelector:@selector(CreationDidFailed:)];
-		
-		[request setDelegate:self];
-		[request startAsynchronous];
-		NSLog(@"Post: Virus Creation");
+		[_virusMGR CreateVirus:aVirus]; 
 	}
 
 }
 
-- (void)CreationDidFinished:(ASIHTTPRequest *)request {
+- (void)UpdateCallBack:(BOOL)wasCreated {
 
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._createButton.enabled = TRUE;
-	NSString *virusMade = [NSString stringWithString:[request responseString]];
-	
-	//Virus was created succesfully
-	if ([virusMade isEqualToString:@"TRUE"])
+	if (wasCreated)
 	{
-		cVirus *newVirus = [[cVirus alloc] init];
-		newVirus._virusName = self._virusName;
-		newVirus._instantPoints = [NSNumber numberWithInt:[self._instantPoints intValue]];
-		newVirus._zonePoints = [NSNumber numberWithInt:[self._zonePoints intValue]];
-		newVirus._virusType = self._virusType;
-		newVirus._owner = player._username;
-		
-		//Save to playersingleton array of viruses
-		
-		[player._viruses addObject:newVirus];
-		
-		[newVirus release];
-		NSLog(@"Post: Virus Creation - Succesful:Added Virus to players Array");
 		[self.navigationController popViewControllerAnimated:YES];
 	}
-	//The request account name is already in use, advise user to choose another
 	else
 	{
-		self._helpTextView.text = [NSString stringWithString:virusMade];
+		self._helpTextView.text = @"Cannot connect to server";
 	}
-	
+
 }
 
-- (void)CreationDidFailed:(ASIHTTPRequest *)request {
-	
-	self._helpTextView.text = [NSString stringWithString:@"Cannot Connect to SERVER"];
-	self._createButton.enabled = TRUE;
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	
