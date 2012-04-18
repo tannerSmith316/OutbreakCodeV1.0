@@ -15,35 +15,60 @@
 @synthesize _virus;
 @synthesize delegate;
 
-- (void)SelectVirus:(cVirus *)aVirus {
+- (id)init {
 	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	self = [super init];
+	if (self != nil)
+	{
+
+	}
+	
+	return self;
 	
 }
+
 
 - (void)CreateVirus:(cVirus *)aVirus {
 	
 	self._virus = aVirus;
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	NSString *urlstring = [NSString stringWithFormat:@"%@createVirus.php",player._serverIP];
-	NSURL *url = [NSURL URLWithString:urlstring];
+	if ([player doesOwnVirus:aVirus])
+	{
+		/*
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Creation Error!" message:[NSString stringWithFormat:@"No duplicate virus names"] delegate:nil cancelButtonTitle:@"Aww!" otherButtonTitles:nil] autorelease];
+		[alert show];
+		[delegate UpdateCallBack:FALSE];
+		 */
+		 
+	}
+	else
+	{
+		NSString *urlstring = [NSString stringWithFormat:@"%@createVirus.php",player._serverIP];
+		NSURL *url = [NSURL URLWithString:urlstring];
+		
+		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+		[request setPostValue:player._username forKey:@"username"];
+		[request setPostValue:aVirus._virusName forKey:@"virus_name"];
+		[request setPostValue:aVirus._instantPoints forKey:@"instant_points"];
+		[request setPostValue:aVirus._zonePoints forKey:@"zone_points"];
+		[request setPostValue:aVirus._virusType forKey:@"virus_type"];
+		
+		[request setDidFinishSelector:@selector(CreationDidFinished:)];
+		[request setDidFailSelector:@selector(CreationDidFailed:)];
+		[request setDelegate:self];
+		
+		//SET TO SYNCHRONOUS WHEN TESTING
+		[request startSynchronous];
+		//[request startAsynchronous];
+		NSLog(@"Post: Virus Creation");
+	}
+
 	
-	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setPostValue:player._username forKey:@"username"];
-	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
-	[request setPostValue:aVirus._instantPoints forKey:@"instant_points"];
-	[request setPostValue:aVirus._zonePoints forKey:@"zone_points"];
-	[request setPostValue:aVirus._virusType forKey:@"virus_type"];
-	
-	[request setDidFinishSelector:@selector(CreationDidFinished:)];
-	[request setDidFailSelector:@selector(CreationDidFailed:)];
-	
-	[request setDelegate:self];
-	[request startAsynchronous];
-	NSLog(@"Post: Virus Creation");
 }
 
+
+//TODO: request needs to return json virus that was created so MGR doesn't store locally
 - (void)CreationDidFinished:(ASIHTTPRequest *)request {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -59,7 +84,11 @@
 		NSLog(@"Post: Virus Creation - Succesful:Added Virus to players Array");
 	}
 	
-	[delegate UpdateCallBack:TRUE];
+	
+	if (delegate != nil)
+	{
+		[delegate UpdateCallBack:TRUE];
+	}
 	
 }
 
@@ -85,7 +114,10 @@
 	[request setDidFailSelector:@selector(DeleteVirusDidFailed:)];
 	
 	[request setDelegate:self];
-	[request startAsynchronous];
+	
+	//SET TO SYNCHRONOUS WHEN TESTING
+	[request startSynchronous];
+	//[request startAsynchronous];
 	
 	[aVirus release];
 }
@@ -121,6 +153,14 @@
 	//CONNECTION FAILED
 	NSLog(@"Delete Error");
 	[delegate CallBackDelete];
+}
+
+- (void)SelectVirus:(cVirus *)aVirus {
+
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	
+	player._currentVirus = aVirus;
+	[delegate UpdateCallBack];
 }
 
 

@@ -36,7 +36,6 @@
 	
 	//startupdateloc starts core location
 	[CLController.locMgr startUpdatingLocation];
-	
 }
 
 
@@ -151,7 +150,10 @@
 	[request setPostValue:player._longitude forKey:@"longitude"];
 	[request setPostValue:range forKey:@"range"];
 	[request setDelegate:self];
-	[request startAsynchronous];
+	
+	//SET TO SYNCHRONOUS WHEN TESTING
+	[request startSynchronous];
+	//[request startAsynchronous];
 	//recieve json
 	//return array of playes
 	
@@ -241,20 +243,6 @@
 	{
 		player._infectedWith = nil;
 	}
-	
-	/*for ( NSDictionary * each_virus in jsonDict ) 
-	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		NSString *virusOwner = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_owner"]];
-		//Needs to retrieve more virus info
-		cVirus *virus = [[cVirus alloc] init];
-		virus._virusName = virusName;
-		virus._owner = virusOwner;
-		player._infectedWith = virus;
-		[virus release];
-	}*/
-	
-	
 	
 }
 

@@ -16,6 +16,18 @@
 
 @synthesize delegate;
 
+- (id)init {
+	
+	self = [super init];
+	if (self != nil)
+	{
+
+	}
+	
+	return self;
+	
+}
+
 - (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -74,11 +86,12 @@
 	[request setDidFailSelector:@selector(LoginDidFailed:)];
 	
 	[request setDelegate:self];
-	[request startAsynchronous];
+	
+	//SYNCHRONOUS FOR TESTING
+	[request startSynchronous];
+	//[request startAsynchronous];
 	
 }
-
-
 
 - (void)LoginDidFinished:(ASIHTTPRequest *)request {
 	
@@ -91,13 +104,6 @@
 		
 		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 		
-		//Save succesful credentials to flat file for auto-login
-		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
-		NSString *successfulCredentials = [NSString stringWithFormat:@"%@\n%@", player._username, player._password];
-		[successfulCredentials writeToFile:myFilePath atomically:YES];
-		
-		
 		//Load JSON data into singleton
 		NSString *jsonString = [NSString stringWithString:[request responseString]];
 		//Parse the json
@@ -107,31 +113,35 @@
 		
 		[self parsePlayerJson:deserializedData];
 		
+		//Save succesful credentials to flat file for auto-login
 		
-		//Push main VC
-		cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
-		mainScreen.title = @"Main";
 		
-		UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
+		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+		NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
+		NSString *successfulCredentials = [NSString stringWithFormat:@"%@\n%@", player._username, player._password];
+		[successfulCredentials writeToFile:myFilePath atomically:YES];
 		
-		mainScreen.navigationItem.leftBarButtonItem = backButton;
-		[backButton release];
-		NSLog(@"POST: Login Succesful");
-		
-		[delegate CallBackLoginDidFinished];
+		if (delegate != nil)
+		{
+			[delegate CallBackLoginDidFinished];
+		}
+		 
+		 
 	}
 	else
 	{
 		NSLog(@"Invalid Login Credentials");
-		[delegate CallBackLoginFailed];
+		if (delegate != nil)
+		{
+			[delegate CallBackLoginFailed];
+		}
+		
 	}
-	
-	
-	//posted back here
-	//if passed login check
-	//
-	
-	
+	 
+}
+
+- (void)LoginDidFailed:(ASIHTTPRequest *)request {
+
 }
 
 //Parses returned json and sets playsingleton with data retrieved
@@ -158,7 +168,7 @@
 	//Set playerSingleton viruses
 	player._viruses = viruses;
 	
-	
+	[viruses release];
 	
 	NSDictionary *playerInfectedWith = [playerDict objectForKey:@"infected_with"];
 	
@@ -174,8 +184,12 @@
 		//Set playersingleton infectedWith
 		player._infectedWith = infectedWith;
 	}
+}
+
+- (void)Logout {
 	
-	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	[player ResetInstance];
 }
 
 @end

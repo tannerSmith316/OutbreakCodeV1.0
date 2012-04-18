@@ -14,7 +14,7 @@ static cPlayerSingleton *_player = nil;
 @implementation cPlayerSingleton
 @synthesize _infectedWith;
 @synthesize _viruses;
-@synthesize _name;
+
 @synthesize _currentVirus;
 @synthesize _latitude;
 @synthesize _longitude;
@@ -47,15 +47,13 @@ static cPlayerSingleton *_player = nil;
 
 	if (_player != nil)
 	{
-		_infectedWith = nil;
-		_viruses = nil;
-		_name = nil;
-		_currentVirus =nil;
-		_latitude =nil;
-		_longitude =nil;
-		_password =nil;
-		_username =nil;
-		
+		self._infectedWith = nil;
+		[self._viruses removeAllObjects];
+		self._currentVirus =nil;
+		self._latitude =nil;
+		self._longitude =nil;
+		self._password =nil;
+		self._username =nil;
 	}
 	
 }
@@ -66,9 +64,10 @@ static cPlayerSingleton *_player = nil;
 	{
 		//LAN : 192.168.10.200
 		//WAN : 66.189.145.171
-		self._serverIP = [NSString stringWithFormat:@"http://66.189.145.171/"];
+		self._serverIP = [NSString stringWithFormat:@"http://192.168.10.200/"];
 		_locationMGR = [[cLocationManager alloc] init];
 		_infectionMGR = [[cInfectionManager alloc] init];
+		_viruses = [[NSMutableArray alloc] init];
 		_MINDISTANCE = [[NSNumber alloc] initWithInt:50000];
 		_MAXDISTANCE = [[NSNumber alloc] initWithInt:65000];
 		_MINTIME = [[NSNumber alloc] initWithInt:30];
@@ -132,6 +131,17 @@ static cPlayerSingleton *_player = nil;
 }
  */
 
+- (BOOL)doesOwnVirus:(cVirus *)aVirus {
+	
+	for( cVirus *virus in self._viruses )
+	{
+		if ([virus._virusName isEqual:aVirus._virusName])
+		{
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
 
 - (void)dealloc {
 	

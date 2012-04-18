@@ -109,41 +109,11 @@
 		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", self._username, self._password);
 		//autologin here
 		
-		//[self LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
-		
 		[_playerMGR LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
-		
-		
 	}
 }
 
-- (void)LoginWithUsername:(NSString *)username Password:(NSString *)password {
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	//Moves variables out to view controller
-	NSString *urlstring = [NSString stringWithFormat:@"%@login.php",player._serverIP];
-	NSURL *url = [NSURL URLWithString:urlstring];
-	
-	NSLog(@"POST: Login; Username=%@ ; Password=%@", username, password);
-	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setPostValue:username forKey:@"username"];
-	[request setPostValue:password forKey:@"password"];
-	
-	[request setDidFinishSelector:@selector(LoginDidFinished:)];
-	[request setDidFailSelector:@selector(LoginDidFailed:)];
-	
-	[request setDelegate:self];
-	[request startAsynchronous];
-	
-	
-	_loginIndicator.hidden = FALSE;
-	[_loginIndicator startAnimating];
-	
-	//make call to 
-	
-	_loginButton.enabled = FALSE;
-	_registerButton.enabled = FALSE;
-}
+
 
 - (IBAction)LoginButtonPressed:(id)sender
 {
@@ -199,15 +169,6 @@
 	self._loginError.text = @"Bad login credentials";
 	_loginButton.enabled = TRUE;
 	_registerButton.enabled = TRUE;
-	[_loginIndicator stopAnimating];
-	_loginIndicator.hidden = TRUE;
-}
-										  
-- (void)LoginDidFailed:(ASIHTTPRequest *)request {
-	
-	_loginButton.enabled = TRUE;
-	_registerButton.enabled = TRUE;
-	_loginError.text = @"FAILED CONNECTION";
 	[_loginIndicator stopAnimating];
 	_loginIndicator.hidden = TRUE;
 }

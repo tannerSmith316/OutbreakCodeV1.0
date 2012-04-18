@@ -137,6 +137,7 @@
 
 - (IBAction)CreateButtonPressed {
 	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	//TODO: Need to check name against list of users current viruses locally
 	if ([self._virusNameField.text length] == 0)
 	{
@@ -146,16 +147,16 @@
 	{
 		//Save all ui fields to view controller variables
 		cVirus *aVirus = [[cVirus alloc]init];
-		aVirus._zonePoints =  [NSString stringWithFormat:@"%d", (int)self._zoneSlider.value];
-		aVirus._instantPoints = [NSString stringWithFormat:@"%d", (int)self._instantSlider.value];
+		aVirus._zonePoints =  [NSNumber numberWithInt:(int)self._zoneSlider.value];
+		aVirus._instantPoints = [NSNumber numberWithInt:(int)self._instantSlider.value];
 		aVirus._virusName = [NSString stringWithString:self._virusNameField.text];
 		aVirus._virusType = [NSString stringWithString: [self._typeSwitcher titleForSegmentAtIndex:[self._typeSwitcher selectedSegmentIndex]]];
 		
 		//disable button
 		self._createButton.enabled = FALSE;
-		
 		//post call
 		[_virusMGR CreateVirus:aVirus]; 
+
 	}
 
 }

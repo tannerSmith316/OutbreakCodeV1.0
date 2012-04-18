@@ -44,7 +44,6 @@
 		729F6FAA15007BDB0046355F /* credentials.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729F6FA915007BDB0046355F /* credentials.txt */; };
 		729F703A150088540046355F /* cRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F7038150088540046355F /* cRegisterViewController.m */; };
 		729F703B150088540046355F /* cRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729F7039150088540046355F /* cRegisterViewController.xib */; };
-		72A2E89615367C2C0024B2D3 /* iLocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */; };
 		72A2E906153680100024B2D3 /* cPlayerSingleton.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F95150073BA0046355F /* cPlayerSingleton.h */; };
 		72A2E907153680100024B2D3 /* cPlayerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F6F96150073BA0046355F /* cPlayerSingleton.m */; };
 		72A2E90C1536802E0024B2D3 /* cLocationManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B015057F8600A4A2AB /* cLocationManager.h */; };
@@ -87,7 +86,6 @@
 		72A2E9391536810E0024B2D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		72A2E93A153681130024B2D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		72A2E93B1536811C0024B2D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		72A2E94F1536826D0024B2D3 /* iInfectionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */; };
 		72A2E9531536848F0024B2D3 /* iPlayerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */; };
 		72A2E9571536851F0024B2D3 /* iVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A2E9561536851F0024B2D3 /* iVirusManager.m */; };
 		72A2EA411536A2090024B2D3 /* cVirusManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8571516CBAD00ECACEB /* cVirusManager.h */; };
@@ -97,6 +95,28 @@
 		72A3B3B71505816A00A4A2AB /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B61505816A00A4A2AB /* CoreLocationController.m */; };
 		72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8581516CBAD00ECACEB /* cVirusManager.m */; };
 		72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932B150D9A6000F67811 /* cInfectionManager.m */; };
+		72F4BE5C153D23F60016DD44 /* cPlayerManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 727118AE14FEA2F400EAD166 /* cPlayerManager.h */; };
+		72F4BE5D153D23F60016DD44 /* cPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 727118AF14FEA2F400EAD166 /* cPlayerManager.m */; };
+		72F4BF0A153DFA240016DD44 /* JSONKit.h in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA79150854E9008E980E /* JSONKit.h */; };
+		72F4BF0B153DFA240016DD44 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA7A150854E9008E980E /* JSONKit.m */; };
+		72F4BF58153E1A360016DD44 /* cInfectViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA0A15084560008E980E /* cInfectViewController.h */; };
+		72F4BF59153E1A360016DD44 /* cInfectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA0B15084560008E980E /* cInfectViewController.m */; };
+		72F4BFB4153E5AC20016DD44 /* cVirusCreationViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAE150C299300DD393D /* cVirusCreationViewController.xib */; };
+		72F4BFB5153E5AC20016DD44 /* cLoginViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 727118A214FEA1F300EAD166 /* cLoginViewController.xib */; };
+		72F4BFB6153E5AC20016DD44 /* cVirusSelectionViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 72233BF7150C115900DD393D /* cVirusSelectionViewController.xib */; };
+		72F4BFB7153E5AC20016DD44 /* cInfectViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 728DEA0C15084560008E980E /* cInfectViewController.xib */; };
+		72F4BFB8153E5AC20016DD44 /* cMainScreenViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 722211F41502FFD900D77DCF /* cMainScreenViewController.xib */; };
+		72F4BFB9153E5AC20016DD44 /* cRegisterViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 729F7039150088540046355F /* cRegisterViewController.xib */; };
+		72F4BFBC153E5ADA0016DD44 /* cLoginViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 727118A014FEA1F300EAD166 /* cLoginViewController.h */; };
+		72F4BFBD153E5ADA0016DD44 /* cLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727118A114FEA1F300EAD166 /* cLoginViewController.m */; };
+		72F4BFBE153E5ADA0016DD44 /* cRegisterViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 729F7037150088540046355F /* cRegisterViewController.h */; };
+		72F4BFBF153E5ADA0016DD44 /* cRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729F7038150088540046355F /* cRegisterViewController.m */; };
+		72F4BFC0153E5ADA0016DD44 /* cMainScreenViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 722211F21502FFD900D77DCF /* cMainScreenViewController.h */; };
+		72F4BFC1153E5ADA0016DD44 /* cMainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722211F31502FFD900D77DCF /* cMainScreenViewController.m */; };
+		72F4BFC2153E5ADA0016DD44 /* cVirusSelectionViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72233BF5150C115900DD393D /* cVirusSelectionViewController.h */; };
+		72F4BFC3153E5ADA0016DD44 /* cVirusSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233BF6150C115900DD393D /* cVirusSelectionViewController.m */; };
+		72F4BFC4153E5ADA0016DD44 /* cVirusCreationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAC150C299300DD393D /* cVirusCreationViewController.h */; };
+		72F4BFC5153E5ADA0016DD44 /* cVirusCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAD150C299300DD393D /* cVirusCreationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,8 +196,6 @@
 		729F7039150088540046355F /* cRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cRegisterViewController.xib; sourceTree = "<group>"; };
 		72A2E88F15367BFB0024B2D3 /* InterfaceUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaceUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A2E89015367BFB0024B2D3 /* InterfaceUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterfaceUnitTests-Info.plist"; sourceTree = "<group>"; };
-		72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLocationManagerTests.m; sourceTree = "<group>"; };
-		72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iInfectionManagerTests.m; sourceTree = "<group>"; };
 		72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPlayerManagerTests.m; sourceTree = "<group>"; };
 		72A2E9561536851F0024B2D3 /* iVirusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVirusManager.m; sourceTree = "<group>"; };
 		72A3B3B015057F8600A4A2AB /* cLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cLocationManager.h; sourceTree = "<group>"; };
@@ -370,10 +388,10 @@
 			isa = PBXGroup;
 			children = (
 				72233CAE150C299300DD393D /* cVirusCreationViewController.xib */,
+				727118A214FEA1F300EAD166 /* cLoginViewController.xib */,
 				72233BF7150C115900DD393D /* cVirusSelectionViewController.xib */,
 				728DEA0C15084560008E980E /* cInfectViewController.xib */,
 				722211F41502FFD900D77DCF /* cMainScreenViewController.xib */,
-				727118A214FEA1F300EAD166 /* cLoginViewController.xib */,
 				729F7039150088540046355F /* cRegisterViewController.xib */,
 			);
 			name = UI;
@@ -401,8 +419,6 @@
 		72A2E85F15367A660024B2D3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				72A2E89515367C2C0024B2D3 /* iLocationManagerTests.m */,
-				72A2E94E1536826D0024B2D3 /* iInfectionManagerTests.m */,
 				72A2E9521536848F0024B2D3 /* iPlayerManagerTests.m */,
 				72A2E9561536851F0024B2D3 /* iVirusManager.m */,
 			);
@@ -553,10 +569,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A2E914153680510024B2D3 /* cVictim.h in Sources */,
+				72F4BFBC153E5ADA0016DD44 /* cLoginViewController.h in Sources */,
+				72F4BFBD153E5ADA0016DD44 /* cLoginViewController.m in Sources */,
+				72F4BFBE153E5ADA0016DD44 /* cRegisterViewController.h in Sources */,
+				72F4BFBF153E5ADA0016DD44 /* cRegisterViewController.m in Sources */,
+				72F4BFC0153E5ADA0016DD44 /* cMainScreenViewController.h in Sources */,
+				72F4BF0A153DFA240016DD44 /* JSONKit.h in Sources */,
+				72F4BF0B153DFA240016DD44 /* JSONKit.m in Sources */,
+				72F4BFC1153E5ADA0016DD44 /* cMainScreenViewController.m in Sources */,
+				72F4BF58153E1A360016DD44 /* cInfectViewController.h in Sources */,
+				72F4BF59153E1A360016DD44 /* cInfectViewController.m in Sources */,
+				72F4BFC2153E5ADA0016DD44 /* cVirusSelectionViewController.h in Sources */,
+				72F4BFC3153E5ADA0016DD44 /* cVirusSelectionViewController.m in Sources */,
+				72F4BFC4153E5ADA0016DD44 /* cVirusCreationViewController.h in Sources */,
+				72F4BFC5153E5ADA0016DD44 /* cVirusCreationViewController.m in Sources */,
+				72A2E915153680510024B2D3 /* cVictim.m in Sources */,
+				72A2E916153680510024B2D3 /* cVirus.h in Sources */,
+				72A2E917153680510024B2D3 /* cVirus.m in Sources */,
 				72A2E912153680510024B2D3 /* CoreLocationController.h in Sources */,
+				72A2E913153680510024B2D3 /* CoreLocationController.m in Sources */,
+				72F4BE5C153D23F60016DD44 /* cPlayerManager.h in Sources */,
+				72F4BFB4153E5AC20016DD44 /* cVirusCreationViewController.xib in Sources */,
+				72F4BFB5153E5AC20016DD44 /* cLoginViewController.xib in Sources */,
+				72F4BFB6153E5AC20016DD44 /* cVirusSelectionViewController.xib in Sources */,
+				72F4BFB7153E5AC20016DD44 /* cInfectViewController.xib in Sources */,
+				72F4BFB8153E5AC20016DD44 /* cMainScreenViewController.xib in Sources */,
+				72F4BFB9153E5AC20016DD44 /* cRegisterViewController.xib in Sources */,
+				72F4BE5D153D23F60016DD44 /* cPlayerManager.m in Sources */,
+				72A2E90C1536802E0024B2D3 /* cLocationManager.h in Sources */,
+				72A2E90D1536802E0024B2D3 /* cLocationManager.m in Sources */,
+				72A2E90E1536802E0024B2D3 /* cInfectionManager.h in Sources */,
+				72A2E90F1536802E0024B2D3 /* cInfectionManager.m in Sources */,
 				72A2EA411536A2090024B2D3 /* cVirusManager.h in Sources */,
 				72A2EA421536A2090024B2D3 /* cVirusManager.m in Sources */,
-				72A2E913153680510024B2D3 /* CoreLocationController.m in Sources */,
+				72A2E906153680100024B2D3 /* cPlayerSingleton.h in Sources */,
+				72A2E907153680100024B2D3 /* cPlayerSingleton.m in Sources */,
 				72A2E91A153680780024B2D3 /* Reachability.h in Sources */,
 				72A2E91B153680780024B2D3 /* Reachability.m in Sources */,
 				72A2E91C153680780024B2D3 /* ASIAuthenticationDialog.h in Sources */,
@@ -579,18 +627,6 @@
 				72A2E92D153680780024B2D3 /* ASINetworkQueue.h in Sources */,
 				72A2E92E153680780024B2D3 /* ASINetworkQueue.m in Sources */,
 				72A2E92F153680780024B2D3 /* ASIProgressDelegate.h in Sources */,
-				72A2E914153680510024B2D3 /* cVictim.h in Sources */,
-				72A2E915153680510024B2D3 /* cVictim.m in Sources */,
-				72A2E916153680510024B2D3 /* cVirus.h in Sources */,
-				72A2E917153680510024B2D3 /* cVirus.m in Sources */,
-				72A2E90C1536802E0024B2D3 /* cLocationManager.h in Sources */,
-				72A2E90D1536802E0024B2D3 /* cLocationManager.m in Sources */,
-				72A2E90E1536802E0024B2D3 /* cInfectionManager.h in Sources */,
-				72A2E90F1536802E0024B2D3 /* cInfectionManager.m in Sources */,
-				72A2E906153680100024B2D3 /* cPlayerSingleton.h in Sources */,
-				72A2E907153680100024B2D3 /* cPlayerSingleton.m in Sources */,
-				72A2E89615367C2C0024B2D3 /* iLocationManagerTests.m in Sources */,
-				72A2E94F1536826D0024B2D3 /* iInfectionManagerTests.m in Sources */,
 				72A2E9531536848F0024B2D3 /* iPlayerManagerTests.m in Sources */,
 				72A2E9571536851F0024B2D3 /* iVirusManager.m in Sources */,
 			);

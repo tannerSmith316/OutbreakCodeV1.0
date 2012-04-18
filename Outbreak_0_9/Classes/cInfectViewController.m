@@ -42,9 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	//query db
-	
-	//put into array
 }
 
 

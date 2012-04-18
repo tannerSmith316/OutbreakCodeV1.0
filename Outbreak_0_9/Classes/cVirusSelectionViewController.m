@@ -171,6 +171,7 @@
 - (void)UpdateCallBack {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	self._viruses = player._viruses;
 	self._currentVirusLabel.text = player._currentVirus._virusName;
 	[self._virusSelectTable reloadData];
 	self.navigationItem.leftBarButtonItem.enabled = TRUE;
@@ -194,7 +195,7 @@
 		cVirus *theVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
 	
 		//Set current virus to the selected one
-		player._currentVirus = theVirus;
+		[self._virusMGR SelectVirus:theVirus];
 		[theVirus release];
 	
 		//helper label: Update viewcontrollers label

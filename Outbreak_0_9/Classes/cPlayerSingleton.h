@@ -50,7 +50,6 @@
 
 @property (nonatomic, retain)NSMutableArray *_viruses;
 @property (nonatomic, retain)cVirus *_infectedWith;
-@property (nonatomic, retain)NSString *_name;
 @property (nonatomic, retain)cVirus *_currentVirus;
 @property (nonatomic, retain)NSString *_latitude;
 @property (nonatomic, retain)NSString *_longitude;
