@@ -1,0 +1,183 @@
+TInterfaceUnitTests
+v7
+r0
+t355892569.110240
+cCheck dependencies
+cProcessInfoPlistFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/Info.plist InterfaceUnitTests-Info.plist
+cCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/iLocationManagerTests.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests normal i386
+cPhaseScriptExecution "Run Script" /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Script-72A2E88D15367BFB0024B2D3.sh
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004E77C2B90000000000000110
+t1316471481
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingKit.h
+c000000004D54DEB900000000000008A5
+t1297407673
+s2213
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
+c000000004D54DEB600000000000001D0
+t1297407670
+s464
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/CoreLocationController.h
+c000000004EB0AFF4000000000000026D
+t1320202228
+s621
+i<Foundation/Foundation.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cInfectionManager.h
+c000000004F60034B00000000000001E1
+t1331692363
+s481
+i<Foundation/Foundation.h>
+i"cVictim.h"
+i"cVirus.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cLocationManager.h
+c000000004F66940000000000000002C5
+t1332122624
+s709
+i<Foundation/Foundation.h>
+i"CoreLocationController.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cPlayerSingleton.h
+c000000004F5FEAE100000000000008CE
+t1331686113
+s2254
+i<Foundation/Foundation.h>
+i"cVirus.h"
+i"cLocationManager.h"
+i"cInfectionManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVictim.h
+c000000004F5D8B1D00000000000001AA
+t1331530525
+s426
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cVirus.h
+c000000004F5EB2B5000000000000028C
+t1331606197
+s652
+i<Foundation/Foundation.h>
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.h
+c000000004F8644ED000000000000042F
+t1334199533
+s1071
+i<SenTestingKit/SenTestingKit.h>
+i"cLocationManager.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m
+c000000004F8645C70000000000000233
+t1334199751
+s563
+i<SenTestingKit/SenTestingKit.h>
+i"cPlayerSingleton.h"
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest
+t2
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest.dSYM
+t2
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/Info.plist
+t1334199768
+s464
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests
+t2
+s0
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/InterfaceUnitTests.LinkFileList
+c000000004F8645D800000000000000B0
+t1334199768
+s176
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/iLocationManagerTests.o
+t1334199751
+s13844
+
+N/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Script-72A2E88D15367BFB0024B2D3.sh
+c000000004F8645D80000000000000062
+t1334199768
+s98
+
+NInterfaceUnitTests-Info.plist
+c000000004F86447B0000000000000281
+t1334199419
+s641
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies355892568#355892568#0(0"0(0#1#0"8625170432#0"0#
+
+CCompileC build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/iLocationManagerTests.o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s355892568.985795
+e355892568.986868
+r1
+xCompileC
+xbuild/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/iLocationManagerTests.o
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m355892568#355892568#0(0"0(0#0#91"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m8620745824#2383"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/InterfaceUnitTests-generated-files.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/InterfaceUnitTests-own-target-headers.hmap -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/InterfaceUnitTests-all-target-headers.hmap -iquote /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/InterfaceUnitTests-project-headers.hmap -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/DerivedSources/i386 -I/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/DerivedSources -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/iLocationManagerTests.m -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/iLocationManagerTests.o0#
+
+CGenerateDSYMFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest.dSYM /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests
+r0
+
+CLd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests normal i386
+s355892568.986936
+e355892569.006384
+r0
+xLd
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests
+xnormal
+xi386
+oUndefined symbols:
+o  "_OBJC_CLASS_$_cPlayerSingleton", referenced from:
+o      objc-class-ref-to-cPlayerSingleton in iLocationManagerTests.o
+old: symbol(s) not found
+ocollect2: ld returned 1 exit status
+lSLF07#2@137"Link /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests355892568#355892569#0(200"Undefined symbols:  "_OBJC_CLASS_$_cPlayerSingleton", referenced from:      objc-class-ref-to-cPlayerSingleton in iLocationManagerTests.old: symbol(s) not foundcollect2: ld returned 1 exit status4(4@50""_OBJC_CLASS_$_cPlayerSingleton", referenced from:355892569#19#53#0(6@0"355892569#0#0#0#0#0"0(13@61"Objc-class-ref-to-cPlayerSingleton in iLocationManagerTests.o355892569#72#68#0(6@0"355892569#0#0#0#0#0"0(13@19"Symbol(s) not found355892569#140#24#0(6@0"355892569#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status355892569#164#36#0(6@0"355892569#0#0#0#0#0"0(0#0#0"8625666080#1296"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -bundle -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -F/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks -filelist /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/InterfaceUnitTests.LinkFileList -mmacosx-version-min=10.6 -framework Foundation -framework SenTestingKit -framework UIKit -Xlinker -objc_abi_version -Xlinker 2 -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/InterfaceUnitTests1#
+
+CPhaseScriptExecution "Run Script" /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Script-72A2E88D15367BFB0024B2D3.sh
+s355892569.006482
+e355892569.110188
+r0
+xPhaseScriptExecution
+xRun Script
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Script-72A2E88D15367BFB0024B2D3.sh
+o/Developer/Tools/RunPlatformUnitTests.include:412: note: Started tests for architectures 'i386'
+o/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)
+o2012-04-11 20:02:49.103 otest[1618:903] The executable for the test bundle at /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest could not be found.
+o/Developer/Tools/RunPlatformUnitTests.include:448: error: Failed tests for architecture 'i386' (GC OFF)
+o/Developer/Tools/RunPlatformUnitTests.include:462: note: Completed tests for architectures 'i386'
+lSLF07#2@36"Run custom shell script 'Run Script'355892569#355892569#1(20@47"Run unit tests for architecture 'i386' (GC OFF)355892569#355892569#0(420"/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)2012-04-11 20:02:49.103 otest[1618:903] The executable for the test bundle at /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest could not be found./Developer/Tools/RunPlatformUnitTests.include:448: error: Failed tests for architecture 'i386' (GC OFF)1(4@45"Failed tests for architecture 'i386' (GC OFF)355892569#18446744073709551615#0#0(6@0"355892569#0#0#0#0#0"0(0#0#0"0"103"/Developer/Tools/RunPlatformUnitTests.include:448: error: Failed tests for architecture 'i386' (GC OFF)0"614"/Developer/Tools/RunPlatformUnitTests.include:412: note: Started tests for architectures 'i386'/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)2012-04-11 20:02:49.103 otest[1618:903] The executable for the test bundle at /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest could not be found./Developer/Tools/RunPlatformUnitTests.include:448: error: Failed tests for architecture 'i386' (GC OFF)/Developer/Tools/RunPlatformUnitTests.include:462: note: Completed tests for architectures 'i386'0(0#0#0"8625176640#19202"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER mckenziekurtz    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build    setenv BUILD_ROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator    setenv CACHE_ROOT /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest    setenv CODE_SIGN_CONTEXT_CLASS XCCodeSignContext    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH InterfaceUnitTests.octest    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH InterfaceUnitTests.octest/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/Outbreak_0_9.dst    setenv DWARF_DSYM_FILE_NAME InterfaceUnitTests.octest.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH InterfaceUnitTests.octest/Executables    setenv EXECUTABLE_FOLDER_PATH InterfaceUnitTests.octest    setenv EXECUTABLE_NAME InterfaceUnitTests    setenv EXECUTABLE_PATH InterfaceUnitTests.octest/InterfaceUnitTests    setenv FILE_LIST /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH InterfaceUnitTests.octest/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/Developer/Library/Frameworks"    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME InterfaceUnitTests.octest    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE NO    setenv GCC_ENABLE_OBJC_EXCEPTIONS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION 4.2    setenv GCC_VERSION_IDENTIFIER __2    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/include\" "    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE InterfaceUnitTests-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH InterfaceUnitTests.octest/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH InterfaceUnitTests.octest/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/Outbreak_0_9.dst    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER mckenziekurtz    setenv INSTALL_ROOT /tmp/Outbreak_0_9.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH InterfaceUnitTests.octest/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/InterfaceUnitTests-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal/i386/InterfaceUnitTests.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH InterfaceUnitTests.octest/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_bundle    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549    setenv MAC_OS_X_VERSION_ACTUAL 1068    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0608    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Objects-normal    setenv OBJROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-framework Foundation -framework SenTestingKit -framework UIKit"    setenv PACKAGE_TYPE com.apple.package-type.wrapper    setenv PASCAL_STRINGS YES    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH InterfaceUnitTests.octest/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/PkgInfo    setenv PKGINFO_PATH InterfaceUnitTests.octest/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PRODUCT_BUILD_VERSION 8F192    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 40300    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH InterfaceUnitTests.octest/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH InterfaceUnitTests.octest/PrivateHeaders    setenv PRODUCT_NAME InterfaceUnitTests    setenv PRODUCT_SETTINGS_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/InterfaceUnitTests-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.bundle    setenv PROFILING_CODE NO    setenv PROJECT Outbreak_0_9    setenv PROJECT_DERIVED_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/DerivedSources    setenv PROJECT_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PROJECT_FILE_PATH /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Outbreak_0_9.xcodeproj    setenv PROJECT_NAME Outbreak_0_9    setenv PROJECT_TEMP_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build    setenv PUBLIC_HEADERS_FOLDER_PATH InterfaceUnitTests.octest/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH InterfaceUnitTests.octest/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_NAME iphonesimulator4.3    setenv SDK_PRODUCT_BUILD_VERSION 8F192    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH InterfaceUnitTests.octest/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/RY/RYc+Xo4aGEKe2k99R1i0Gk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH InterfaceUnitTests.octest/SharedSupport    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv SRCROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE non-global    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SYMBOL_REPOSITORY_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/SymbolRepositories    setenv SYMROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1    setenv TARGETNAME InterfaceUnitTests    setenv TARGET_BUILD_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator    setenv TARGET_NAME InterfaceUnitTests    setenv TARGET_TEMP_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build    setenv TEMP_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build    setenv TEMP_FILES_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build    setenv TEMP_FILE_DIR /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build    setenv TEMP_ROOT /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH InterfaceUnitTests.octest    setenv UNSTRIPPED_PRODUCT NO    setenv USER mckenziekurtz    setenv USER_APPS_DIR /Users/mckenziekurtz/Applications    setenv USER_LIBRARY_DIR /Users/mckenziekurtz/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH InterfaceUnitTests.octest/version.plist    setenv VERSION_INFO_BUILDER mckenziekurtz    setenv VERSION_INFO_FILE InterfaceUnitTests_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:InterfaceUnitTests  PROJECT:Outbreak_0_9-\""    setenv WRAPPER_EXTENSION octest    setenv WRAPPER_NAME InterfaceUnitTests.octest    setenv WRAPPER_SUFFIX .octest    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2518    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    setenv _REAL_SDKROOT iphoneos    /bin/sh -c /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Outbreak_0_9.build/Debug-iphonesimulator/InterfaceUnitTests.build/Script-72A2E88D15367BFB0024B2D3.sh1#
+
+CProcessInfoPlistFile /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/Info.plist InterfaceUnitTests-Info.plist
+s355892568.982769
+e355892568.985682
+r1
+xProcessInfoPlistFile
+x/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/Info.plist
+xInterfaceUnitTests-Info.plist
+lSLF07#2@37"Process InterfaceUnitTests-Info.plist355892568#355892568#0(0"0(0#0#89"/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/InterfaceUnitTests-Info.plist8625136704#447"    cd /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility InterfaceUnitTests-Info.plist -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest/Info.plist0#
+
+CTouch /Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/build/Debug-iphonesimulator/InterfaceUnitTests.octest
+r0
+
