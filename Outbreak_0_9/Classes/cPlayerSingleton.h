@@ -13,12 +13,15 @@
 
 @interface cPlayerSingleton : NSObject {
 	
-	NSNumber *_MAXDISTANCE;
+	NSNumber *_MAXDISTANCE; //range of instant spread in meters
 	NSNumber *_MINDISTANCE;
-	NSNumber *_MAXHOTSPOTRANGE;
+	NSNumber *_MAXHOTSPOTRANGE; //range of hotspot zone in meters
 	NSNumber *_MINHOTSPOTRANGE;
-	NSNumber *_MAXTIME;
+	NSNumber *_MAXTIME; //time hotspot lingers in seconds
 	NSNumber *_MINTIME;
+    NSNumber *_MAXSITTIME; //amount of time to sit before a hotspot it laid
+    NSNumber *_MINSITTIME;
+    NSNumber *_MAXMOVEDIST; //amount of distance to move before player is considered no longer sitting
 	//login username
 	NSString *_username;
 	//login password
@@ -65,6 +68,9 @@
 @property (nonatomic, retain)NSNumber *_MINTIME;
 @property (nonatomic, retain)NSNumber *_MAXHOTSPOTRANGE;
 @property (nonatomic, retain)NSNumber *_MINHOTSPOTRANGE;
+@property (nonatomic, retain)NSNumber *_MINSITTIME;
+@property (nonatomic, retain)NSNumber *_MAXSITTIME;
+@property (nonatomic, retain)NSNumber *_MAXMOVEDIST;
 
 //@property (nonatomic, getter=_isTimerActive)BOOL _isTimerActive;
 

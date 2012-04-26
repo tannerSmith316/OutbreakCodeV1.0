@@ -14,14 +14,14 @@
 
 @implementation cInfectionManager
 
-
+@synthesize _hotspotTimer;
 
 - (id)init {
 	
 	self = [super init];
 	if (self != nil)
 	{
-		
+		_hotspotTimer = [[cHotspotTimer alloc] init];
 	}
 	
 	return self;
@@ -70,7 +70,7 @@
 
 - (void)LayHotspot {
 	
-	
+    NSLog(@"Laying some hotspots(before POST)");
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	NSString *urlappended = [NSString stringWithFormat:@"%@layHotspot.php", player._serverIP];
 	NSURL *url = [NSURL URLWithString:urlappended];
@@ -84,12 +84,12 @@
 	
 	//THIS IS A COMMENT FOR SEAN -------- NEEDS VIRUS ID RIGHT HERE DONT LOOK AWWAY THIS NEEDS YOUR ATTENTION NOW
 	//(zone/100)*(max-min) + min
-	float rangeFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXHOTSPOTRANGE floatValue] - [player._MINHOTSPOTRANGE floatValue]) + [player._MINHOTSPOTRANGE floatValue];
+	float rangeFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINHOTSPOTRANGE floatValue] - [player._MAXHOTSPOTRANGE floatValue]) + [player._MAXHOTSPOTRANGE floatValue];
 	NSNumber *range = [NSNumber numberWithFloat:rangeFloat];
 	
 	NSString *rangeString = [NSString stringWithFormat:@"%@", range];
 	
-	float durationFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXTIME floatValue] - [player._MINTIME floatValue]) + [player._MINTIME floatValue];
+	float durationFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINTIME floatValue] - [player._MAXTIME floatValue]) + [player._MAXTIME floatValue];
 	NSNumber *durationNum = [NSNumber numberWithFloat:durationFloat];
 	
 	[request setPostValue:[NSString stringWithFormat:@"%@", durationNum] forKey:@"duration"];
@@ -109,6 +109,8 @@
 
 	//layed it
 	NSLog(@"%@", [request responseString]);
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player._infectionMGR._hotspotTimer ResetTimer];
 }
 
 - (void)HotspotDidFailed:(ASIHTTPRequest *)request {
@@ -128,9 +130,6 @@
 		cVictim *myself = [[cVictim alloc] init];
 		myself._username = player._username;
 		
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",enemyVirus._virusName, enemyVirus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
-		[alert addButtonWithTitle:@"Quit it"];
-		[alert show];
 		player._infectedWith = enemyVirus;
 		[self PersistInfection:enemyVirus WithVictim:myself];
 	}

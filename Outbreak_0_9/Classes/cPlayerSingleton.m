@@ -7,7 +7,6 @@
 //
 
 #import "cPlayerSingleton.h"
-//#import "cLocationManager.h"
 
 static cPlayerSingleton *_player = nil;
 
@@ -30,6 +29,9 @@ static cPlayerSingleton *_player = nil;
 @synthesize _MINTIME;
 @synthesize _MAXHOTSPOTRANGE;
 @synthesize _MINHOTSPOTRANGE;
+@synthesize _MINSITTIME;
+@synthesize _MAXSITTIME;
+@synthesize _MAXMOVEDIST;
 
 + (cPlayerSingleton *)GetInstance {
 	@synchronized(self) {
@@ -54,6 +56,7 @@ static cPlayerSingleton *_player = nil;
 		self._longitude =nil;
 		self._password =nil;
 		self._username =nil;
+        [_player._infectionMGR._hotspotTimer._hotspotTimer invalidate];
 	}
 	
 }
@@ -68,12 +71,15 @@ static cPlayerSingleton *_player = nil;
 		_locationMGR = [[cLocationManager alloc] init];
 		_infectionMGR = [[cInfectionManager alloc] init];
 		_viruses = [[NSMutableArray alloc] init];
-		_MINDISTANCE = [[NSNumber alloc] initWithInt:50000];
-		_MAXDISTANCE = [[NSNumber alloc] initWithInt:65000];
-		_MINTIME = [[NSNumber alloc] initWithInt:30];
-		_MAXTIME = [[NSNumber alloc] initWithInt:300];
-		_MINHOTSPOTRANGE = [[NSNumber alloc] initWithInt:50];
-		_MAXHOTSPOTRANGE = [[NSNumber alloc] initWithInt:500];
+		_MINDISTANCE = [[NSNumber alloc] initWithInt:100]; //100
+		_MAXDISTANCE = [[NSNumber alloc] initWithInt:1000]; //1000
+		_MINTIME = [[NSNumber alloc] initWithInt:300]; //300
+		_MAXTIME = [[NSNumber alloc] initWithInt:7200]; //7200
+		_MINHOTSPOTRANGE = [[NSNumber alloc] initWithInt:10]; //10
+		_MAXHOTSPOTRANGE = [[NSNumber alloc] initWithInt:100]; //100
+        _MAXSITTIME = [[NSNumber alloc] initWithInt:300]; //30
+        _MINSITTIME = [[NSNumber alloc] initWithInt:3]; //300
+        _MAXMOVEDIST = [[NSNumber alloc] initWithInt:20];
 		//_isTimerActive = FALSE;
 	}
 	return self;
@@ -157,6 +163,9 @@ static cPlayerSingleton *_player = nil;
 	[_MINTIME release];
 	[_MAXDISTANCE release];
 	[_MINDISTANCE release];
+    [_MAXSITTIME release];
+    [_MINSITTIME release];
+    [_MAXMOVEDIST release];
 	[super dealloc];
 }
 

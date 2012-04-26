@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "cVictim.h"
 #import "cVirus.h"
-
+#import "cHotspotTimer.h"
 
 @interface cInfectionManager : NSObject {
 
-	
+	cHotspotTimer *_hotspotTimer;
 		
 }
+
+@property (nonatomic, retain)cHotspotTimer *_hotspotTimer;
 
 - (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim;
 - (void)LayHotspot;

@@ -7,6 +7,7 @@
 //
 
 #import "cHotspotTimer.h"
+#import "cPlayerSingleton.h"
 
 @implementation cHotspotTimer
 
@@ -29,10 +30,22 @@
 }
 
 - (void)StopTimer {
-    _hotspotTimer = [NSTimer scheduledTimerWithTimeInterval:_interval target:NULL selector:@selector userInfo:<#(id)#> repeats:<#(BOOL)#>
+    
+    [_hotspotTimer invalidate];
 }
 
 - (void)ResetTimer {
+
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    float sitTime = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINSITTIME floatValue] - [player._MAXSITTIME floatValue]) + [player._MAXSITTIME floatValue];
+    self._interval = [NSNumber numberWithFloat:sitTime];
+    if([self._hotspotTimer isValid])
+    {
+        [self._hotspotTimer invalidate];
+        
+    }
+
+    self._hotspotTimer = [NSTimer scheduledTimerWithTimeInterval:[_interval intValue] target:player._infectionMGR selector:@selector(LayHotspot) userInfo:nil repeats:NO];
     
 }
 

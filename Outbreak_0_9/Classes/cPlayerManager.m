@@ -142,6 +142,7 @@
 
 - (void)LoginDidFailed:(ASIHTTPRequest *)request {
 
+    [delegate CallBackLoginFailed];
 }
 
 //Parses returned json and sets playsingleton with data retrieved

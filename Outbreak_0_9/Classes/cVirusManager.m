@@ -159,6 +159,8 @@
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
+    [player._infectionMGR._hotspotTimer ResetTimer];
+    
 	player._currentVirus = aVirus;
 	[delegate UpdateCallBack];
 }
