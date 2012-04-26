@@ -122,6 +122,7 @@
 
 - (void)PersistLocationDidFailed:(ASIHTTPRequest *)request {
 	
+    
 }
 
 - (void)dealloc {

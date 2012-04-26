@@ -67,7 +67,7 @@ static cPlayerSingleton *_player = nil;
 	{
 		//LAN : 192.168.10.200
 		//WAN : 66.189.145.171
-		self._serverIP = [NSString stringWithFormat:@"http://192.168.10.200/"];
+		self._serverIP = [NSString stringWithFormat:@"http://66.189.145.171/"];
 		_locationMGR = [[cLocationManager alloc] init];
 		_infectionMGR = [[cInfectionManager alloc] init];
 		_viruses = [[NSMutableArray alloc] init];
