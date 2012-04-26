@@ -88,8 +88,8 @@
 	[request setDelegate:self];
 	
 	//SYNCHRONOUS FOR TESTING
-	[request startSynchronous];
-	//[request startAsynchronous];
+	//[request startSynchronous];
+	[request startAsynchronous];
 	
 }
 
