@@ -37,7 +37,7 @@
 - (void)ResetTimer {
 
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-    float sitTime = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINSITTIME floatValue] - [player._MAXSITTIME floatValue]) + [player._MAXSITTIME floatValue];
+    float sitTime = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXSITTIME floatValue] - [player._MINSITTIME floatValue]) + [player._MINSITTIME floatValue];
     self._interval = [NSNumber numberWithFloat:sitTime];
     if([self._hotspotTimer isValid])
     {

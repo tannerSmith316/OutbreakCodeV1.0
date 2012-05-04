@@ -59,8 +59,8 @@
 		[request setDelegate:self];
 		
 		//SET TO SYNCHRONOUS WHEN TESTING
-		[request startSynchronous];
-		//[request startAsynchronous];
+		//[request startSynchronous];
+		[request startAsynchronous];
 		NSLog(@"Post: Virus Creation");
 	}
 

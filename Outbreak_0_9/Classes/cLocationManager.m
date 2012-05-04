@@ -227,7 +227,7 @@
 		virus._virusName = virusName;
 		virus._owner = virusOwner;
         
-        player._infectedWith = virus;
+        
 		
 		if (player._infectedWith == nil)
 		{
@@ -237,7 +237,7 @@
 			
 		}
 		
-		
+		player._infectedWith = virus;
 		
 		
 		[virus release];

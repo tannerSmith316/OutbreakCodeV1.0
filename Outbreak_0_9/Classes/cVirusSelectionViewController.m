@@ -147,6 +147,11 @@
 		createview.title = @"Viruses";
 		[self.navigationController pushViewController:createview animated:YES];
 	}
+    else 
+    {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Maximum Capacity" message:[NSString stringWithFormat:@"Maximum of 5 viruses reached!"] delegate:nil cancelButtonTitle:@"Aww!" otherButtonTitles:nil] autorelease];
+        [alert show];
+    }
 	
 }
 

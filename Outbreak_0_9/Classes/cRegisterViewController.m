@@ -67,6 +67,7 @@
 	
 	self._errorMessage.text = msg;
 	self._whirligig.hidden = TRUE;
+    self._registerButton.enabled = TRUE;
 	[_whirligig stopAnimating];
 }
 

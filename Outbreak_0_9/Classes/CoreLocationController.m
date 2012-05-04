@@ -12,7 +12,7 @@
 	if(self != nil) {
 		self.locMgr = [[[CLLocationManager alloc] init] autorelease];
 		self.locMgr.delegate = self;
-		self.locMgr.desiredAccuracy = kCLLocationAccuracyBest;
+		//self.locMgr.desiredAccuracy = kCLLocationAccuracyBest;
 	}
 	
 	return self;
@@ -34,7 +34,8 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-	if([self.delegate conformsToProtocol:@protocol(CoreLocationControllerDelegate)]) {
+	
+    if([self.delegate conformsToProtocol:@protocol(CoreLocationControllerDelegate)]) {
 		[self.delegate locationError:error];
 	}
 }

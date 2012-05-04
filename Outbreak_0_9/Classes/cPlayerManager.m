@@ -154,14 +154,19 @@
 	
 	//Retrieve information from the deserialized json string
 	NSDictionary *playerViruses = [playerDict objectForKey:@"viruses"];
-	//Iterate through virus data
+	
+    
+    //Iterate through virus data BEING FIXED NOE
 	for ( NSDictionary * each_virus in playerViruses ) 
 	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
+        
 		//Needs to retrieve more virus info
 		cVirus *virus = [[cVirus alloc] init];
-		virus._virusName = virusName;
+		virus._virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
 		virus._owner = player._username;
+        virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
+        virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
+        virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
 		
 		[viruses addObject:virus];
 		[virus release];
@@ -184,6 +189,8 @@
 		infectedWith._owner = virusOwner;
 		//Set playersingleton infectedWith
 		player._infectedWith = infectedWith;
+        
+        
 	}
 }
 

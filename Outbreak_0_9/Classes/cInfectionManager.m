@@ -60,6 +60,7 @@
 - (void)InfectionDidFinished:(ASIHTTPRequest *)request {
 	
 
+    
 
 }
 
@@ -84,12 +85,12 @@
 	
 	//THIS IS A COMMENT FOR SEAN -------- NEEDS VIRUS ID RIGHT HERE DONT LOOK AWWAY THIS NEEDS YOUR ATTENTION NOW
 	//(zone/100)*(max-min) + min
-	float rangeFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINHOTSPOTRANGE floatValue] - [player._MAXHOTSPOTRANGE floatValue]) + [player._MAXHOTSPOTRANGE floatValue];
+	float rangeFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXHOTSPOTRANGE floatValue] - [player._MINHOTSPOTRANGE floatValue]) + [player._MINHOTSPOTRANGE floatValue];
 	NSNumber *range = [NSNumber numberWithFloat:rangeFloat];
 	
 	NSString *rangeString = [NSString stringWithFormat:@"%@", range];
 	
-	float durationFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MINTIME floatValue] - [player._MAXTIME floatValue]) + [player._MAXTIME floatValue];
+	float durationFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXTIME floatValue] - [player._MINTIME floatValue]) + [player._MINTIME floatValue];
 	NSNumber *durationNum = [NSNumber numberWithFloat:durationFloat];
 	
 	[request setPostValue:[NSString stringWithFormat:@"%@", durationNum] forKey:@"duration"];
@@ -111,6 +112,14 @@
 	NSLog(@"%@", [request responseString]);
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     [player._infectionMGR._hotspotTimer ResetTimer];
+    
+    if ([[request responseString] isEqualToString:@"TRUE"]) {
+        
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Hotspot Laid!"] delegate:nil cancelButtonTitle:@"Ok!" otherButtonTitles:nil] autorelease];
+        [alert show];
+    }
+    
+    
 }
 
 - (void)HotspotDidFailed:(ASIHTTPRequest *)request {
@@ -131,6 +140,7 @@
 		myself._username = player._username;
 		
 		player._infectedWith = enemyVirus;
+  
 		[self PersistInfection:enemyVirus WithVictim:myself];
 	}
 }
