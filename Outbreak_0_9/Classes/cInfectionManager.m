@@ -105,7 +105,7 @@
 	[request setPostValue:activeVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
-	[request setPostValue:player._username forKey:@"username"];
+	[request setPostValue:activeVirus._owner forKey:@"username"];
 	
     [activeVirus release];
 
@@ -149,9 +149,16 @@
 		cVictim *myself = [[cVictim alloc] init];
 		myself._username = player._username;
 		
-		player._infectedWith = enemyVirus;
+        if(player._infectedWith == nil)
+        {
+            player._infectedWith = enemyVirus;
+            [self PersistInfection:enemyVirus WithVictim:myself];
+            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",enemyVirus._virusName, enemyVirus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
+            [alert addButtonWithTitle:@"Quit it"];
+            [alert show];
   
-		[self PersistInfection:enemyVirus WithVictim:myself];
+            
+        }
 	}
 }
 

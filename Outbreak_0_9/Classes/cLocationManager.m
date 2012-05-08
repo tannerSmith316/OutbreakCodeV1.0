@@ -1,4 +1,4 @@
-//
+ //
 //  cLocationManager.m
 //  Outbreak_0_9
 //
@@ -193,6 +193,36 @@
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
+    NSDictionary *infectedWithViruses = [jsonDict objectForKey:@"infections"];
+	for ( NSDictionary *each_virus in infectedWithViruses )
+	{
+		
+		//Needs to retrieve more virus info
+		cVirus *virus = [[cVirus alloc] init];
+		virus._virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
+		virus._owner = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_owner"]];
+        virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
+        virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
+        virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
+        
+		if (player._infectedWith == nil)
+		{
+            player._infectedWith = virus;
+			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",virus._virusName, virus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
+			[alert addButtonWithTitle:@"Quit it"];
+			[alert show];
+			
+		}
+        
+		
+		[virus release];
+	}
+    
+    if([infectedWithViruses count] == 0)
+    {
+        player._infectedWith = nil;
+    }
+
 	//Retrieve information from the deserialized json string
 	NSDictionary *hotspots = [jsonDict objectForKey:@"hotspots"];
 	for ( NSDictionary *hotspot in hotspots )
@@ -212,42 +242,8 @@
 			[player._infectionMGR DefendInfection:enemyVirus];
 		}
 		
-		
-		
-		
 	}
 	
-	NSDictionary *infectedWithViruses = [jsonDict objectForKey:@"infections"];
-	for ( NSDictionary *each_virus in infectedWithViruses )
-	{
-		
-		//Needs to retrieve more virus info
-		cVirus *virus = [[cVirus alloc] init];
-		virus._virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		virus._owner = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_owner"]];
-        virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
-        virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
-        virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
-        
-        
-		
-		if (player._infectedWith == nil)
-		{
-			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",virus._virusName, virus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
-			[alert addButtonWithTitle:@"Quit it"];
-			[alert show];
-			
-		}
-		
-		player._infectedWith = virus;
-		
-		
-		[virus release];
-	}
-	if ([infectedWithViruses count] == 0 )
-	{
-		player._infectedWith = nil;
-	}
 	
 }
 
