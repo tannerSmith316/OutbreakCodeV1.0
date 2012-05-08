@@ -81,25 +81,33 @@
 	[request setDidFinishSelector:@selector(HotspotDidFinished:)];
 	[request setDidFailSelector:@selector(HotspotDidFailed:)];
 	
+    cVirus *activeVirus;
+    if (player._infectedWith) {
+        activeVirus = [[cVirus alloc] initWithVirus:player._infectedWith];
+    }
+    else {
+        activeVirus = [[cVirus alloc] initWithVirus:player._currentVirus];
+    }
 	
 	
 	//THIS IS A COMMENT FOR SEAN -------- NEEDS VIRUS ID RIGHT HERE DONT LOOK AWWAY THIS NEEDS YOUR ATTENTION NOW
 	//(zone/100)*(max-min) + min
-	float rangeFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXHOTSPOTRANGE floatValue] - [player._MINHOTSPOTRANGE floatValue]) + [player._MINHOTSPOTRANGE floatValue];
+	float rangeFloat = ([activeVirus._zonePoints floatValue] / 100) * ([player._MAXHOTSPOTRANGE floatValue] - [player._MINHOTSPOTRANGE floatValue]) + [player._MINHOTSPOTRANGE floatValue];
 	NSNumber *range = [NSNumber numberWithFloat:rangeFloat];
 	
 	NSString *rangeString = [NSString stringWithFormat:@"%@", range];
 	
-	float durationFloat = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXTIME floatValue] - [player._MINTIME floatValue]) + [player._MINTIME floatValue];
+	float durationFloat = ([activeVirus._zonePoints floatValue] / 100) * ([player._MAXTIME floatValue] - [player._MINTIME floatValue]) + [player._MINTIME floatValue];
 	NSNumber *durationNum = [NSNumber numberWithFloat:durationFloat];
 	
 	[request setPostValue:[NSString stringWithFormat:@"%@", durationNum] forKey:@"duration"];
 	[request setPostValue:rangeString forKey:@"range"];
-	[request setPostValue:player._currentVirus._virusName forKey:@"virus_name"];
+	[request setPostValue:activeVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
 	[request setPostValue:player._username forKey:@"username"];
 	
+    [activeVirus release];
 
 	 //	[request setPostValue forKey:
 	[request setDelegate:self];
@@ -110,6 +118,8 @@
 
 	//layed it
 	NSLog(@"%@", [request responseString]);
+    NSString* test = [NSString stringWithString:[request responseString]];
+    if(test) {}
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     [player._infectionMGR._hotspotTimer ResetTimer];
     

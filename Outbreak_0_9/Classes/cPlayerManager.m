@@ -50,12 +50,12 @@
 	//Account name was not taken and has been registered for the user
 	if ([[request responseString] isEqualToString:@"TRUE"])
 	{
-		[delegate UpdateCallBack:@"HURRY UP AND LOGIN YOU COW"];
+		[delegate UpdateCallBack:@"Account Created"];
 	}
 	//The request account name is already in use, advise user to choose another
 	else
 	{
-		[delegate UpdateCallBack:@"PICK ANOTHER"];
+		[delegate UpdateCallBack:@"Name Taken"];
 	}
 	
 }
@@ -180,17 +180,17 @@
 	
 	for( NSDictionary *each_virus in playerInfectedWith )
 	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		NSString *virusOwner = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_owner"]];
-		//Needs to retrieve more data
-		
+		//Needs to retrieve more virus info
 		cVirus *infectedWith = [[cVirus alloc] init];
-		infectedWith._virusName = virusName;
-		infectedWith._owner = virusOwner;
+		infectedWith._virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
+		infectedWith._owner = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_owner"]];
+        infectedWith._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
+        infectedWith._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
+        infectedWith._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
 		//Set playersingleton infectedWith
 		player._infectedWith = infectedWith;
         
-        
+        [infectedWith release];
 	}
 }
 

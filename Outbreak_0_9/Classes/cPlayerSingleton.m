@@ -67,18 +67,18 @@ static cPlayerSingleton *_player = nil;
 	{
 		//LAN : 192.168.10.200
 		//WAN : 66.189.145.171
-		self._serverIP = [NSString stringWithFormat:@"http://66.189.145.171/"];
+		self._serverIP = [NSString stringWithFormat:@"http://192.168.10.200/"];
 		_locationMGR = [[cLocationManager alloc] init];
 		_infectionMGR = [[cInfectionManager alloc] init];
 		_viruses = [[NSMutableArray alloc] init];
-		_MINDISTANCE = [[NSNumber alloc] initWithInt:10000000]; //100
-		_MAXDISTANCE = [[NSNumber alloc] initWithInt:10000000]; //1000
+		_MINDISTANCE = [[NSNumber alloc] initWithInt:100]; //100
+		_MAXDISTANCE = [[NSNumber alloc] initWithInt:1000]; //1000
 		_MINTIME = [[NSNumber alloc] initWithInt:300]; //300
 		_MAXTIME = [[NSNumber alloc] initWithInt:7200]; //7200
 		_MINHOTSPOTRANGE = [[NSNumber alloc] initWithInt:10]; //10
 		_MAXHOTSPOTRANGE = [[NSNumber alloc] initWithInt:100]; //100
-        _MAXSITTIME = [[NSNumber alloc] initWithInt:3]; //30
-        _MINSITTIME = [[NSNumber alloc] initWithInt:3]; //300
+        _MINSITTIME = [[NSNumber alloc] initWithInt:3]; //30
+        _MAXSITTIME = [[NSNumber alloc] initWithInt:300]; //300
         _MAXMOVEDIST = [[NSNumber alloc] initWithInt:20];
 		//_isTimerActive = FALSE;
 	}

@@ -13,6 +13,7 @@
 @interface cVirusSelectionViewController : UIViewController {
 
 	IBOutlet UITableView *_virusSelectTable;
+    IBOutlet UITextView *_virusStatsText;
 	IBOutlet UIButton *_createVirusButton;
 	IBOutlet UIButton *_deleteVirusButton;
 	IBOutlet UIButton *_selectVirusButton;
@@ -24,6 +25,7 @@
 	cVirusManager *_virusMGR;
 }
 
+@property (nonatomic, retain)IBOutlet UITextView *_virusStatsText;
 @property (nonatomic, retain)cVirusManager *_virusMGR;
 @property (nonatomic, retain)cVirus *_deletingVirus;
 @property (nonatomic, retain)UITableView *_virusSelectTable;

@@ -18,6 +18,7 @@
 
 @implementation cVirusSelectionViewController
 
+@synthesize _virusStatsText;
 @synthesize _virusMGR;
 @synthesize _viruses;
 @synthesize _deletingVirus;
@@ -55,7 +56,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	self._virusStatsText.editable = FALSE;
 	
 }
 
@@ -65,6 +66,9 @@
 	self._viruses = player._viruses;
 	[_virusSelectTable reloadData];
 	self._currentVirusLabel.text = player._currentVirus._virusName;
+   
+    if(player._currentVirus)
+        self._virusStatsText.text = [NSString stringWithString:[player._currentVirus GetStats]];
 }
 
 
@@ -116,7 +120,8 @@
 //Victim has been chosen for infection attempt
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    NSString *buffer = [NSString stringWithString:[[_viruses objectAtIndex:indexPath.row] GetStats]];
+    self._virusStatsText.text = buffer;
 }
 
 - (void)didReceiveMemoryWarning {

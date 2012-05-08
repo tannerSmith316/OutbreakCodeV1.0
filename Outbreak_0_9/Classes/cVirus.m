@@ -30,4 +30,11 @@
 	return self;
 }
 
+- (NSString *)GetStats {
+    NSString *formattedStats = [NSString stringWithFormat:@"Name:%@\nType:%@\nInstant Points:%@\nZone Points:%@", _virusName, _virusType, _instantPoints, _zonePoints];
+    
+    return formattedStats;
+                                
+}
+
 @end

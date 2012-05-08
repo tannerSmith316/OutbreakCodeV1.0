@@ -24,6 +24,7 @@
 @property (nonatomic, retain)NSNumber *_zonePoints;
 @property (nonatomic, retain)NSString *_virusName;
 
-//- (cVictim *)initWithVirus:(cVirus *)aVirus;
+- (cVirus *)initWithVirus:(cVirus *)aVirus;
+- (NSString *)GetStats;
 
 @end

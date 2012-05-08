@@ -153,7 +153,7 @@
 	[request setDelegate:self];
 	
 	//SET TO SYNCHRONOUS WHEN TESTING
-	[request startSynchronous];
+	[request startAsynchronous];
 	//[request startAsynchronous];
 	//recieve json
 	//return array of playes
@@ -220,18 +220,20 @@
 	NSDictionary *infectedWithViruses = [jsonDict objectForKey:@"infections"];
 	for ( NSDictionary *each_virus in infectedWithViruses )
 	{
-		NSString *virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
-		NSString *virusOwner = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_owner"]];
+		
 		//Needs to retrieve more virus info
 		cVirus *virus = [[cVirus alloc] init];
-		virus._virusName = virusName;
-		virus._owner = virusOwner;
+		virus._virusName = [NSString stringWithFormat:@"%@",[each_virus objectForKey:@"virus_name"]];
+		virus._owner = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_owner"]];
+        virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
+        virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
+        virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
         
         
 		
 		if (player._infectedWith == nil)
 		{
-			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",virusName, virusOwner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
+			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",virus._virusName, virus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
 			[alert addButtonWithTitle:@"Quit it"];
 			[alert show];
 			

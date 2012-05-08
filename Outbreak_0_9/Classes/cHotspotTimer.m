@@ -37,7 +37,16 @@
 - (void)ResetTimer {
 
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-    float sitTime = ([player._currentVirus._zonePoints floatValue] / 100) * ([player._MAXSITTIME floatValue] - [player._MINSITTIME floatValue]) + [player._MINSITTIME floatValue];
+    
+    cVirus *activeVirus;
+    if (player._infectedWith) {
+        activeVirus = [[cVirus alloc] initWithVirus:player._infectedWith];
+    }
+    else {
+        activeVirus = [[cVirus alloc] initWithVirus:player._currentVirus];
+    }
+    
+    float sitTime = ([activeVirus._zonePoints floatValue] / 100) * ([player._MINSITTIME floatValue] - [player._MAXSITTIME floatValue]) + [player._MAXSITTIME floatValue];
     self._interval = [NSNumber numberWithFloat:sitTime];
     if([self._hotspotTimer isValid])
     {
@@ -45,6 +54,8 @@
         
     }
 
+    [activeVirus release];
+    
     self._hotspotTimer = [NSTimer scheduledTimerWithTimeInterval:[_interval intValue] target:player._infectionMGR selector:@selector(LayHotspot) userInfo:nil repeats:NO];
     
 }

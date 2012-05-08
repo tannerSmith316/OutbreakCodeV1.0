@@ -58,6 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self AttemptAutoLogin];
+    self._loginIndicator.hidesWhenStopped = TRUE;
 
 
 }

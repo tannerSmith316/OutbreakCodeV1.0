@@ -116,7 +116,7 @@
 	[request setDelegate:self];
 	
 	//SET TO SYNCHRONOUS WHEN TESTING
-	[request startSynchronous];
+	[request startAsynchronous];
 	//[request startAsynchronous];
 	
 	[aVirus release];
@@ -159,9 +159,10 @@
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
-    [player._infectionMGR._hotspotTimer ResetTimer];
+
     
 	player._currentVirus = aVirus;
+    [player._infectionMGR._hotspotTimer ResetTimer];
 	[delegate UpdateCallBack];
 }
 
