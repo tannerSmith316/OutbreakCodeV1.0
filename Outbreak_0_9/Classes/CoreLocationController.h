@@ -2,7 +2,7 @@
 //  CoreLocationController.h
 //  CoreLocationDemo
 //
-//  Created by McKenzie Kurtz on 11/1/11.
+//  Created by iGeek Developers on 11/1/11.
 //  Copyright 2011 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -12,15 +12,14 @@
 
 @protocol CoreLocationControllerDelegate
 @required
-
 - (void)locationUpdate:(CLLocation *)location;
 - (void)locationError:(NSError *)error;
-
 @end
 
 
 @interface CoreLocationController : NSObject <CLLocationManagerDelegate> {
-	CLLocationManager *locMgr;
+	//Apple Core Location Manager
+    CLLocationManager *locMgr;
 	id delegate;
 }
 

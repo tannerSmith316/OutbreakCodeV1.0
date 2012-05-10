@@ -2,7 +2,7 @@
 //  cMainScreenViewController.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/3/12.
+//  Created by iGeek Developers on 3/3/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -14,19 +14,16 @@
 	IBOutlet UIButton *_infectScreenButton;
 	IBOutlet UIButton *_virusScreenButton;
 	IBOutlet UILabel *_infectedWithLabel;
-	IBOutlet UIButton *_hotspotButton;
 }
 
 @property (nonatomic, retain)UIButton *_infectScreenButton;
 @property (nonatomic, retain)UIButton *_virusScreenButton;
 @property (nonatomic, retain)UILabel *_infectedWithLabel;
-@property (nonatomic, retain)UIButton *_hotspotButton;
 
+//Programmatically handled button event handler
 - (void)LogoutBackButton;
+//Interface builder button event handlers
 - (IBAction)InfectScreenButtonPressed;
 - (IBAction)VirusScreenButtonPressed;
-- (IBAction)HotspotButtonPressed;
-
-- (IBAction)HealInfection;
 
 @end

@@ -10,23 +10,27 @@
 #import "cPlayerSingleton.h"
 
 @implementation cHotspotTimer
-
 @synthesize  _hotspotTimer;
 @synthesize _latitude;
 @synthesize _longitude;
 @synthesize _interval;
 
 - (id)init {
-    
     self = [super init];
 	if (self != nil)
 	{
-        self._latitude = [[NSString alloc] init];
-        self._longitude = [[NSString alloc] init];
-        self._interval = [[NSNumber alloc] init];
+        _latitude = [[NSString alloc] init];
+        _longitude = [[NSString alloc] init];
+        _interval = [[NSNumber alloc] init];
 	}
-	
 	return self;
+}
+ 
+- (void)dealloc {
+    [_latitude release];
+    [_longitude release];
+    [_interval release];
+    [super dealloc];
 }
 
 - (void)StopTimer {
@@ -34,19 +38,25 @@
     [_hotspotTimer invalidate];
 }
 
+//Uses the player's current virus to determine timer intervals and starts timer
 - (void)ResetTimer {
-
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
+    //Will use enemy virus if the player is infect
     cVirus *activeVirus;
-    if (player._infectedWith) {
+    if (player._infectedWith) 
+    {
         activeVirus = [[cVirus alloc] initWithVirus:player._infectedWith];
     }
-    else {
+    else 
+    {
         activeVirus = [[cVirus alloc] initWithVirus:player._currentVirus];
     }
     
-    float sitTime = ([activeVirus._zonePoints floatValue] / 100) * ([player._MINSITTIME floatValue] - [player._MAXSITTIME floatValue]) + [player._MAXSITTIME floatValue];
+    float _MINSITTIME = [NSLocalizedString(@"MINSITTIME", nil) floatValue];
+    float _MAXSITTIME = [NSLocalizedString(@"MAXSITTIME", nil) floatValue];
+    
+    float sitTime = ([activeVirus._zonePoints floatValue] / 100) * (_MINSITTIME - _MAXSITTIME) + _MAXSITTIME;
     self._interval = [NSNumber numberWithFloat:sitTime];
     if([self._hotspotTimer isValid])
     {

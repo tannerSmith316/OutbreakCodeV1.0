@@ -2,7 +2,7 @@
 //  Outbreak_0_9AppDelegate.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 2/29/12.
+//  Created by iGeek Developers on 2/29/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 

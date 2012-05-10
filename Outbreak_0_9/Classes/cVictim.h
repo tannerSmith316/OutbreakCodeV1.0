@@ -2,16 +2,18 @@
 //  cVictim.h
 //  Outbreak_0_5
 //
-//  Created by McKenzie Kurtz on 2/20/12.
+//  Created by iGeek Developers on 2/20/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-
+//holds neccasary info for passing at risk users around 
+//for possible infections
 @interface cVictim : NSObject {
 
 	NSString *_username;
+    //victims distance from player
 	NSString *_distance;
 }
 

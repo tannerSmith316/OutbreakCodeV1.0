@@ -2,7 +2,7 @@
 //  cPlayerManager.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 2/29/12.
+//  Created by iGeek Developers on 2/29/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -23,11 +23,15 @@
 
     //Represents LoginViewController
 	id delegate;
-	
 }
 
 @property (nonatomic, assign) id delegate;
 
+//Parses the playerData from the json Dict and saves
+//it to the player singleton
+- (void)ParsePlayerJson:(NSDictionary *)playerDict;
+
+//Each of these functions sends POST requests asynchronously to our web server
 - (void)LoginWithUsername:(NSString *)username Password:(NSString *)password;
 - (void)Logout;
 - (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password;

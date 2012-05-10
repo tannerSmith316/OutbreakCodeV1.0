@@ -2,7 +2,7 @@
 //  cPlayerSingleton.h
 //  Outbreak_0_5
 //
-//  Created by McKenzie Kurtz on 2/19/12.
+//  Created by iGeek Developers on 2/19/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -11,19 +11,10 @@
 #import "cLocationManager.h"
 #import "cInfectionManager.h"
 
+//This is a player singleton class that holds data needed App wide
 @interface cPlayerSingleton : NSObject {
-	
-    NSNumber *_UPDATETIMERINTERVAL;//update time interval
-	NSNumber *_MAXDISTANCE; //range of instant spread in meters
-	NSNumber *_MINDISTANCE;
-	NSNumber *_MAXHOTSPOTRANGE; //range of hotspot zone in meters
-	NSNumber *_MINHOTSPOTRANGE;
-	NSNumber *_MAXTIME; //time hotspot lingers in seconds
-	NSNumber *_MINTIME;
-    NSNumber *_MAXSITTIME; //amount of time to sit before a hotspot it laid
-    NSNumber *_MINSITTIME;
-    NSNumber *_MAXMOVEDIST; //amount of distance to move before player is considered no longer sitting
-	//login username
+
+    //login username
 	NSString *_username;
 	//login password
 	NSString *_password;
@@ -46,10 +37,9 @@
 	
 	NSTimer *_updateLocationTimer;
 	
+    //Managers for handling logical computations
 	cLocationManager *_locationMGR;
 	cInfectionManager *_infectionMGR;
-	
-	//BOOL _isTimerActive;
 }
 
 @property (nonatomic, retain)NSMutableArray *_viruses;
@@ -63,24 +53,14 @@
 @property (nonatomic, retain)NSString *_password;
 @property (nonatomic, retain)cLocationManager *_locationMGR;
 @property (nonatomic, retain)cInfectionManager *_infectionMGR;
-@property (nonatomic, retain)NSNumber *_MAXDISTANCE;
-@property (nonatomic, retain)NSNumber *_MINDISTANCE;
-@property (nonatomic, retain)NSNumber *_MAXTIME;
-@property (nonatomic, retain)NSNumber *_MINTIME;
-@property (nonatomic, retain)NSNumber *_MAXHOTSPOTRANGE;
-@property (nonatomic, retain)NSNumber *_MINHOTSPOTRANGE;
-@property (nonatomic, retain)NSNumber *_MINSITTIME;
-@property (nonatomic, retain)NSNumber *_MAXSITTIME;
-@property (nonatomic, retain)NSNumber *_MAXMOVEDIST;
-@property (nonatomic, retain)NSNumber *_UPDATETIMERINTERVAL;
-//@property (nonatomic, getter=_isTimerActive)BOOL _isTimerActive;
 
 //Public accesor for singleton class
-- (void)ResetInstance;
 + (cPlayerSingleton *)GetInstance;
+//Starts the timer for updating the users location
 - (void)StartUpdateTimer;
-
+//Empties all of player attributes
+- (void)ResetInstance;
+//Checks the virus passed in against virus's in the players virus array
 - (BOOL)doesOwnVirus:(cVirus *)aVirus;
-
 
 @end

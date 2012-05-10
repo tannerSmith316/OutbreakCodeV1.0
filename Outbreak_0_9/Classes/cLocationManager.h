@@ -2,7 +2,7 @@
 //  cLocationManager.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/5/12.
+//  Created by iGeek Developers on 3/5/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -12,7 +12,6 @@
 @protocol UILocationAsyncDelegate
 @required
 - (void)UpdateVictimTable:(NSArray *)victimArray;
-
 @end
 
 @interface cLocationManager : NSObject<CoreLocationControllerDelegate> {
@@ -30,6 +29,8 @@
 //starts the core location train, is called when updatelocation timer fires
 - (void)PollCoreLocation;
 
+//Sends a POST request to get nearby players for infection attempts
 - (void)GetNearby;
+- (void)PersistLatitude:(NSString *)latitude andLongitude:(NSString *)longitude;
 
 @end

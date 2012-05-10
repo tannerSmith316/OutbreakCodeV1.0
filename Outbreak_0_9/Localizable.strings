@@ -8,9 +8,20 @@
 
 //"KEY" = "CONTENT";
 
+"URLSERVER" = "http://66.189.145.171/";
+//"URLSERVER" = "http://192.168.10.200/";
 
-//"URLSERVER" = "http://66.189.145.171/";
-"URLSERVER" = "http://192.168.10.200/";
+"MAXPLAYERVIRUSES" = "5";
+"MINDISTANCE" = "100"; //100
+"MAXDISTANCE" = "1000"; //1000
+"MINTIME" = "300"; //300
+"MAXTIME" = "7200"; //7200
+"MINHOTSPOTRANGE" = "10"; //10
+"MAXHOTSPOTRANGE" = "100"; //100
+"MINSITTIME" = "5"; //30
+"MAXSITTIME" = "300"; //300
+"MAXMOVEDSIT" = "20"; //20
+"UPDATETIMERINTERVAL" = "10"; //30
 
 "PlayerPersister" = "cPlayerPersister.php";
 "MethodLogin" = "Login";
@@ -29,3 +40,6 @@
 "VirusPersister" = "cVirusPersister.php";
 "MethodDeleteVirus" = "DeleteVirus";
 "MethodCreateVirus" = "CreateVirus";
+
+"BadPasswordRetype" = "The entered passwords do not match";
+"EmptyFields" = "Empty Fields:Please fill them in";

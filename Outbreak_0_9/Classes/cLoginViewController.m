@@ -29,7 +29,6 @@
 
 
 - (id)init {
-	
 	self = [super init];
 	if (self != nil)
 	{
@@ -39,22 +38,11 @@
 	}
 	
 	return self;
-	
 }
 
 - (void)dealloc {
 	[_playerMGR release];
     [super dealloc];
-}
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self._loginIndicator.hidesWhenStopped = TRUE;
-    
-    //Try and log player in automatically to avoid
-    //annoying login screen when it loads
-	[self AttemptAutoLogin];
 }
 
 //Looks for and opens credentials.txt from the local Document directory
@@ -98,30 +86,39 @@
 	
 }
 
+//Handle UI event by pushing the appropriate screen
+- (IBAction)RegisterButtonPressed:(id)sender {
+	
+    //Make and push the view(screen)
+	cRegisterViewController *regview = [[cRegisterViewController alloc] init];
+	regview.title = @"Register";
+	[self.navigationController pushViewController:regview animated:YES];
+	[regview release];
+	
+}
+
+//This is a callback for when the LoginViewcontroller is the playerMgr's
+//delegate and information is travelling back up to the UI
 - (void)UICallback:(BOOL)loginSuccess errorMsg:(NSString *)errMsg {
  
     if (loginSuccess) 
     {
+        NSLog(@"POST: Login Succesful");
+        self._usernameField.text = nil;
+        self._passwordField.text = nil;
         
         cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
         mainScreen.title = @"Main";
-		
-        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
-		
-        mainScreen.navigationItem.leftBarButtonItem = backButton;
-        [backButton release];
-        NSLog(@"POST: Login Succesful");
-        
-        self._usernameField.text = nil;
-        self._passwordField.text = nil;
-        //[player StartUpdateTimer];
         [self.navigationController pushViewController:mainScreen animated:YES];
+        //Navigation retained its on copy on push, so release ours
         [mainScreen release];
     }
     else 
     {
         self._loginError.text = @"Bad login credentials";
     }
+    
+    //Re-enable UI regardless of success
     self.navigationItem.backBarButtonItem.enabled = TRUE;
 	_loginButton.enabled = TRUE;
 	_registerButton.enabled = TRUE;
@@ -129,41 +126,21 @@
 	_loginIndicator.hidden = TRUE;
 }
 
-- (void)CallBackLoginDidFinished {
-	
-	//Response will return TRUE or FALSE
-	
-
-
-	//posted back here
-	//if passed login check
-	
-	
-}
-
-- (void)CallBackLoginFailed {
-	
-	
-	_loginButton.enabled = TRUE;
-	_registerButton.enabled = TRUE;
-	[_loginIndicator stopAnimating];
-	_loginIndicator.hidden = TRUE;
-}
-
+//Keyboard dissapears when Return button pressed
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
 	[textField resignFirstResponder];
 	return NO;
 }
 
-
-- (IBAction)RegisterButtonPressed:(id)sender {
-	
-	cRegisterViewController *regview = [[cRegisterViewController alloc] init];
-	regview.title = @"Register";
-	[self.navigationController pushViewController:regview animated:YES];
-	[regview release];
-	
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self._loginIndicator.hidesWhenStopped = TRUE;
+    
+    //Try and log player in automatically to avoid
+    //annoying login screen when it loads
+	[self AttemptAutoLogin];
 }
 
 /*****  UNMODIFIED NEEDED APPLE STUFF BELOW *********/

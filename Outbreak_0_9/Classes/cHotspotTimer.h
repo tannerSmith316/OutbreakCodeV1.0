@@ -21,7 +21,9 @@
 @property (nonatomic, retain)NSString *_longitude;
 @property (nonatomic, retain)NSNumber *_interval;
 
+//Re inits the timer to a timer based on the current virus
 - (void)ResetTimer;
+//Completely stop timer, if no viruses are selected
 - (void)StopTimer;
 
 

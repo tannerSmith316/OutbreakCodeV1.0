@@ -2,48 +2,49 @@
 //  cVirusManager.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/18/12.
+//  Created by iGeek Developers on 3/18/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
-#import "cVirusManager.h"
-#import "cPlayerSingleton.h"
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
+#import "cPlayerSingleton.h"
+#import "cVirusManager.h"
 
 @implementation cVirusManager
 @synthesize _virus;
 @synthesize delegate;
 
 - (id)init {
-	
 	self = [super init];
 	if (self != nil)
 	{
 
 	}
-	
 	return self;
-	
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
 
 - (void)CreateVirus:(cVirus *)aVirus {
-	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._virus = aVirus;
 	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    //Warn the user if they already have the virus they are trying to create
 	if ([player doesOwnVirus:aVirus])
 	{
-		/*
 		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Creation Error!" message:[NSString stringWithFormat:@"No duplicate virus names"] delegate:nil cancelButtonTitle:@"Aww!" otherButtonTitles:nil] autorelease];
 		[alert show];
-		[delegate UpdateCallBack:FALSE];
-		 */
-		 
+		
+        if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
+        {
+            [delegate UpdateCallback:FALSE errMsg:nil];
+        }
 	}
 	else
-	{
+	{//POST the virus to the webserver
 		NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"VirusPersister", nil)];
         NSURL *url = [NSURL URLWithString:urlstring];
         NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodCreateVirus", nil)];
@@ -64,15 +65,13 @@
 		//[request startSynchronous];
 		[request startAsynchronous];
 		NSLog(@"Post: Virus Creation");
-	}
-
-	
+	}	
 }
 
 
-//TODO: request needs to return json virus that was created so MGR doesn't store locally
+//Callback on succesful connection to web server, if web server
+//returns TRUE, save the virus into the players array.
 - (void)CreationDidFinished:(ASIHTTPRequest *)request {
-	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
 	//Virus was created succesfully
@@ -86,7 +85,6 @@
 		NSLog(@"Post: Virus Creation - Succesful:Added Virus to players Array");
 	}
 	
-	
 	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
 	{
 		[delegate UpdateCallback:TRUE errMsg:nil];
@@ -94,6 +92,7 @@
 	
 }
 
+//Failed connection to server, send FAIL to delegate with error msg
 - (void)CreationDidFailed:(ASIHTTPRequest *)request {
 	
 	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
@@ -102,11 +101,12 @@
     }
 }
 
+//This is an asynchronous POST to persist the deletion of
+//the sent virus
 - (void)DeleteVirus:(cVirus *)aVirus {
-
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._virus = aVirus;
 	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"VirusPersister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
 	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodDeleteVirus", nil)];
@@ -115,11 +115,8 @@
     [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:player._username forKey:@"username"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
-	
-	
 	[request setDidFinishSelector:@selector(DeleteVirusDidFinished:)];
 	[request setDidFailSelector:@selector(DeleteVirusDidFailed:)];
-	
 	[request setDelegate:self];
 	
 	//SET TO SYNCHRONOUS WHEN TESTING
@@ -129,13 +126,12 @@
 	[aVirus release];
 }
 
-
+//Callback on succesful connection to server, if server returns true
+//Remove the saved virus info from the array of player viruses
 - (void)DeleteVirusDidFinished:(ASIHTTPRequest *)request {
-	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	if ([[request responseString] isEqualToString:@"TRUE"])
 	{
-		cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-		
 		for( cVirus *virus in player._viruses )
 		{
 			if ([virus._virusName isEqualToString:self._virus._virusName])
@@ -145,16 +141,17 @@
 				{
 					player._currentVirus = nil;
 				}
+                //Once its removed, GET OUT
 				break;
 			}
 		}
-		
         if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
             [delegate UpdateCallback:TRUE errMsg:nil];
 	}
-	
 }
 
+//Callback indicating failed connection to server, report failure and 
+//errormsg to delegate
 - (void)DeleteVirusDidFailed:(ASIHTTPRequest *)request {
 	
 	//CONNECTION FAILED
@@ -163,8 +160,9 @@
         [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to web server"];
 }
 
+//Sets the player's current virus to the one passed in and starts
+//its hotspot timer, no POST here(current virus is not saved on server)
 - (void)SelectVirus:(cVirus *)aVirus {
-
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
 	player._currentVirus = aVirus;
@@ -172,6 +170,5 @@
     if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
         [delegate UpdateCallback:TRUE errMsg:nil];
 }
-
 
 @end

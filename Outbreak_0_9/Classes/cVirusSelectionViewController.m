@@ -2,7 +2,7 @@
 //  cVirusSelectionViewController.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/10/12.
+//  Created by iGeek Developers on 3/10/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -40,45 +40,105 @@
 	return self;
 	
 }
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	self._virusStatsText.editable = FALSE;
-	
+- (void)dealloc {
+    [super dealloc];
 }
 
+//Everytime the view appears its pulls data from the playersingleton
+//and sets the current selected virus label from data
 - (void)viewWillAppear:(BOOL)animated
 {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._viruses = player._viruses;
 	[_virusSelectTable reloadData];
 	self._currentVirusLabel.text = player._currentVirus._virusName;
-   
+    
+    //If the user has a selected virus, display its stats in a textview
     if(player._currentVirus)
         self._virusStatsText.text = [NSString stringWithString:[player._currentVirus GetStats]];
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//Checks if the user has less than the max amount of viruses
+//if so, navigate to the creation view controller, otherwise warn user
+- (IBAction)CreateVirusButtonPressed {
+	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    int MAXVIRUSES = [NSLocalizedString(@"MAXPLAYERVIRUSES", nil) intValue];
+    
+	//Check if there are any spaces left for new viruses
+	if ([player._viruses count] < MAXVIRUSES)
+	{
+		cVirusCreationViewController *createview = [[cVirusCreationViewController alloc] init];
+		createview.title = @"Viruses";
+		[self.navigationController pushViewController:createview animated:YES];
+	}
+    else 
+    {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Maximum Capacity" message:[NSString stringWithFormat:@"Maximum of 5 viruses reached!"] delegate:nil cancelButtonTitle:@"Aww!" otherButtonTitles:nil] autorelease];
+        [alert show];
+    }
+	
 }
-*/
 
+//Gets the indexPath from the UITableView and uses that to index
+//Into the viruses array, if data was collected it is sent to virus manager
+- (IBAction)DeleteVirusButtonPressed {
+
+    //Get index from tableView which corresponds with viruses array index
+	NSIndexPath *indexPath = [self._virusSelectTable indexPathForSelectedRow];
+	if (indexPath != nil)
+	{
+		cVirus *aVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
+		
+		self.navigationItem.leftBarButtonItem.enabled = FALSE;
+		self._createVirusButton.enabled = FALSE;
+		self._deleteVirusButton.enabled = FALSE;
+		self._selectVirusButton.enabled = FALSE;
+		
+		[self._virusMGR DeleteVirus:aVirus];
+        [aVirus release];
+	}
+}
+
+//Checks if player has a virus to select, retrieves UITable indexPath
+//to index viruses array and sends collected data to virus Manager
+- (IBAction)SelectVirusButtonPressed {
+    
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	
+	//Must check for something in array or retrieving indexPath will crash
+	if ([player._viruses count] > 0)
+	{
+		NSIndexPath *indexPath = [self._virusSelectTable indexPathForSelectedRow];
+        
+		//set users current virus to virus at index path
+		cVirus *theVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
+        
+		//Set current virus to the selected one
+		[self._virusMGR SelectVirus:theVirus];
+		[theVirus release];
+        
+		//helper label: Update viewcontrollers label
+		self._currentVirusLabel.text = player._currentVirus._virusName;
+	}
+}
+
+//Callback for virusManager to tell VirusSelectionView that its done 
+//processing along with passing any error messages
+- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
+
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	self._viruses = player._viruses;
+	self._currentVirusLabel.text = player._currentVirus._virusName;
+	[self._virusSelectTable reloadData];
+	self.navigationItem.leftBarButtonItem.enabled = TRUE;
+	self._createVirusButton.enabled = TRUE;
+	self._deleteVirusButton.enabled = TRUE;
+	self._selectVirusButton.enabled = TRUE;
+}
+
+/********************NEEDED UITableView Functions BELOW***************/
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -94,8 +154,6 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-	
     static NSString *CellIdentifier = @"Cell";
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -104,31 +162,31 @@
     }
 	
     // Configure the cell.
-	
 	NSString *str = [[_viruses objectAtIndex:indexPath.row] _virusName];
-	
     cell.textLabel.text = str;
-	
 
-	
     return cell;
 }
 
-
-
-//Victim has been chosen for infection attempt
+//a Virus has been highlighted on the table(actions occur on button press)
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Display stats so user can make choice with the virus
     NSString *buffer = [NSString stringWithString:[[_viruses objectAtIndex:indexPath.row] GetStats]];
     self._virusStatsText.text = buffer;
 }
+/******************** END NEEDED UITableView Functions ABOVE***************/
 
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    // Release any cached data, images, etc. that aren't in use.
+    //Make TextView READ-ONLY
+	self._virusStatsText.editable = FALSE;
+	
 }
+
+/************UNMODIFIED view event handlers BELOW**********/
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -136,81 +194,11 @@
     // e.g. self.myOutlet = nil;
 }
 
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (IBAction)CreateVirusButtonPressed {
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	//Check if there are any spaces left for new viruses
-	if ([player._viruses count] < 5)
-	{
-		cVirusCreationViewController *createview = [[cVirusCreationViewController alloc] init];
-		createview.title = @"Viruses";
-		[self.navigationController pushViewController:createview animated:YES];
-	}
-    else 
-    {
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Maximum Capacity" message:[NSString stringWithFormat:@"Maximum of 5 viruses reached!"] delegate:nil cancelButtonTitle:@"Aww!" otherButtonTitles:nil] autorelease];
-        [alert show];
-    }
-	
-}
-
-- (IBAction)DeleteVirusButtonPressed {
-
-	NSIndexPath *indexPath = [self._virusSelectTable indexPathForSelectedRow];
-	if (indexPath != nil)
-	{
-		cVirus *aVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
-		
-		self.navigationItem.leftBarButtonItem.enabled = FALSE;
-		self._createVirusButton.enabled = FALSE;
-		self._deleteVirusButton.enabled = FALSE;
-		self._selectVirusButton.enabled = FALSE;
-		
-		[self._virusMGR DeleteVirus:aVirus];
-	}
-	
-
-}
-
-- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
-
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	self._viruses = player._viruses;
-	self._currentVirusLabel.text = player._currentVirus._virusName;
-	[self._virusSelectTable reloadData];
-	self.navigationItem.leftBarButtonItem.enabled = TRUE;
-	self._createVirusButton.enabled = TRUE;
-	self._deleteVirusButton.enabled = TRUE;
-	self._selectVirusButton.enabled = TRUE;
-}
-
-
-
-- (IBAction)SelectVirusButtonPressed {
-
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	
-	//Must check for something in array or retrieving indexPath will crash
-	if ([player._viruses count] > 0)
-	{
-		NSIndexPath *indexPath = [self._virusSelectTable indexPathForSelectedRow];
-
-		//set users current virus to virus at index path
-		cVirus *theVirus = [[cVirus alloc] initWithVirus:[_viruses objectAtIndex:indexPath.row]];
-	
-		//Set current virus to the selected one
-		[self._virusMGR SelectVirus:theVirus];
-		[theVirus release];
-	
-		//helper label: Update viewcontrollers label
-		self._currentVirusLabel.text = player._currentVirus._virusName;
-	}
-	
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc. that aren't in use.
 }
 
 @end

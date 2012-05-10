@@ -2,53 +2,71 @@
 //  cMainScreenViewController.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/3/12.
+//  Created by iGeek Developers on 3/3/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
+#import "cInfectViewController.h"
 #import "cMainScreenViewController.h"
 #import "cPlayerSingleton.h"
-#import "cInfectViewController.h"
 #import "cVirusSelectionViewController.h"
 
 @implementation cMainScreenViewController
-
 @synthesize _infectScreenButton;
 @synthesize _virusScreenButton;
 @synthesize _infectedWithLabel;
-@synthesize _hotspotButton;
 
-
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
+- (void)dealloc {
+    [super dealloc];
 }
-*/
 
-/*
+//Calls managers to log the user out and pop's the
+//view back to the login screen
+- (void)LogoutBackButton {
+
+	//TODO: CALL PHP LOGOUT SCRIPT
+	
+    //clear playersingleton
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	[player ResetInstance];
+	[player._updateLocationTimer invalidate];
+	//pop viewcontroller
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+//Changes the view when user presses the button
+- (IBAction)InfectScreenButtonPressed {
+
+	cInfectViewController *infectionView = [[cInfectViewController alloc] init];
+	infectionView.title = @"Infect";
+	[self.navigationController pushViewController:infectionView animated:YES];
+}
+
+//Changes the view when the user presses the button
+- (IBAction)VirusScreenButtonPressed {
+	
+	cVirusSelectionViewController *virusview = [[cVirusSelectionViewController alloc] init];
+	virusview.title = @"Viruses";
+	[self.navigationController pushViewController:virusview animated:YES];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Set the Navigation Bar's back button programmatically(instead of using IB)
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(LogoutBackButton)];
+    self.navigationItem.leftBarButtonItem = backButton;
+    [backButton release];
 }
-*/
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+//Check everytime the user go's to the main screen if the user is infected
+//If so - Display it to the screen somehow
 - (void)viewWillAppear:(BOOL)animated {
-
-	//
+    
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	if( player._infectedWith != nil ) {
+	if( player._infectedWith != nil ) 
+    {
 		self.view.backgroundColor = [UIColor redColor];
 		self._infectedWithLabel.text = [NSString stringWithFormat:@"infected with %@ - %@", player._infectedWith._virusName, player._infectedWith._owner];
 	}
@@ -58,6 +76,8 @@
 		self._infectedWithLabel.text = nil;
 	}
 }
+
+/********** UNMODIFIED apple view event handlers BELOW ********/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -72,53 +92,5 @@
     // e.g. self.myOutlet = nil;
 }
 
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (void)LogoutBackButton {
-
-	//TODO:
-	//upload all stats to DB
-	//clear playersingleton
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	[player ResetInstance];
-	[player._updateLocationTimer invalidate];
-	//pop viewcontroller
-	[self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)InfectScreenButtonPressed {
-
-	//push view
-	cInfectViewController *infectionView = [[cInfectViewController alloc] init];
-	infectionView.title = @"Infect";
-	[self.navigationController pushViewController:infectionView animated:YES];
-}
-
-- (IBAction)VirusScreenButtonPressed {
-	
-	//
-	cVirusSelectionViewController *virusview = [[cVirusSelectionViewController alloc] init];
-	virusview.title = @"Viruses";
-	[self.navigationController pushViewController:virusview animated:YES];
-}
-
-- (IBAction)HotspotButtonPressed {
-
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	if (player._latitude != nil)
-	{
-		[player._infectionMGR LayHotspot];
-	}
-	
-}
-
-- (IBAction)HealInfection {
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	player._infectedWith = nil;
-}
 
 @end

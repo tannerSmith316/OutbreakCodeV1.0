@@ -2,28 +2,27 @@
 //  cInfectionManager.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/11/12.
+//  Created by iGeek Developers on 3/11/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "cHotspotTimer.h"
 #import "cVictim.h"
 #import "cVirus.h"
-#import "cHotspotTimer.h"
-
 
 @interface cInfectionManager : NSObject {
 
+    //Timer based on current virus zone points
 	cHotspotTimer *_hotspotTimer;
-		
 }
 
 @property (nonatomic, retain)cHotspotTimer *_hotspotTimer;
 
-- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim;
-- (void)LayHotspot;
-- (void)DefendInfection:(cVirus *)enemyVirus;
+//Makes 
 - (void)AttemptInstant:(cVictim *)aVictim;
-
+- (void)DefendInfection:(cVirus *)enemyVirus;
+- (void)LayHotspot;
+- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim;
  
 @end

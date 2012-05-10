@@ -115,7 +115,6 @@
 		72F4BFC3153E5ADA0016DD44 /* cVirusSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233BF6150C115900DD393D /* cVirusSelectionViewController.m */; };
 		72F4BFC4153E5ADA0016DD44 /* cVirusCreationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAC150C299300DD393D /* cVirusCreationViewController.h */; };
 		72F4BFC5153E5ADA0016DD44 /* cVirusCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAD150C299300DD393D /* cVirusCreationViewController.m */; };
-		76F9B592155B58A3002E7F44 /* cDefaultStringTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F9B591155B58A3002E7F44 /* cDefaultStringTable.m */; };
 		76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76F9B593155B5B7E002E7F44 /* Localizable.strings */; };
 		C39450E21547B08D006F390C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C39450E11547B08D006F390C /* libz.dylib */; };
 		C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C39450E41548B6E4006F390C /* cHotspotTimer.m */; };
@@ -208,9 +207,6 @@
 		72C4C8581516CBAD00ECACEB /* cVirusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cVirusManager.m; sourceTree = "<group>"; };
 		72E0932A150D9A6000F67811 /* cInfectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cInfectionManager.h; sourceTree = "<group>"; };
 		72E0932B150D9A6000F67811 /* cInfectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cInfectionManager.m; sourceTree = "<group>"; };
-		7675C9F8155B7C2100AEF007 /* UIAsyncDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAsyncDelegate.h; sourceTree = "<group>"; };
-		76F9B590155B58A3002E7F44 /* cDefaultStringTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cDefaultStringTable.h; sourceTree = "<group>"; };
-		76F9B591155B58A3002E7F44 /* cDefaultStringTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cDefaultStringTable.m; sourceTree = "<group>"; };
 		76F9B593155B5B7E002E7F44 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Outbreak_0_9-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C39450E11547B08D006F390C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -263,7 +259,6 @@
 				729F6F4F15006E720046355F /* ASIHTTP */,
 				1D3623240D0F684500981E51 /* Outbreak_0_9AppDelegate.h */,
 				1D3623250D0F684500981E51 /* Outbreak_0_9AppDelegate.m */,
-				7675C9F8155B7C2100AEF007 /* UIAsyncDelegate.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -372,8 +367,6 @@
 				729F6F99150074FD0046355F /* cVirus.m */,
 				729F6F95150073BA0046355F /* cPlayerSingleton.h */,
 				729F6F96150073BA0046355F /* cPlayerSingleton.m */,
-				76F9B590155B58A3002E7F44 /* cDefaultStringTable.h */,
-				76F9B591155B58A3002E7F44 /* cDefaultStringTable.m */,
 			);
 			name = BO;
 			sourceTree = "<group>";
@@ -580,7 +573,6 @@
 				72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */,
 				72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */,
 				C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */,
-				76F9B592155B58A3002E7F44 /* cDefaultStringTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

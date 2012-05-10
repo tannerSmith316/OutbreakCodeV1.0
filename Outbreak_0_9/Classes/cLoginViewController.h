@@ -9,6 +9,8 @@
 #import	"cPlayerManager.h"
 #import <UIKit/UIKit.h>
 
+//This class contains the UI elements for the login screen
+//along with a player manager for logical processing 
 @interface cLoginViewController : UIViewController<UITextFieldDelegate, AsyncUICallback> {
     //UI - Interface Builder variables
 	IBOutlet UITextField *_usernameField;

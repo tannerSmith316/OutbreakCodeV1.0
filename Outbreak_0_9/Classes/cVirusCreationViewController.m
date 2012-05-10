@@ -2,19 +2,17 @@
 //  cVirusCreationViewController.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/10/12.
+//  Created by iGeek Developers on 3/10/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
-#import "cVirusCreationViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "cPlayerSingleton.h"
 #import "cVirus.h"
-
+#import "cVirusCreationViewController.h"
 
 @implementation cVirusCreationViewController
-
 @synthesize _virusMGR;
 @synthesize _instantSlider;
 @synthesize _zoneSlider;
@@ -31,7 +29,6 @@
 
 
 - (id)init {
-	
 	self = [super init];
 	if (self != nil)
 	{
@@ -39,26 +36,19 @@
 		_virusMGR = [[cVirusManager alloc]init];
 		_virusMGR.delegate = self;
 	}
-	
 	return self;
-	
 }
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
 
+- (void)dealloc {
+    [_virusMGR release];
+    [super dealloc];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    //Setup labels to indicate value of slider
 	int progressAsInt = (int)(_instantSlider.value + 0.5f);
 	NSString *newText = [[NSString alloc] initWithFormat:@"%d",progressAsInt];
 	_instantValue.text = newText;
@@ -69,39 +59,12 @@
 	_zoneValue.text = newText2;
 	[newText2 release];
 	
+    //Help textview is READ-ONLY
 	self._helpTextView.editable = FALSE;
-	
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-
-}
-
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-
+//Function is hit everytime slider value changes 
+//Slider values are tied together so change points accordingly
 -(IBAction)instantSliderChanged:(id)sender
 {
 	//Update label and 
@@ -119,6 +82,8 @@
 	
 }
 
+//Function is hit everytime slider value changes 
+//Slider values are tied together so change points accordingly
 -(IBAction)zoneSliderChanged:(id)sender
 {
 	//Update label and 
@@ -135,9 +100,10 @@
 	[newText2 release];
 }
 
+//Checks for UI fields to be complete and retrieves all inputed
+//data to be sent to the virus Manager for creation
 - (IBAction)CreateButtonPressed {
-	
-	//TODO: Need to check name against list of users current viruses locally
+
 	if ([self._virusNameField.text length] == 0)
 	{
 		self._helpTextView.text = [NSString stringWithString:@"Please enter a virus name"];
@@ -155,34 +121,12 @@
 		self._createButton.enabled = FALSE;
 		//post call
 		[_virusMGR CreateVirus:aVirus]; 
-
 	}
-
 }
 
-- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
-
-	self._createButton.enabled = TRUE;
-	if (asyncSuccess)
-	{
-		[self.navigationController popViewControllerAnimated:YES];
-	}
-	else
-	{
-		self._helpTextView.text = errMsg;
-	}
-
-}
-
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-	
-	[textField resignFirstResponder];
-	return NO;
-}
-
+//Generic function for all help buttons on the page
+//Uses button tag to determine help message to send
 - (IBAction)HelpButtonPressed:(id)sender {
-	
 	//Instant Help
 	if ([sender tag] == 1 )
 	{
@@ -196,6 +140,46 @@
 	{
 		self._helpTextView.text = [NSString stringWithString:@"RNA viruses are easier healed but can mutate on succesful infection\nDNA viruses dont mutate but are much harder to create vaccines from"];
 	}
+}
+
+//Callback for Virus manager to tell CreationView if a virus was created
+//along with any error messages
+- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
+
+	self._createButton.enabled = TRUE;
+	if (asyncSuccess)
+	{
+        //If the virus was created, Pop back to SelectionView
+		[self.navigationController popViewControllerAnimated:YES];
+	}
+	else
+	{
+		self._helpTextView.text = errMsg;
+	}
+
+}
+
+//Makes keyboard dissappear when Return key is pressed
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	
+	[textField resignFirstResponder];
+	return NO;
+}
+
+/************ UNMODIFIED view event handlers BELOW *********/
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc. that aren't in use.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+    
 }
 
 @end

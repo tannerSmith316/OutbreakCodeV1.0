@@ -2,7 +2,7 @@
 //  cVirus.m
 //  Outbreak_0_5
 //
-//  Created by McKenzie Kurtz on 2/19/12.
+//  Created by iGeek Developers on 2/19/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 
 
 @implementation cVirus
-
 @synthesize _owner;
 @synthesize _virusName;
 @synthesize _zonePoints;
@@ -18,8 +17,9 @@
 @synthesize _virusType;
 @synthesize _mutation;
 
+//Copy constructor
 - (cVirus *)initWithVirus:(cVirus *)aVirus {
-	
+	self = [super init];
 	if(self)
 	{
 		self._virusName = aVirus._virusName;
@@ -32,6 +32,7 @@
 	return self;
 }
 
+//Return formatted string containing virus stats
 - (NSString *)GetStats {
     NSString *formattedStats = [NSString stringWithFormat:@"Name:%@\nType:%@\nInstant Points:%@\nZone Points:%@", _virusName, _virusType, _instantPoints, _zonePoints];
     

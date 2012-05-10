@@ -2,7 +2,7 @@
 //  iVirusManager.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 4/11/12.
+//  Created by iGeek Developers on 4/11/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 

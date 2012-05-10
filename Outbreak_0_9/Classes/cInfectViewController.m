@@ -2,22 +2,18 @@
 //  cInfectViewController.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/7/12.
+//  Created by iGeek Developers on 3/7/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
+#import "cInfectionManager.h"
 #import "cInfectViewController.h"
 #import "cVictim.h"
 
-#import "cInfectionManager.h"
-
-
 @implementation cInfectViewController
-
 @synthesize _victimArray;
 
 - (id)init {
-	
 	self = [super init];
 	if (self)
 	{
@@ -26,51 +22,21 @@
 	return self;
 }
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-}
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
 - (void)dealloc {
+    [_victimArray release];
     [super dealloc];
 }
 
+- (IBAction)RefreshButtonPressed {
+    
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	
+	player._locationMGR.delegate = self;
+	[player._locationMGR GetNearby];
+	
+}
+
+/************** UITABLEVIEW DELEGATE REQUIRED FUNCTIONS **********/
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -84,12 +50,11 @@
     return [_victimArray count];
 }
 
-// Customize the appearance of table view cells.
+// Customize the appearance of table view cells to show victim and distance
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+	//Make a regular cell
     static NSString *CellIdentifier = @"Cell";
-	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
@@ -101,41 +66,48 @@
 	
     cell.textLabel.text = str;
 	[theVictim release];
-	
-	
+		
     return cell;
 }
-
-
 
 //Victim has been chosen for infection attempt
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//run virus defenses
-	//infectionmanager.infect(currentvirus, username)
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	cInfectionManager *infector = player._infectionMGR;
-	[infector AttemptInstant:[_victimArray objectAtIndex:indexPath.row]];
-	//POST Infect to web server if success
-	//if (infectionSucces)
+    //Send victim info to the manager for logical computations
+	[player._infectionMGR AttemptInstant:[_victimArray objectAtIndex:indexPath.row]];
 }
 
+//UICallback when location manager sends infectionView the array of
+//victims from its GetNearby
 - (void)UpdateVictimTable:(NSArray *)victimArray {
 	
-	//Insert Victims into table view
+	//retain the sent array in self
 	[self._victimArray setArray:victimArray];
+    //Tell the UITable to update its data
 	[_victimTable reloadData];
 	
 }
 
-- (IBAction)RefreshButtonPressed {
+/******* UNMODIFIED view event handlers BELOW **********/
 
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	
-	player._locationMGR.delegate = self;
-	[player._locationMGR GetNearby];
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
 	
 }
 
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc. that aren't in use.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
 
 @end

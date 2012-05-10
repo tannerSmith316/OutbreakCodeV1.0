@@ -2,14 +2,14 @@
 //  cRegisterViewController.mfile://localhost/Users/mckenziekurtz/Documents/TannerFolder/JP/Outbreak_0_9/Classes/cRegisterViewController.xib
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 3/1/12.
+//  Created by iGeek Developers on 3/1/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
-#import "cRegisterViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "cPlayerSingleton.h"
+#import "cRegisterViewController.h"
 
 @implementation cRegisterViewController
 
@@ -22,26 +22,29 @@
 @synthesize _whirligig;
 
 - (id)init {
-	
 	self = [super init];
 	if (self != nil)
 	{
 		//custom inits here
 		_playerMGR = [[cPlayerManager alloc]init];
 		_playerMGR.delegate = self;
-        
 	}
-	
 	return self;
-	
 }
 
+- (void)dealloc {
+    [_playerMGR release];
+    [super dealloc];
+}
+
+//Checks if the information in the UI fields is valid, if so
+//It sends the data off to the player manager for logical computations
 - (IBAction)RegisterButtonPressed:(id)sender {
 	
-	//check if password fields are the same
+	//Checks that user doesnt have an "empty string" password
 	if ( [self._usernameField.text length] != 0 && [self._passwordField.text length] != 0 && [self._passwordField2.text length] != 0 )
 	{
-		
+		//Check if the user re-typed the password correctly in second field
 		if( [self._passwordField.text isEqualToString:self._passwordField2.text] ) 
 		{
 			//UI Indicates a process occurring with whirligig animation
@@ -50,23 +53,23 @@
 			_registerButton.enabled = FALSE;
             self.navigationItem.backBarButtonItem.enabled = FALSE;
 		
-			//post call
+			
 			[self._playerMGR RegisterWithUsername:self._usernameField.text Password:self._passwordField.text];
-		
 		}
 		else
 		{
-			self._errorMessage.text = @"PASSWORDS DONUT MATCH";
+			self._errorMessage.text = NSLocalizedString(@"BadPasswordRetype", nil);
 		}
 	}
 	else
 	{
-		self._errorMessage.text = @"FILL IN YOUR fields";
+		self._errorMessage.text = NSLocalizedString(@"EmptyFields", nil);
 	}
 }
 
+//Callback when PlayerManager tells RegisterView its done processing
 - (void)UICallback:(BOOL)asyncSuccess errorMsg:(NSString *)errMsg {
-	
+	//Re-Enable the UI elements
 	self._errorMessage.text = errMsg;
 	self._whirligig.hidden = TRUE;
     self._registerButton.enabled = TRUE;
@@ -74,38 +77,20 @@
 	[_whirligig stopAnimating];
 }
 
+//Makes keyboard dissapear when Return button pressed
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	
 	[textField resignFirstResponder];
 	return NO;
 }
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
- - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
- self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
- if (self) {
- // Custom initialization.
- }
- return self;
- }
- */
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self._whirligig.hidesWhenStopped = TRUE;
+}
 
- // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
- - (void)viewDidLoad {
- [super viewDidLoad];
-     self._whirligig.hidesWhenStopped = TRUE;
- }
- 
-
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations.
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
+/****** UNMODIFIED NEEDED view event handlers BELOW*******/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -121,8 +106,6 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
+
 
 @end
