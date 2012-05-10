@@ -8,7 +8,7 @@
 
 #import "cInfectViewController.h"
 #import "cVictim.h"
-#import "cPlayerSingleton.h"
+
 #import "cInfectionManager.h"
 
 
@@ -97,7 +97,6 @@
 	
     // Configure the cell.
 	cVictim *theVictim = [[cVictim alloc] initWithVictim:[_victimArray objectAtIndex:indexPath.row]];
-	NSNumber *nm = [NSNumber numberWithFloat:[theVictim._distance floatValue]];
 	NSString *str = [NSString stringWithFormat:@"%@ \t\t\t           %-6.1f", theVictim._username, [theVictim._distance floatValue]];
 	
     cell.textLabel.text = str;

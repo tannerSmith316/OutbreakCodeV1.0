@@ -2,15 +2,15 @@
 //  cLoginViewController.h
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 2/29/12.
+//  Created by iGeek Developers on 2/29/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
 #import	"cPlayerManager.h"
 #import <UIKit/UIKit.h>
 
-
-@interface cLoginViewController : UIViewController<UITextFieldDelegate> {
+@interface cLoginViewController : UIViewController<UITextFieldDelegate, AsyncUICallback> {
+    //UI - Interface Builder variables
 	IBOutlet UITextField *_usernameField;
 	IBOutlet UITextField *_passwordField;
 	IBOutlet UIButton *_loginButton;
@@ -18,10 +18,12 @@
 	IBOutlet UILabel *_loginError;
 	IBOutlet UIButton *_registerButton;
 	
-	cPlayerManager *_playerMGR;
-	NSString *_username;
+    //Safe storage because UI fields can always be altered
+    NSString *_username;
 	NSString *_password;
-
+    
+    //Class thats sent messages for BOL operations
+	cPlayerManager *_playerMGR;
 }
 
 @property (nonatomic, retain)UITextField *_usernameField;
@@ -34,9 +36,11 @@
 @property (nonatomic, retain)NSString *_password;
 @property (nonatomic, retain)cPlayerManager *_playerMGR;
 
-- (IBAction)LoginButtonPressed:(id)sender;
+//Attempts to automatically log the user in
+//To avoid annoying login screen
 - (void)AttemptAutoLogin;
-- (void)LoginWithUsername:(NSString *)username Password:(NSString *)password;
+//Tied to UI Actions through Interface Builder
+- (IBAction)LoginButtonPressed:(id)sender;
 - (IBAction)RegisterButtonPressed:(id)sender;
 
 @end

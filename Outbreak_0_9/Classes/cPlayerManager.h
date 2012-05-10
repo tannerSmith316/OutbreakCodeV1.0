@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+//UI callback protocol
+@protocol AsyncUICallback
+@required
+- (void)UICallback:(BOOL)success errorMsg:(NSString *)errMsg;
+@end
+
+@protocol RegisterUICallback
+@required
+- (void)UpdateCallback:(NSString *)msg;
+@end
 
 @interface cPlayerManager : NSObject {
 
+    //Represents LoginViewController
 	id delegate;
 	
 }

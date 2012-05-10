@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  Outbreak_0_9
+
+  Created by Sean Velkin on 5/9/12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+//"KEY" = "CONTENT";
+
+
+//"URLSERVER" = "http://66.189.145.171/";
+"URLSERVER" = "http://192.168.10.200/";
+
+"PlayerPersister" = "cPlayerPersister.php";
+"MethodLogin" = "Login";
+"MethodLogout" = "Logout";
+"MethodRegister" = "Register";
+
+"InfectionPersister" = "cInfectionPersister.php";
+"MethodLayHotspot" = "LayHotspot";
+"MethodInfectPlayer" = "InfectPlayer";
+"MethodCurePlayer" = "CurePlayer";
+
+"LocationPersister" = "cLocationPersister.php";
+"MethodPersistLocation" = "PersistLocation";
+"MethodGetNearby" = "GetNearby";
+
+"VirusPersister" = "cVirusPersister.php";
+"MethodDeleteVirus" = "DeleteVirus";
+"MethodCreateVirus" = "CreateVirus";

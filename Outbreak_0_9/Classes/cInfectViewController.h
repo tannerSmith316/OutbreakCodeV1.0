@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "cPlayerSingleton.h"
 
-
-@interface cInfectViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+@interface cInfectViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UILocationAsyncDelegate> {
 
 	IBOutlet UITableView *_victimTable;
 	NSMutableArray *_victimArray;

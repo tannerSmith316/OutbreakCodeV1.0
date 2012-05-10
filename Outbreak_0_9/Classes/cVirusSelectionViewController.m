@@ -13,7 +13,6 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "cPlayerManager.h"
-#import "cVirusManager.h"
 
 
 @implementation cVirusSelectionViewController
@@ -178,7 +177,7 @@
 
 }
 
-- (void)UpdateCallBack {
+- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._viruses = player._viruses;

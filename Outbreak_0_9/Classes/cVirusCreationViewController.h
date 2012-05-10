@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "cVirusManager.h"
 
-@interface cVirusCreationViewController : UIViewController {
+@interface cVirusCreationViewController : UIViewController<UIVirusAsyncDelegate> {
 	
 	
 	IBOutlet UITextField *_virusNameField;

@@ -30,11 +30,12 @@
 
 - (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password {
 
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	NSString *urlstring = [NSString stringWithFormat:@"%@createAccount.php",player._serverIP];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"PlayerPersister", nil)];
+    NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodRegister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
 	
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:username forKey:@"username"];
 	[request setPostValue:password forKey:@"password"];
 	
@@ -50,19 +51,23 @@
 	//Account name was not taken and has been registered for the user
 	if ([[request responseString] isEqualToString:@"TRUE"])
 	{
-		[delegate UpdateCallBack:@"Account Created"];
+        if([delegate conformsToProtocol:@protocol(AsyncUICallback)])
+            [delegate UICallback:TRUE errorMsg:@"Account Created"];
 	}
 	//The request account name is already in use, advise user to choose another
 	else
 	{
-		[delegate UpdateCallBack:@"Name Taken"];
-	}
+        if([delegate conformsToProtocol:@protocol(AsyncUICallback)])
+            [delegate UICallback:TRUE errorMsg:@"Name Taken"];
+    }
+	
 	
 }
 
 - (void)RegisterDidFailed:(ASIHTTPRequest *)request {
 	
-	[delegate UpdateCallBack:@"Cannot Connect to SERVER"];
+    if([delegate conformsToProtocol:@protocol(AsyncUICallback)])
+        [delegate UICallback:FALSE errorMsg:@"Cannot Connect to SERVER"];
 	
 }
 
@@ -70,15 +75,16 @@
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
-	//Moves variables out to view controller
+	//Saves data to player
 	player._username = username;
 	player._password = password;
 	
-	NSString *urlstring = [NSString stringWithFormat:@"%@login.php",player._serverIP];
+    NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"PlayerPersister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
-	
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodLogin", nil)];
 	NSLog(@"POST: Login; Username=%@ ; Password=%@", username, password);
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:username forKey:@"username"];
 	[request setPostValue:password forKey:@"password"];
 	
@@ -119,11 +125,11 @@
 		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 		NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
 		NSString *successfulCredentials = [NSString stringWithFormat:@"%@\n%@", player._username, player._password];
-		[successfulCredentials writeToFile:myFilePath atomically:YES];
-		
-		if (delegate != nil)
+		[successfulCredentials writeToFile:myFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+		[player._locationMGR PollCoreLocation];
+		if ([delegate conformsToProtocol:@protocol(AsyncUICallback)])
 		{
-			[delegate CallBackLoginDidFinished];
+			[delegate UICallback:TRUE errorMsg:nil];
 		}
 		 
 		 
@@ -131,9 +137,9 @@
 	else
 	{
 		NSLog(@"Invalid Login Credentials");
-		if (delegate != nil)
+		if ([delegate conformsToProtocol:@protocol(AsyncUICallback)])
 		{
-			[delegate CallBackLoginFailed];
+			[delegate UICallback:FALSE errorMsg:nil];
 		}
 		
 	}
@@ -142,7 +148,10 @@
 
 - (void)LoginDidFailed:(ASIHTTPRequest *)request {
 
-    [delegate CallBackLoginFailed];
+    if ([delegate conformsToProtocol:@protocol(AsyncUICallback)])
+    {
+        [delegate UICallback:FALSE errorMsg:nil];
+    }
 }
 
 //Parses returned json and sets playsingleton with data retrieved

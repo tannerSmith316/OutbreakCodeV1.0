@@ -10,6 +10,11 @@
 #import <Foundation/Foundation.h>
 @class cVirus;
 
+@protocol UIVirusAsyncDelegate
+@required
+- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg;
+@end
+
 @interface cVirusManager : NSObject {
 	
 	cVirus *_virus;
@@ -20,8 +25,6 @@
 
 @property (nonatomic, retain)cVirus *_virus;
 @property (nonatomic, assign)id delegate;
-@property (nonatomic, retain)NSOperationQueue *_virusOperations;
-@property (nonatomic, retain)NSNumber *ISTESTING;
 
 - (void)CreateVirus:(cVirus *)aVirus;
 - (void)DeleteVirus:(cVirus *)aVirus;

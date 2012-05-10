@@ -137,7 +137,6 @@
 
 - (IBAction)CreateButtonPressed {
 	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	//TODO: Need to check name against list of users current viruses locally
 	if ([self._virusNameField.text length] == 0)
 	{
@@ -161,16 +160,16 @@
 
 }
 
-- (void)UpdateCallBack:(BOOL)wasCreated {
+- (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
 
 	self._createButton.enabled = TRUE;
-	if (wasCreated)
+	if (asyncSuccess)
 	{
 		[self.navigationController popViewControllerAnimated:YES];
 	}
 	else
 	{
-		self._helpTextView.text = @"Cannot connect to server";
+		self._helpTextView.text = errMsg;
 	}
 
 }

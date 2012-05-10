@@ -44,10 +44,12 @@
 	}
 	else
 	{
-		NSString *urlstring = [NSString stringWithFormat:@"%@createVirus.php",player._serverIP];
-		NSURL *url = [NSURL URLWithString:urlstring];
+		NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"VirusPersister", nil)];
+        NSURL *url = [NSURL URLWithString:urlstring];
+        NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodCreateVirus", nil)];
 		
 		ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        [request setPostValue:webMethod forKey:@"method"];
 		[request setPostValue:player._username forKey:@"username"];
 		[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 		[request setPostValue:aVirus._instantPoints forKey:@"instant_points"];
@@ -85,16 +87,19 @@
 	}
 	
 	
-	if (delegate != nil)
+	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
 	{
-		[delegate UpdateCallBack:TRUE];
+		[delegate UpdateCallback:TRUE errMsg:nil];
 	}
 	
 }
 
 - (void)CreationDidFailed:(ASIHTTPRequest *)request {
 	
-	[delegate UpdateCallBack:FALSE];
+	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
+    {
+        [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to server"];
+    }
 }
 
 - (void)DeleteVirus:(cVirus *)aVirus {
@@ -102,10 +107,12 @@
 	self._virus = aVirus;
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	NSString *urlstring = [NSString stringWithFormat:@"%@deleteVirus.php",player._serverIP];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"VirusPersister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodDeleteVirus", nil)];
 	
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:player._username forKey:@"username"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 	
@@ -137,13 +144,13 @@
 				if ([player._currentVirus._virusName isEqualToString:self._virus._virusName])
 				{
 					player._currentVirus = nil;
-					//self._currentVirusLabel.text = @"";
 				}
 				break;
 			}
 		}
 		
-		[delegate UpdateCallBack];
+        if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
+            [delegate UpdateCallback:TRUE errMsg:nil];
 	}
 	
 }
@@ -152,18 +159,18 @@
 	
 	//CONNECTION FAILED
 	NSLog(@"Delete Error");
-	[delegate CallBackDelete];
+	if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
+        [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to web server"];
 }
 
 - (void)SelectVirus:(cVirus *)aVirus {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
-
-    
 	player._currentVirus = aVirus;
     [player._infectionMGR._hotspotTimer ResetTimer];
-	[delegate UpdateCallBack];
+    if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
+        [delegate UpdateCallback:TRUE errMsg:nil];
 }
 
 

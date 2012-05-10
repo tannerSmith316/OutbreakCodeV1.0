@@ -55,10 +55,12 @@
 	
 	
 	
-	NSString *urlstring = [NSString stringWithFormat:@"%@updateLocation.php",player._serverIP];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"LocationPersister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodPersistLocation", nil)];
 	
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:latitude forKey:@"latitude"];
 	[request setPostValue:longitude forKey:@"longitude"];
 	[request setPostValue:player._username forKey:@"username"];
@@ -142,10 +144,13 @@
 	
 	//sends to php
 
-	NSString *urlappended = [NSString stringWithFormat:@"%@getNearby.php", player._serverIP];
-	NSURL *url = [NSURL URLWithString:urlappended];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"LocationPersister", nil)];
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodGetNearby", nil)];
+	NSURL *url = [NSURL URLWithString:urlstring];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setDidFinishSelector:@selector(GetNearbyFinished:)];
+    [request setDidFailSelector:@selector(GetNearbyDidFailed:)];
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:player._username forKey:@"username"];
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
@@ -184,7 +189,10 @@
 	}
 	
 	//Post Array to viewcontroller delegate for table update
-	[delegate UpdateVictimTable:victims];
+	if ([delegate conformsToProtocol:@protocol(UILocationAsyncDelegate)]) 
+    {
+        [delegate UpdateVictimTable:victims];
+    }
 	
 	[victims release];
 }
@@ -235,7 +243,7 @@
 		cVirus *enemyVirus = [[cVirus alloc] init];
 		enemyVirus._virusName = virusName;
 		enemyVirus._owner = virusOwner;
-		enemyVirus._zonePoints = virusZonePoints;
+		enemyVirus._zonePoints = [NSNumber numberWithInt:[virusZonePoints intValue]];
 		
 		if (player._infectedWith == nil)
 		{

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "cPlayerManager.h"
 
-@interface cRegisterViewController : UIViewController<UITextFieldDelegate> {
+@interface cRegisterViewController : UIViewController<UITextFieldDelegate, AsyncUICallback> {
 
 	IBOutlet UITextField *_usernameField;
 	IBOutlet UITextField *_passwordField;

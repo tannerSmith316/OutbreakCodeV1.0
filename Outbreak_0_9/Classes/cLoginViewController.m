@@ -2,19 +2,19 @@
 //  cLoginViewController.m
 //  Outbreak_0_9
 //
-//  Created by McKenzie Kurtz on 2/29/12.
+//  Created by iGeek Developers on 2/29/12.
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
-#import "cPlayerManager.h"
-#import "cLoginViewController.h"
-#import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "ASIHTTPRequest.h"
+#import "cLoginViewController.h"
+#import "cMainScreenViewController.h"
+#import "cPlayerManager.h"
 #import "cPlayerSingleton.h"
 #import "cRegisterViewController.h"
-#import "cMainScreenViewController.h"
-#import "JSONKit.h"
 #import "cVirus.h"
+#import "JSONKit.h"
 
 @implementation cLoginViewController
 @synthesize _playerMGR;
@@ -33,7 +33,7 @@
 	self = [super init];
 	if (self != nil)
 	{
-		//custom inits here
+		//Create the manager and set its delegate for UI update callbacks
 		_playerMGR = [[cPlayerManager alloc]init];
 		_playerMGR.delegate = self;
 	}
@@ -42,35 +42,131 @@
 	
 }
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
+- (void)dealloc {
+	[_playerMGR release];
+    [super dealloc];
 }
-*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self AttemptAutoLogin];
     self._loginIndicator.hidesWhenStopped = TRUE;
+    
+    //Try and log player in automatically to avoid
+    //annoying login screen when it loads
+	[self AttemptAutoLogin];
+}
+
+//Looks for and opens credentials.txt from the local Document directory
+//Parses data in credentials.txt and uses it to attempt to login automatically
+- (void)AttemptAutoLogin {
+	
+    //Get local phone documents directory
+	NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    //Retrieve the document containing auto-login credentials
+	NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
+	NSString *myFileContents = [NSString stringWithContentsOfFile:myFilePath encoding:NSUTF8StringEncoding error:nil];
+	NSLog(@"Attempting AutoLogin");
+    
+    //If the file contains data, use it for logging in.
+	if( [myFileContents length] != 0 )
+	{
+		NSArray *credentials = [myFileContents componentsSeparatedByString:@"\n"]; 
+		self._usernameField.text = [credentials objectAtIndex:0];
+		self._passwordField.text = [credentials objectAtIndex:1];
+		self._username = [credentials objectAtIndex:0];
+		self._password = [credentials objectAtIndex:1];
+		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", self._username, self._password);
+		
+		[_playerMGR LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
+	}
+}
+
+//Calls the player managers login function using
+//the data from the UI supplied by the user
+- (IBAction)LoginButtonPressed:(id)sender {
+	self._password = _passwordField.text;
+	self._username = _usernameField.text;
+
+	_loginIndicator.hidden = FALSE;
+	[_loginIndicator startAnimating];		
+	self.navigationItem.backBarButtonItem.enabled = FALSE;
+	_loginButton.enabled = FALSE;
+	_registerButton.enabled = FALSE;
+    
+	[_playerMGR LoginWithUsername:self._username Password:self._password];
+	
+}
+
+- (void)UICallback:(BOOL)loginSuccess errorMsg:(NSString *)errMsg {
+ 
+    if (loginSuccess) 
+    {
+        
+        cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
+        mainScreen.title = @"Main";
+		
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
+		
+        mainScreen.navigationItem.leftBarButtonItem = backButton;
+        [backButton release];
+        NSLog(@"POST: Login Succesful");
+        
+        self._usernameField.text = nil;
+        self._passwordField.text = nil;
+        //[player StartUpdateTimer];
+        [self.navigationController pushViewController:mainScreen animated:YES];
+        [mainScreen release];
+    }
+    else 
+    {
+        self._loginError.text = @"Bad login credentials";
+    }
+    self.navigationItem.backBarButtonItem.enabled = TRUE;
+	_loginButton.enabled = TRUE;
+	_registerButton.enabled = TRUE;
+	[_loginIndicator stopAnimating];
+	_loginIndicator.hidden = TRUE;
+}
+
+- (void)CallBackLoginDidFinished {
+	
+	//Response will return TRUE or FALSE
+	
 
 
+	//posted back here
+	//if passed login check
+	
+	
+}
+
+- (void)CallBackLoginFailed {
+	
+	
+	_loginButton.enabled = TRUE;
+	_registerButton.enabled = TRUE;
+	[_loginIndicator stopAnimating];
+	_loginIndicator.hidden = TRUE;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+	[textField resignFirstResponder];
+	return NO;
 }
 
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (IBAction)RegisterButtonPressed:(id)sender {
+	
+	cRegisterViewController *regview = [[cRegisterViewController alloc] init];
+	regview.title = @"Register";
+	[self.navigationController pushViewController:regview animated:YES];
+	[regview release];
+	
 }
-*/
+
+/*****  UNMODIFIED NEEDED APPLE STUFF BELOW *********/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -84,119 +180,6 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
-
-
-
-- (void)dealloc {
-	[_playerMGR release];
-    [super dealloc];
-}
-
-- (void)AttemptAutoLogin {
-	
-	//stuff here
-	
-	NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-	NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
-	NSString *myFileContents = [NSString stringWithContentsOfFile:myFilePath];
-	NSLog(@"Attempting AutoLogin");
-	if( [myFileContents length] != 0 )
-	{
-		NSArray *credentials = [myFileContents componentsSeparatedByString:@"\n"]; 
-		self._usernameField.text = [credentials objectAtIndex:0];
-		self._passwordField.text = [credentials objectAtIndex:1];
-		self._username = [credentials objectAtIndex:0];
-		self._password = [credentials objectAtIndex:1];
-		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", self._username, self._password);
-		//autologin here
-		
-		[_playerMGR LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
-	}
-}
-
-
-
-- (IBAction)LoginButtonPressed:(id)sender
-{
-	// TODO: Spawn a login thread
-	self._password = _passwordField.text;
-	self._username = _usernameField.text;
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-
-	_loginIndicator.hidden = FALSE;
-	[_loginIndicator startAnimating];
-		
-		//make call to 
-		
-	self.navigationItem.backBarButtonItem.enabled = FALSE;
-	_loginButton.enabled = FALSE;
-	_registerButton.enabled = FALSE;
-	[_playerMGR LoginWithUsername:self._username Password:self._password];
-	
-}
-
-- (void)CallBackLoginDidFinished {
-	
-	//Response will return TRUE or FALSE
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
-	mainScreen.title = @"Main";
-		
-	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:mainScreen action:@selector(LogoutBackButton)];
-		
-	mainScreen.navigationItem.leftBarButtonItem = backButton;
-	[backButton release];
-	NSLog(@"POST: Login Succesful");
-
-	self._usernameField.text = nil;
-	self._passwordField.text = nil;
-	[player StartUpdateTimer];
-	[self.navigationController pushViewController:mainScreen animated:YES];
-	[mainScreen release];
-
-
-	//posted back here
-	//if passed login check
-	self.navigationItem.backBarButtonItem.enabled = TRUE;
-	_loginButton.enabled = TRUE;
-	_registerButton.enabled = TRUE;
-	[_loginIndicator stopAnimating];
-	_loginIndicator.hidden = TRUE;
-	
-}
-
-- (void)CallBackLoginFailed {
-	
-	self._loginError.text = @"Bad login credentials";
-	_loginButton.enabled = TRUE;
-	_registerButton.enabled = TRUE;
-	[_loginIndicator stopAnimating];
-	_loginIndicator.hidden = TRUE;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-
-	[textField resignFirstResponder];
-	return NO;
-}
-
-- (IBAction)TouchOutsideKeyboard:(id)sender {
-
-	[_usernameField resignFirstResponder];
-	[_passwordField resignFirstResponder];
-}
-
-- (IBAction)RegisterButtonPressed:(id)sender {
-	
-	//
-	//pushy
-	cRegisterViewController *regview = [[cRegisterViewController alloc] init];
-	regview.title = @"Register";
-	[self.navigationController pushViewController:regview animated:YES];
-	[regview release];
-	
-}
-
 
 
 @end

@@ -13,7 +13,7 @@
 
 @interface cPlayerSingleton : NSObject {
 	
-    //MAX AND MIN SHOULD BE BEST AND WORST - REFACTOR OPTION BROKE
+    NSNumber *_UPDATETIMERINTERVAL;//update time interval
 	NSNumber *_MAXDISTANCE; //range of instant spread in meters
 	NSNumber *_MINDISTANCE;
 	NSNumber *_MAXHOTSPOTRANGE; //range of hotspot zone in meters
@@ -72,13 +72,15 @@
 @property (nonatomic, retain)NSNumber *_MINSITTIME;
 @property (nonatomic, retain)NSNumber *_MAXSITTIME;
 @property (nonatomic, retain)NSNumber *_MAXMOVEDIST;
-
+@property (nonatomic, retain)NSNumber *_UPDATETIMERINTERVAL;
 //@property (nonatomic, getter=_isTimerActive)BOOL _isTimerActive;
 
 //Public accesor for singleton class
 - (void)ResetInstance;
 + (cPlayerSingleton *)GetInstance;
 - (void)StartUpdateTimer;
+
+- (BOOL)doesOwnVirus:(cVirus *)aVirus;
 
 
 @end

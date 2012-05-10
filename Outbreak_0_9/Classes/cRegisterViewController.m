@@ -48,6 +48,7 @@
 			self._whirligig.hidden = FALSE;
 			[_whirligig startAnimating];
 			_registerButton.enabled = FALSE;
+            self.navigationItem.backBarButtonItem.enabled = FALSE;
 		
 			//post call
 			[self._playerMGR RegisterWithUsername:self._usernameField.text Password:self._passwordField.text];
@@ -64,11 +65,12 @@
 	}
 }
 
-- (void)UpdateCallBack:(NSString *)msg {
+- (void)UICallback:(BOOL)asyncSuccess errorMsg:(NSString *)errMsg {
 	
-	self._errorMessage.text = msg;
+	self._errorMessage.text = errMsg;
 	self._whirligig.hidden = TRUE;
     self._registerButton.enabled = TRUE;
+    self.navigationItem.backBarButtonItem.enabled = TRUE;
 	[_whirligig stopAnimating];
 }
 

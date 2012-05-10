@@ -37,16 +37,15 @@
 
 - (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim {
 
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	NSString *urlappended = [NSString stringWithFormat:@"%@infectPlayer.php", player._serverIP];
-	NSURL *url = [NSURL URLWithString:urlappended];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"InfectionPersister", nil)];
+	NSURL *url = [NSURL URLWithString:urlstring];
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodInfectPlayer", nil)];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 
 
 	[request setDidFinishSelector:@selector(InfectionDidFinished:)];
 	[request setDidFailSelector:@selector(InfectionDidFailed:)];
-	
+	[request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:aVictim._username forKey:@"victim_id"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:aVirus._owner forKey:@"username"];
@@ -58,23 +57,20 @@
 }
 
 - (void)InfectionDidFinished:(ASIHTTPRequest *)request {
-	
-
-    
-
+    NSLog(@"%@", [request responseString]);
 }
 
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
 	
-	//
 }
 
 - (void)LayHotspot {
 	
     NSLog(@"Laying some hotspots(before POST)");
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	NSString *urlappended = [NSString stringWithFormat:@"%@layHotspot.php", player._serverIP];
-	NSURL *url = [NSURL URLWithString:urlappended];
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"InfectionPersister", nil)];
+	NSURL *url = [NSURL URLWithString:urlstring];
+	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodLayHotspot", nil)];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	
 	
@@ -100,6 +96,7 @@
 	float durationFloat = ([activeVirus._zonePoints floatValue] / 100) * ([player._MAXTIME floatValue] - [player._MINTIME floatValue]) + [player._MINTIME floatValue];
 	NSNumber *durationNum = [NSNumber numberWithFloat:durationFloat];
 	
+    [request setPostValue:webMethod forKey:@"method"];
 	[request setPostValue:[NSString stringWithFormat:@"%@", durationNum] forKey:@"duration"];
 	[request setPostValue:rangeString forKey:@"range"];
 	[request setPostValue:activeVirus._virusName forKey:@"virus_name"];

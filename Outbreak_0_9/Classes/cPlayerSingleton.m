@@ -32,6 +32,7 @@ static cPlayerSingleton *_player = nil;
 @synthesize _MINSITTIME;
 @synthesize _MAXSITTIME;
 @synthesize _MAXMOVEDIST;
+@synthesize _UPDATETIMERINTERVAL;
 
 + (cPlayerSingleton *)GetInstance {
 	@synchronized(self) {
@@ -65,30 +66,27 @@ static cPlayerSingleton *_player = nil;
 	
 	if (self = [super init])
 	{
-		//LAN : 192.168.10.200
-		//WAN : 66.189.145.171
-		self._serverIP = [NSString stringWithFormat:@"http://192.168.10.200/"];
 		_locationMGR = [[cLocationManager alloc] init];
 		_infectionMGR = [[cInfectionManager alloc] init];
 		_viruses = [[NSMutableArray alloc] init];
+        
 		_MINDISTANCE = [[NSNumber alloc] initWithInt:100]; //100
 		_MAXDISTANCE = [[NSNumber alloc] initWithInt:1000]; //1000
 		_MINTIME = [[NSNumber alloc] initWithInt:300]; //300
 		_MAXTIME = [[NSNumber alloc] initWithInt:7200]; //7200
 		_MINHOTSPOTRANGE = [[NSNumber alloc] initWithInt:10]; //10
 		_MAXHOTSPOTRANGE = [[NSNumber alloc] initWithInt:100]; //100
-        _MINSITTIME = [[NSNumber alloc] initWithInt:3]; //30
+        _MINSITTIME = [[NSNumber alloc] initWithInt:30]; //30
         _MAXSITTIME = [[NSNumber alloc] initWithInt:300]; //300
-        _MAXMOVEDIST = [[NSNumber alloc] initWithInt:20];
-		//_isTimerActive = FALSE;
+        _MAXMOVEDIST = [[NSNumber alloc] initWithInt:20]; //20
+        _UPDATETIMERINTERVAL = [[NSNumber alloc] initWithInt:30]; //30
 	}
 	return self;
 }
 //starts the playersingleton's update timer on main screen init
 - (void)StartUpdateTimer {
 	
-	//_isTimerActive = TRUE;
-	self._updateLocationTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(locationTimerFired:) userInfo:nil repeats:NO];
+	self._updateLocationTimer = [NSTimer scheduledTimerWithTimeInterval:[_UPDATETIMERINTERVAL integerValue] target:self selector:@selector(locationTimerFired:) userInfo:nil repeats:NO];
 }
 
 
@@ -115,27 +113,15 @@ static cPlayerSingleton *_player = nil;
 	return UINT_MAX;
 }
 
-- (void)release {
-
-	//do nothing
-}
-
 - (id)autorelease {
 	
 	return self;
 }
 
-/*
-- (BOOL)_isTimerActive {
-	
-	return _isTimerActive;
+- (oneway void)release {
+    
+    //Do nothing
 }
-
-- (void)set_isTimerActive:(BOOL)isActive {
-	
-	_isTimerActive = isActive;
-}
- */
 
 - (BOOL)doesOwnVirus:(cVirus *)aVirus {
 	
@@ -151,21 +137,7 @@ static cPlayerSingleton *_player = nil;
 
 - (void)dealloc {
 	
-	[_viruses release];
-	[_locationMGR release];
-	[_updateLocationTimer release];
-	[_serverIP release];
-	[_username release];
-	[_password release];
-	[_MINHOTSPOTRANGE release];
-	[_MAXHOTSPOTRANGE release];
-	[_MAXTIME release];
-	[_MINTIME release];
-	[_MAXDISTANCE release];
-	[_MINDISTANCE release];
-    [_MAXSITTIME release];
-    [_MINSITTIME release];
-    [_MAXMOVEDIST release];
+    [self ResetInstance];
 	[super dealloc];
 }
 

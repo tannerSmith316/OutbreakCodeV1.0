@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "cVirus.h"
-@class cVirusManager;
+#import "cVirusManager.h"
 
-@interface cVirusSelectionViewController : UIViewController {
+@interface cVirusSelectionViewController : UIViewController<UIVirusAsyncDelegate> {
 
 	IBOutlet UITableView *_virusSelectTable;
     IBOutlet UITextView *_virusStatsText;

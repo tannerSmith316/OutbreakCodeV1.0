@@ -11,6 +11,7 @@
 #import "cVirus.h"
 #import "cHotspotTimer.h"
 
+
 @interface cInfectionManager : NSObject {
 
 	cHotspotTimer *_hotspotTimer;

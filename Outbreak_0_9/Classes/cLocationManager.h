@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CoreLocationController.h"
 
+@protocol UILocationAsyncDelegate
+@required
+- (void)UpdateVictimTable:(NSArray *)victimArray;
+
+@end
 
 @interface cLocationManager : NSObject<CoreLocationControllerDelegate> {
 
