@@ -212,6 +212,7 @@
         virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
+        virus._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
         
 		if (player._infectedWith == nil)
 		{
@@ -219,9 +220,10 @@
 			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",virus._virusName, virus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
 			[alert addButtonWithTitle:@"Quit it"];
 			[alert show];
-			
 		}
-        
+        else {
+            player._infectedWith = virus;
+        }
 		
 		[virus release];
 	}
@@ -239,11 +241,13 @@
 		NSString *virusName = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_name"]];
 		NSString *virusOwner = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_owner"]];
 		NSString *virusZonePoints = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"zone_points"]];
-		
+		NSString *mutation = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"mutation"]];
 		cVirus *enemyVirus = [[cVirus alloc] init];
 		enemyVirus._virusName = virusName;
 		enemyVirus._owner = virusOwner;
 		enemyVirus._zonePoints = [NSNumber numberWithInt:[virusZonePoints intValue]];
+        enemyVirus._mutation = [NSNumber numberWithInt:[mutation intValue]];
+        
 		
 		if (player._infectedWith == nil)
 		{

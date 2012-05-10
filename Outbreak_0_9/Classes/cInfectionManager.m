@@ -49,6 +49,10 @@
 	[request setPostValue:aVictim._username forKey:@"victim_id"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:aVirus._owner forKey:@"username"];
+    if ( aVirus._mutation != nil ) {
+        
+        [request setPostValue:aVirus._mutation forKey:@"mutation"];
+    }
 	[request setDelegate:self];
 	[request startAsynchronous];
 	
@@ -80,6 +84,7 @@
     cVirus *activeVirus;
     if (player._infectedWith) {
         activeVirus = [[cVirus alloc] initWithVirus:player._infectedWith];
+            [request setPostValue:activeVirus._mutation forKey:@"mutation"];
     }
     else {
         activeVirus = [[cVirus alloc] initWithVirus:player._currentVirus];
@@ -103,6 +108,7 @@
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
 	[request setPostValue:activeVirus._owner forKey:@"username"];
+
 	
     [activeVirus release];
 

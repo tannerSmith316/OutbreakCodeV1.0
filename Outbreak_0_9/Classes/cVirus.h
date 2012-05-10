@@ -16,6 +16,7 @@
 	NSString *_virusType;
 	NSNumber *_instantPoints;
 	NSNumber *_zonePoints;
+    NSNumber *_mutation;
 }
 
 @property (nonatomic, retain)NSString *_owner;
@@ -23,6 +24,7 @@
 @property (nonatomic, retain)NSNumber *_instantPoints;
 @property (nonatomic, retain)NSNumber *_zonePoints;
 @property (nonatomic, retain)NSString *_virusName;
+@property (nonatomic, retain)NSNumber *_mutation;
 
 - (cVirus *)initWithVirus:(cVirus *)aVirus;
 - (NSString *)GetStats;

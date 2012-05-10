@@ -16,6 +16,7 @@
 @synthesize _zonePoints;
 @synthesize _instantPoints;
 @synthesize _virusType;
+@synthesize _mutation;
 
 - (cVirus *)initWithVirus:(cVirus *)aVirus {
 	
@@ -26,6 +27,7 @@
 		self._zonePoints = aVirus._zonePoints;
 		self._instantPoints = aVirus._instantPoints;
 		self._virusType = aVirus._virusType;
+        self._mutation = aVirus._mutation;
 	}
 	return self;
 }

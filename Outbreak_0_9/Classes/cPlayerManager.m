@@ -176,6 +176,7 @@
         virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
+        //virus._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
 		
 		[viruses addObject:virus];
 		[virus release];
@@ -196,6 +197,8 @@
         infectedWith._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         infectedWith._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         infectedWith._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
+        infectedWith._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
+        
 		//Set playersingleton infectedWith
 		player._infectedWith = infectedWith;
         

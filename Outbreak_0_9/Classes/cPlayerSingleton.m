@@ -76,10 +76,10 @@ static cPlayerSingleton *_player = nil;
 		_MAXTIME = [[NSNumber alloc] initWithInt:7200]; //7200
 		_MINHOTSPOTRANGE = [[NSNumber alloc] initWithInt:10]; //10
 		_MAXHOTSPOTRANGE = [[NSNumber alloc] initWithInt:100]; //100
-        _MINSITTIME = [[NSNumber alloc] initWithInt:30]; //30
+        _MINSITTIME = [[NSNumber alloc] initWithInt:5]; //30
         _MAXSITTIME = [[NSNumber alloc] initWithInt:300]; //300
         _MAXMOVEDIST = [[NSNumber alloc] initWithInt:20]; //20
-        _UPDATETIMERINTERVAL = [[NSNumber alloc] initWithInt:30]; //30
+        _UPDATETIMERINTERVAL = [[NSNumber alloc] initWithInt:10]; //30
 	}
 	return self;
 }
