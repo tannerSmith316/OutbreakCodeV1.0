@@ -32,7 +32,15 @@
 	return self;
 }
 
-//Return formatted string containing virus stats
+/************************************************************
+ * Purpose: Format the virus stats as newline delimited for ease of
+ *   display in a UITextView
+ *
+ * Entry: Whenever stats need be displayed this function is called
+ *   before setting UI Text
+ *
+ * Exit: Formatted string has been returned
+ ************************************************************/
 - (NSString *)GetStats {
     NSString *formattedStats = [NSString stringWithFormat:@"Name:%@\nType:%@\nInstant Points:%@\nZone Points:%@", _virusName, _virusType, _instantPoints, _zonePoints];
     

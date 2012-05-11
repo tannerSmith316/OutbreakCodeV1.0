@@ -27,13 +27,19 @@
     [super dealloc];
 }
 
+/************************************************************
+ * Purpose: Request information from the Location Manager based
+ *   on the user pressing a UI button
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: Nearby victims have been returned from the location MGR
+ ************************************************************/
 - (IBAction)RefreshButtonPressed {
-    
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
 	player._locationMGR.delegate = self;
 	[player._locationMGR GetNearby];
-	
 }
 
 /************** UITABLEVIEW DELEGATE REQUIRED FUNCTIONS **********/
@@ -70,7 +76,14 @@
     return cell;
 }
 
-//Victim has been chosen for infection attempt
+/************************************************************
+ * Purpose: Requests the infection manager to attempt an instant 
+ *   infection on the victim located at the table index selected
+ *
+ * Entry: UITable index.row selected on screen
+ *
+ * Exit: Vicitm data has been sent to the infection manager
+ ************************************************************/
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -78,8 +91,15 @@
 	[player._infectionMGR AttemptInstant:[_victimArray objectAtIndex:indexPath.row]];
 }
 
-//UICallback when location manager sends infectionView the array of
-//victims from its GetNearby
+/************************************************************
+ * Purpose: UICallback when the location manager sends infectionView the
+ *   array of victims from its GetNearby
+ *
+ * Entry: LocationManager has finished asynchronous request and calls
+ *   back to the infectView
+ *
+ * Exit: victimArray has been saved locally and is used to update the UITableView
+ ************************************************************/
 - (void)UpdateVictimTable:(NSArray *)victimArray {
 	
 	//retain the sent array in self

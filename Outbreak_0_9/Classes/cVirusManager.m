@@ -28,6 +28,15 @@
     [super dealloc];
 }
 
+/************************************************************
+ * Purpose: Checks if the player already owns the virus, if not
+ *   make the POST to the web server asking for the creation
+ *   of the virus passed in
+ *
+ * Entry: UIButton hit from virusCreationscreen
+ *
+ * Exit: Asynchronous POST sent or user is alerted of errors
+ ************************************************************/
 - (void)CreateVirus:(cVirus *)aVirus {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._virus = aVirus;
@@ -68,9 +77,15 @@
 	}	
 }
 
-
-//Callback on succesful connection to web server, if web server
-//returns TRUE, save the virus into the players array.
+/************************************************************
+ * Purpose: If server said creation was succesful, we add the virus
+ *   the the players virus array and report to the delegate that
+ *   the request has finished
+ *
+ * Entry: succesful connection to server VirusPersister
+ *
+ * Exit: Delegate has been alerted
+ ************************************************************/
 - (void)CreationDidFinished:(ASIHTTPRequest *)request {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
@@ -92,7 +107,14 @@
 	
 }
 
-//Failed connection to server, send FAIL to delegate with error msg
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)CreationDidFailed:(ASIHTTPRequest *)request {
 	
 	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
@@ -101,8 +123,15 @@
     }
 }
 
-//This is an asynchronous POST to persist the deletion of
-//the sent virus
+/************************************************************
+ * Purpose: makes a post to the server requesting that the virus
+ *   passed in be deleted form the players virus array
+ *
+ * Entry: User has selected a virus and pressed delete button
+ *   from virus selection screen
+ *
+ * Exit: asynchronous POST has been sent
+ ************************************************************/
 - (void)DeleteVirus:(cVirus *)aVirus {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._virus = aVirus;
@@ -126,8 +155,15 @@
 	[aVirus release];
 }
 
-//Callback on succesful connection to server, if server returns true
-//Remove the saved virus info from the array of player viruses
+/************************************************************
+ * Purpose: If the web server sais the virus has been deleted from
+ *   persistance, then we remove it from the player virus array and
+ *   alert the delegate that processing is complete
+ *
+ * Entry: succesful connection to DeleteVirus
+ *
+ * Exit: delegate has been alerted
+ ************************************************************/
 - (void)DeleteVirusDidFinished:(ASIHTTPRequest *)request {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	if ([[request responseString] isEqualToString:@"TRUE"])
@@ -150,8 +186,14 @@
 	}
 }
 
-//Callback indicating failed connection to server, report failure and 
-//errormsg to delegate
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)DeleteVirusDidFailed:(ASIHTTPRequest *)request {
 	
 	//CONNECTION FAILED
@@ -160,8 +202,15 @@
         [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to web server"];
 }
 
-//Sets the player's current virus to the one passed in and starts
-//its hotspot timer, no POST here(current virus is not saved on server)
+/************************************************************
+ * Purpose: Sets the players currentVirus to the one passed into
+ *   the function
+ *
+ * Entry: User has selected a virus and pressed the "Select" button
+ *   from the virus selectionView
+ *
+ * Exit: delegate is alerted of the process completeted
+ ************************************************************/
 - (void)SelectVirus:(cVirus *)aVirus {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	

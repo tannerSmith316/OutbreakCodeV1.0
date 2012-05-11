@@ -12,6 +12,7 @@
 @synthesize _username;
 @synthesize _distance;
 
+//Copy constructor
 - (cVictim *)initWithVictim:(cVictim *)aVictim {
 	self = [super init];
     if(self)

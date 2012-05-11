@@ -33,12 +33,21 @@
     [super dealloc];
 }
 
+
 - (void)StopTimer {
     
     [_hotspotTimer invalidate];
 }
 
-//Uses the player's current virus to determine timer intervals and starts timer
+/************************************************************
+ * Purpose: Resets the hotspot timer with the active virus(current or infectedWith
+ *   based on stats
+ *
+ * Entry: Timer has fired and either fails or succeeds at laying a hotspot
+ *   then the request to resettimer happens
+ *
+ * Exit: timer is re-initialized with value based on virus stats
+ ************************************************************/
 - (void)ResetTimer {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
@@ -56,6 +65,7 @@
     float _MINSITTIME = [NSLocalizedString(@"MINSITTIME", nil) floatValue];
     float _MAXSITTIME = [NSLocalizedString(@"MAXSITTIME", nil) floatValue];
     
+	//SitTime - Amount of time needed to spend in one spot for virus to lay hotspot
     float sitTime = ([activeVirus._zonePoints floatValue] / 100) * (_MINSITTIME - _MAXSITTIME) + _MAXSITTIME;
     self._interval = [NSNumber numberWithFloat:sitTime];
     if([self._hotspotTimer isValid])

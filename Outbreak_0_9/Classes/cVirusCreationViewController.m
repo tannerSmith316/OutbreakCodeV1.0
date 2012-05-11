@@ -32,7 +32,6 @@
 	self = [super init];
 	if (self != nil)
 	{
-		//custom inits here
 		_virusMGR = [[cVirusManager alloc]init];
 		_virusMGR.delegate = self;
 	}
@@ -44,7 +43,14 @@
     [super dealloc];
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/************************************************************
+ * Purpose: Set the UILabels to values based on UISlider values
+ *   when the view loads
+ *
+ * Entry: View loaded
+ *
+ * Exit: Labels have been updated
+ ************************************************************/
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
@@ -63,8 +69,14 @@
 	self._helpTextView.editable = FALSE;
 }
 
-//Function is hit everytime slider value changes 
-//Slider values are tied together so change points accordingly
+/************************************************************
+ * Purpose: Change UILabels to values based on Slider values
+ *   Slider values are tied together, sharing 100 points
+ *
+ * Entry: Everytime the instant slider value changes
+ *
+ * Exit: Labels and values updated
+ ************************************************************/
 -(IBAction)instantSliderChanged:(id)sender
 {
 	//Update label and 
@@ -82,8 +94,14 @@
 	
 }
 
-//Function is hit everytime slider value changes 
-//Slider values are tied together so change points accordingly
+/************************************************************
+ * Purpose: Change UILabels to values based on Slider values
+ *   Slider values are tied together, sharing 100 points
+ *
+ * Entry: Everytime the instant slider value changes
+ *
+ * Exit: Labels and values updated
+ ************************************************************/
 -(IBAction)zoneSliderChanged:(id)sender
 {
 	//Update label and 
@@ -100,8 +118,14 @@
 	[newText2 release];
 }
 
-//Checks for UI fields to be complete and retrieves all inputed
-//data to be sent to the virus Manager for creation
+/************************************************************
+ * Purpose: Checks the UI fields to be complete and retreives all
+ * the inputed data to be sent tot he virus manager for creation
+ *
+ * Entry: UIButton pressed
+ *
+ * Exit: Virus sent to manager or error message displayed
+ ************************************************************/
 - (IBAction)CreateButtonPressed {
 
 	if ([self._virusNameField.text length] == 0)
@@ -124,8 +148,14 @@
 	}
 }
 
-//Generic function for all help buttons on the page
-//Uses button tag to determine help message to send
+/************************************************************
+ * Purpose: Sets the helpTextView text to the error strings
+ *   based on button pressed tag
+ *
+ * Entry: When any of the help buttons on screen are pressed
+ *
+ * Exit: Labels updated
+ ************************************************************/
 - (IBAction)HelpButtonPressed:(id)sender {
 	//Instant Help
 	if ([sender tag] == 1 )
@@ -142,8 +172,14 @@
 	}
 }
 
-//Callback for Virus manager to tell CreationView if a virus was created
-//along with any error messages
+/************************************************************
+ * Purpose: Allows the Manager to alert the ViewController that
+ *	 its done and the UI can be updated
+ *
+ * Entry: Manager asynchronous request has finished
+ *
+ * Exit: view is popped or error message is displayed
+ ************************************************************/
 - (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
 
 	self._createButton.enabled = TRUE;
@@ -159,7 +195,13 @@
 
 }
 
-//Makes keyboard dissappear when Return key is pressed
+/************************************************************
+ * Purpose: Hide the keyboard when the user is done with it
+ *
+ * Entry: UI keyboard Done(return) key hit
+ *
+ * Exit: Keyboard dissapears
+ ************************************************************/
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	
 	[textField resignFirstResponder];

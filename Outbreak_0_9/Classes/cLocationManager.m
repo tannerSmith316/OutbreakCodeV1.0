@@ -34,15 +34,27 @@
 	[super dealloc];
 }
 
-//Start the Core Location Train
+/************************************************************
+ * Purpose: Turn coreLocation back on to get location updates
+ *
+ * Entry: When the updateLocation timer fires from the playersingleton
+ *
+ * Exit: CoreLocation has startedUpdatingLocation
+ ************************************************************/
 - (void)PollCoreLocation {
 	
 	//startupdateloc starts core location
 	[CLController.locMgr startUpdatingLocation];
 }
 
-//CoreLocationController Callback when a location has been retrieved
-//Simply - PERSIST IT
+/************************************************************
+ * Purpose: Recieve the new location from core location and call
+ * the persistlocation POST
+ *
+ * Entry: CoreLocation has sent a valid location in accuracy range
+ *
+ * Exit: function that POSTs to web server has started
+ ************************************************************/
 - (void)locationUpdate:(CLLocation *)location {
 	//Parse latitude and longitude out of location info
 	NSString *latitude = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
@@ -51,15 +63,29 @@
     [self PersistLatitude:latitude andLongitude:longitude];
 }
 
-//Core location postback failure
+/************************************************************
+ * Purpose: Handles the rainy situation when core location has
+ *   failed internally
+ *
+ * Entry: CoreLocation error - dunno what happened
+ *
+ * Exit: Display some errors
+ ************************************************************/
 - (void)locationError:(NSError *)error {
 
 	//Unable to update location - Disable game features 
 	NSLog(@"CoreLocation Failure Postback hit");
 }
 
-//Sends an asynchronous POST to the web server and defines callbacks for 
-//request: didFinished and didFailed
+/************************************************************
+ * Purpose: Send asynchronous POST to server requesting that
+ *   the player's location been updated to the values passed in
+ *
+ * Entry: UpdateLocation timer fired and CoreLocation has returned 
+ *   a valid location
+ *
+ * Exit: POST to web server made
+ ************************************************************/
 - (void)PersistLatitude:(NSString *)latitude andLongitude:(NSString *)longitude {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     player._latitude = latitude;
@@ -84,8 +110,15 @@
 	NSLog(@"POST: UpdateLocation, Lat:%@ ; Long:%@", latitude, longitude);
 }
 
-//Successfuly connected to webserver it sends back data on
-//if the user has been infected or is in hotspots
+/************************************************************
+ * Purpose: After we have persisted our location the web server
+ *   will return a json packet containing hotspots the user is in
+ *   or virus's they have been infected with, parse and save
+ *
+ * Entry: succesful connection to web server on persist location
+ *
+ * Exit: parseVirusJson has begun
+ ************************************************************/	
 - (void)PersistLocationDidFinished:(ASIHTTPRequest *)request {
 	
 	NSLog(@"POST: UpdateLocation Succesful");
@@ -117,13 +150,28 @@
 	}
 }
 
-//Cannot connect to webserver
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: 
+ ************************************************************/
 - (void)PersistLocationDidFailed:(ASIHTTPRequest *)request {
 	
 }
 
-//Sends an asynchronous POST request to web server asking for 
-//All players nearby available for infection
+/************************************************************
+ * Purpose: Send a POST request to server requesting all nearby
+ *   victims within range of the users virus, we calculate virus
+ *   distance here, before POST
+ *
+ * Entry: Player has requested the victim for infection table be
+ *   refreshed
+ *
+ * Exit: POST request has been sent
+ ************************************************************/
 - (void)GetNearby {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	float _MAXDISTANCE = [NSLocalizedString(@"MAXDISTANCE", nil) floatValue];
@@ -151,9 +199,16 @@
 	//[request startAsynchronous];	
 }
 
-//Callback from succesful connection to webserver
-//Parse the nearby victims into an array and give to
-//UI delegate for table display
+/************************************************************
+ * Purpose: Parse the return string from the server which
+ *   contains an array of victims( username, distance ) and send
+ *   the arary to InfectViewController for table updates
+ *
+ * Entry: succcessful connection to server
+ *
+ * Exit: delegate is alerted of the successful connection
+ *   and is passed an array of victims
+ ************************************************************/
 - (void)GetNearbyFinished:(ASIHTTPRequest *)request
 {
 	
@@ -187,8 +242,18 @@
 	[victims release];
 }
 
-//Retrieves virus information from infectedWith or hotspots
-//and calls defendInfection functions where neccasary
+/************************************************************
+ * Purpose: Parse the data returned from the LocationDidFinished
+ *   request. First we check for an infectedWith virus, get all its
+ *   stats and save it. Then we check for hotspots and attempt to
+ *   infect the user if they are in a hotspot
+ *
+ * Entry: Only called from PersistLocatonDidFinished for parsing 
+ *   the return packet
+ *
+ * Exit: All data has been saved OR user tries to defend against
+ *   a hotspot infection.
+ ************************************************************/
 - (void)parseVirusJson:(NSDictionary *)jsonDict {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -222,6 +287,8 @@
 		[virus release];
 	}
     
+	//If the server says the player has no infectedWith, cure them
+	//before running hotspot checks
     if([infectedWithViruses count] == 0)
     {
         player._infectedWith = nil;
@@ -237,12 +304,14 @@
 		NSString *virusZonePoints = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"zone_points"]];
 		NSString *mutation = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"mutation"]];
 		
+		//Make a virus with that hotspot data
         cVirus *enemyVirus = [[cVirus alloc] init];
 		enemyVirus._virusName = virusName;
 		enemyVirus._owner = virusOwner;
 		enemyVirus._zonePoints = [NSNumber numberWithInt:[virusZonePoints intValue]];
         enemyVirus._mutation = [NSNumber numberWithInt:[mutation intValue]];
         
+		//Try to infect the player with hotspot virus
 		if (player._infectedWith == nil)
 		{
 			[player._infectionMGR DefendInfection:enemyVirus];

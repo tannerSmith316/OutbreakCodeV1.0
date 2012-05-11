@@ -20,8 +20,14 @@
     [super dealloc];
 }
 
-//Calls managers to log the user out and pop's the
-//view back to the login screen
+/************************************************************
+ * Purpose: Calls managers to log the user out and pop's the view
+ *    back to the login screen
+ *
+ * Entry: UI Button pressed
+ *
+ * Exit: Navigationstack pops back to LoginView
+ ************************************************************/
 - (void)LogoutBackButton {
 
 	//TODO: CALL PHP LOGOUT SCRIPT
@@ -34,7 +40,13 @@
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
-//Changes the view when user presses the button
+/************************************************************
+ * Purpose: Menu button to switch to the InfectionViewController
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: InfectViewController has been pushed
+ ************************************************************/
 - (IBAction)InfectScreenButtonPressed {
 
 	cInfectViewController *infectionView = [[cInfectViewController alloc] init];
@@ -42,7 +54,13 @@
 	[self.navigationController pushViewController:infectionView animated:YES];
 }
 
-//Changes the view when the user presses the button
+/************************************************************
+ * Purpose: Menu button to switch to the VirusSelectionView
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: VirusSelectionView has been pushed
+ ************************************************************/
 - (IBAction)VirusScreenButtonPressed {
 	
 	cVirusSelectionViewController *virusview = [[cVirusSelectionViewController alloc] init];
@@ -50,7 +68,14 @@
 	[self.navigationController pushViewController:virusview animated:YES];
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/************************************************************
+ * Purpose: Creates a UIBarButtonItem programmatically, functions
+ *    similarly to Interface Builder tied buttons
+ *
+ * Entry: The view has been loaded
+ *
+ * Exit: Button has been created and attached to the view
+ ************************************************************/
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -60,8 +85,14 @@
     [backButton release];
 }
 
-//Check everytime the user go's to the main screen if the user is infected
-//If so - Display it to the screen somehow
+/************************************************************
+ * Purpose: Change the main screen background color and label to
+ *   alert the user if they are infected, everytime the screen appears
+ *
+ * Entry: View appears on screen
+ *
+ * Exit: background color and label have been set according to infectedWith
+ ************************************************************/
 - (void)viewWillAppear:(BOOL)animated {
     
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];

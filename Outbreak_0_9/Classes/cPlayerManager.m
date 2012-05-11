@@ -24,9 +24,15 @@
 	return self;	
 }
 
-//Send an asynchronous POST request to the webserver's PlayerPersister dispatcher
-//sending the Login method message, Callback didFinished, and didFailed set before
-//POST request
+/************************************************************
+ * Purpose: Send a POST request to web server requesting a login
+ *   with the username and password parameters
+ *
+ * Entry: LoginViewController has sent a request from data supplied
+ *   by the user
+ *
+ * Exit: Asynchronous request has been sent
+ ************************************************************/
 - (void)LoginWithUsername:(NSString *)username Password:(NSString *)password {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -55,9 +61,16 @@
 	
 }
 
-//If the User succesfully logged in this function will save the succesful
-//login credentials and parse the json packet returned that contains
-//all the players info
+/************************************************************
+ * Purpose: If the user has sent succesful credentials, this function
+ *   will save those credentials to a flat file and then parse the
+ *   json packet saving the data to the playersingleton
+ *
+ * Entry: Succesfull connection to the webserver asynchronous request
+ *   finished
+ *
+ * Exit: credentials saved and ParsePlayerJson has finished
+ ************************************************************/
 - (void)LoginDidFinished:(ASIHTTPRequest *)request {
 	
 	//Response will return TRUE or FALSE
@@ -103,7 +116,14 @@
 	 
 }
 
-//Failed connection to web-server, tell UI delegate the connection failed
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)LoginDidFailed:(ASIHTTPRequest *)request {
 
     if ([delegate conformsToProtocol:@protocol(AsyncUICallback)])
@@ -112,9 +132,15 @@
     }
 }
 
-//Send an asynchronous POST request to the webserver's PlayerPersister dispatcher
-//sending the Register method message, Callback didFinished, and didFailed set before
-//POST request
+/************************************************************
+ * Purpose: Sends a POST request to web server requesting an account
+ *  be registered with the given username and password
+ *
+ * Entry: UIView has been supplied data and requests the manager to process
+ *   it
+ *
+ * Exit: Asynchronous request sent off
+ ************************************************************/
 - (void)RegisterWithUsername:(NSString *)username Password:(NSString *)password {
     
     //Get url and method strings
@@ -135,7 +161,14 @@
 	[request startAsynchronous];
 }
 
-//Callback from asyncronous request if web server was reached
+/************************************************************
+ * Purpose: Report to the UI delegate the the server has been
+ *   reached supplying the appropriate message
+ *
+ * Entry: Succesful connection to server, register request finished
+ *
+ * Exit: delegate is given errorMsg and if the server was connected
+ ************************************************************/
 - (void)RegisterDidFinished:(ASIHTTPRequest *)request {
 	
 	//Account name was not taken and has been registered for the user
@@ -152,7 +185,14 @@
     }
 }
 
-//Callback from asyncronous request ON FAILED webserver request
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)RegisterDidFailed:(ASIHTTPRequest *)request {
 	
     if([delegate conformsToProtocol:@protocol(AsyncUICallback)])
@@ -160,7 +200,14 @@
 	
 }
 
-//Parses returned json and sets playsingleton with data retrieved
+/************************************************************
+ * Purpose: Parse the extensive json file containing player information
+ *   returned from the server and save the data to the player
+ *
+ * Entry: Called from loginDidFinished where the json packet is recieved
+ *
+ * Exit: viruses and infection states saved to player
+ ************************************************************/
 - (void)ParsePlayerJson:(NSDictionary *)playerDict {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -210,9 +257,15 @@
 	}
 }
 
-//Send an asynchronous POST request to the webserver's PlayerPersister dispatcher
-//sending the Logout method message, Callback didFinished, and didFailed set before
-//POST request
+/************************************************************
+ * Purpose: Send a POST to the web server requesting the user to be
+ *  logged out, this sets there coordinates to the north pole, or bermuda
+ *  triangle on database and nils all attributes on client
+ *
+ * Entry: UI requests manager after button press
+ *
+ * Exit: Player has been logged out and login screen is present
+ ************************************************************/
 - (void)Logout {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];

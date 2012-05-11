@@ -32,7 +32,6 @@
 	self = [super init];
 	if (self != nil)
 	{
-		//custom inits here
 		_virusMGR = [[cVirusManager alloc]init];
 		_virusMGR.delegate = self;
 	}
@@ -45,8 +44,14 @@
     [super dealloc];
 }
 
-//Everytime the view appears its pulls data from the playersingleton
-//and sets the current selected virus label from data
+/************************************************************
+ * Purpose: Keep the current virus up to date by checking its value
+ *    from the playsingleton everytime the view appears
+ *
+ * Entry: the View has appeared
+ *
+ * Exit: label and textview set appropriately
+ ************************************************************/
 - (void)viewWillAppear:(BOOL)animated
 {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -59,8 +64,14 @@
         self._virusStatsText.text = [NSString stringWithString:[player._currentVirus GetStats]];
 }
 
-//Checks if the user has less than the max amount of viruses
-//if so, navigate to the creation view controller, otherwise warn user
+/************************************************************
+ * Purpose: Checks if the user has less than the max amount of viruses
+ *   if so, navigate to the creation view controller, otherwise warn user
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: CreationView pushed or error message displayed
+ ************************************************************/
 - (IBAction)CreateVirusButtonPressed {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -72,6 +83,7 @@
 		cVirusCreationViewController *createview = [[cVirusCreationViewController alloc] init];
 		createview.title = @"Viruses";
 		[self.navigationController pushViewController:createview animated:YES];
+		[createview release];
 	}
     else 
     {
@@ -81,8 +93,16 @@
 	
 }
 
-//Gets the indexPath from the UITableView and uses that to index
-//Into the viruses array, if data was collected it is sent to virus manager
+/************************************************************
+ * Purpose: Gets the indexPath from the UITableView and uses that to
+ *   index into the viruses array,if data was collected it's sent to 
+ *   the virus manager for processing
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: Collected data given to virus MGR or no actions taken if
+ *   nothing to delete
+ ************************************************************/
 - (IBAction)DeleteVirusButtonPressed {
 
     //Get index from tableView which corresponds with viruses array index
@@ -101,8 +121,15 @@
 	}
 }
 
-//Checks if player has a virus to select, retrieves UITable indexPath
-//to index viruses array and sends collected data to virus Manager
+/************************************************************
+ * Purpose: Checks if player has a virus to select, retrieves UITable
+ *   indexPath to index viruses array and sends virus to virusManager
+ *
+ * Entry: UI button pressed
+ *
+ * Exit: virus to select was sent to virusManager or no actions taken
+ *  if the user has no viruses
+ ************************************************************/
 - (IBAction)SelectVirusButtonPressed {
     
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -124,8 +151,15 @@
 	}
 }
 
-//Callback for virusManager to tell VirusSelectionView that its done 
-//processing along with passing any error messages
+/************************************************************
+ * Purpose: Callback for virusManager to tell virusSelectionView that
+ *   its done processing along with passing any error messages
+ *
+ * Entry: Virus manager calls back to UI when done with asynchronous
+ *    request
+ *
+ * Exit: UI has been updated(buttons re-enabled)
+ ************************************************************/
 - (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
 
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];

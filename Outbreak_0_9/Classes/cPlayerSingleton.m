@@ -35,13 +35,21 @@ static cPlayerSingleton *_player = nil;
 }
 
 - (void)dealloc {
-	
+	[_locationMGR release];
+	[_infectionMGR release];
+	[_viruses release];
     [self ResetInstance];
 	[super dealloc];
 }
 
-//Creates a player if one doesnt exists
-//Returns player
+/************************************************************
+ * Purpose: Public function allowing us to get a player instance
+ *   wherever we are in the program
+ *
+ * Entry: Most everywhere in the APP we need player data
+ *
+ * Exit: Player singleton is returned
+ ************************************************************/
 + (cPlayerSingleton *)GetInstance {
 	@synchronized(self) {
 		if (_player == nil)
@@ -52,7 +60,14 @@ static cPlayerSingleton *_player = nil;
 	return _player;
 }
 
-//Empties all non-const attributes 
+/************************************************************
+ * Purpose: Empty or nil all attributes that the player contains
+ *   we must reset because you do not release a singleton
+ *
+ * Entry: Called from logout function
+ *
+ * Exit: player singleton attributes are all nil or empty
+ ************************************************************/
 - (void)ResetInstance {
 
 	if (_player != nil)
@@ -68,20 +83,43 @@ static cPlayerSingleton *_player = nil;
 	}
 }
 
-//starts the playersingleton's update timer on main screen init
+/************************************************************
+ * Purpose: Starts the timer responsible for firing the updateLocation
+ *   to keep the players location accurates
+ *
+ * Entry: On login, OR when persistLocation finished its process
+ *   the timer is restarted
+ *
+ * Exit: Timer has restarted 
+ ************************************************************/
 - (void)StartUpdateTimer {
 	
     float _UPDATETIMERINTERVAL = [NSLocalizedString(@"UPDATETIMERINTERVAL", nil) floatValue];
 	self._updateLocationTimer = [NSTimer scheduledTimerWithTimeInterval:_UPDATETIMERINTERVAL target:self selector:@selector(locationTimerFired:) userInfo:nil repeats:NO];
 }
 
-//Start the core location train
+/************************************************************
+ * Purpose: We want to start coreLocation and get a new location
+ *   when the location timer fires and tells us to update
+ *
+ * Entry: UpdateLocationTimer has fired
+ *
+ * Exit: Core Location has started updateing
+ ************************************************************/
 - (void)locationTimerFired:(NSTimer *)theTimer {
 	
 	[_locationMGR PollCoreLocation];
 }
 
-//Checks virus passed in against array of player viruses
+/************************************************************
+ * Purpose: Checks if the passed in virus is contained within
+ *   the players array of viruses
+ *
+ * Entry: CreateVirus will check if the player owns a virus
+ *   before attempting to create it
+ *
+ * Exit: Return true or false if the player owns the virus
+ ************************************************************/
 - (BOOL)doesOwnVirus:(cVirus *)aVirus {
 	
 	for( cVirus *virus in self._viruses )

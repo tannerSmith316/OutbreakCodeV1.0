@@ -28,8 +28,16 @@
 	[super dealloc];
 }
 
-//Run's the victims defenses, if infection succesful it
-//calls PersistInfection
+/************************************************************
+ * Purpose: This will use the victim's defenses to attempt a
+ *   instant spread infection against. If they player has penetrated
+ *   the victims defenses, we make a POST to persist infection
+ *
+ * Entry: User has selected a victim from a table to attempt an
+ *   infection on
+ *
+ * Exit: victim defended against infection or POST persistInfection happens
+ ************************************************************/
 - (void)AttemptInstant:(cVictim *)aVictim {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -45,9 +53,16 @@
 	}
 }
 
-//Runs the users defenses against the Passed in virus, if the user
-//Gets infected, persistInfection is called passing in the user as
-//theVictim
+/************************************************************
+ * Purpose: Run the enemy virus stats against the players defenses
+ *   if the player cannot defend against the virus, we POST persistInfection
+ *   with the player being the victim
+ *
+ * Entry: User was sitting in a hotspot
+ *
+ * Exit: Player succesfully defends enemyVirus or POST to 
+ *   server requesting to PersistInfection if enemy virus gets through
+ ************************************************************/
 - (void)DefendInfection:(cVirus *)enemyVirus {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	//Check immunities
@@ -73,7 +88,14 @@
 	}
 }
 
-//Sends an asynchronous POST request saving an infection to the database
+/************************************************************
+ * Purpose: send POST request saving an infection to the database
+ *
+ * Entry: The player has infected a victim OR enemenyVirus has infected
+ *   the player and we persist with the player as victim
+ *
+ * Exit: POST request sent
+ ************************************************************/
 - (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim {
 
 	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"InfectionPersister", nil)];
@@ -96,18 +118,39 @@
 	[request startAsynchronous];
 }
 
-//Callback indicating a succesful connection to the server
+/************************************************************
+ * Purpose: Check if the server has responded that the infection
+ *   was succesful or not, if so alert the user
+ *
+ * Entry: successful connection to server InfectionPersister
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)InfectionDidFinished:(ASIHTTPRequest *)request {
     NSLog(@"%@", [request responseString]);
 }
 
-//Callback indicating a failed connection to the server
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
 	
 }
 
-//Sends an asynchronous POST to the web server persisting a hotspot
-//With the users current virus based on its stats
+/************************************************************
+ * Purpose: sends POST to web server persisting a hotspot with the
+ *   active virus(users currentVirus OR users infectedWith based on its stats
+ *
+ * Entry: Timer based on virus zone_points has triggered and user
+ *   has staying the the hotspot zone for enough updates to LAYHOTSPOT
+ *
+ * Exit: Asynchronous POST sent
+ ************************************************************/
 - (void)LayHotspot {
     NSLog(@"Laying some hotspots(before POST)");
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -161,9 +204,14 @@
 	[request startAsynchronous];
 }
 
-//Callback indicating succesful connection with server
-//If server returns TRUE string, then alert user they have
-//Laid a hotspot
+/************************************************************
+ * Purpose: Reset the hotspot timer and alert the user one was laid
+ *   if true
+ *
+ * Entry: web server callback when finished with LayHotspot
+ *
+ * Exit: hotspot timer reset and/or user is alerted they laid a hotspot
+ ************************************************************/
 - (void)HotspotDidFinished:(ASIHTTPRequest *)request {
 	NSLog(@"%@", [request responseString]);
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
@@ -179,7 +227,14 @@
     }
 }
 
-//Callback indicates failed connection with server
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
 - (void)HotspotDidFailed:(ASIHTTPRequest *)request {
 
 	//couldnt connect to server

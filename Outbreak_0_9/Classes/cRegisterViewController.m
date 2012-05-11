@@ -25,7 +25,8 @@
 	self = [super init];
 	if (self != nil)
 	{
-		//custom inits here
+		//Setting playerMgr delegate to self so self can be alerted
+		//when the manager is done processing
 		_playerMGR = [[cPlayerManager alloc]init];
 		_playerMGR.delegate = self;
 	}
@@ -37,8 +38,14 @@
     [super dealloc];
 }
 
-//Checks if the information in the UI fields is valid, if so
-//It sends the data off to the player manager for logical computations
+/************************************************************
+ * Purpose: Check if the information in the UI fields is valid, 
+ *    if so, send the data to the player manager for logical computations
+ *
+ * Entry: Button pressed from UI
+ *
+ * Exit: After data is sent to Manager or error message displayed
+ ************************************************************/
 - (IBAction)RegisterButtonPressed:(id)sender {
 	
 	//Checks that user doesnt have an "empty string" password
@@ -67,7 +74,15 @@
 	}
 }
 
-//Callback when PlayerManager tells RegisterView its done processing
+/************************************************************
+ * Purpose: Callback when playermanager tells the RegisterView its
+     done processing
+ *
+ * Entry: Player manager has reached an AsynchronousDidFinsihed/didFailed
+ *	 and calls this function to alert UI
+ *
+ * Exit: After view controller re-enables UI features
+ ************************************************************/
 - (void)UICallback:(BOOL)asyncSuccess errorMsg:(NSString *)errMsg {
 	//Re-Enable the UI elements
 	self._errorMessage.text = errMsg;
@@ -77,7 +92,13 @@
 	[_whirligig stopAnimating];
 }
 
-//Makes keyboard dissapear when Return button pressed
+/************************************************************
+ * Purpose: Hide the keyboard when the user is done with it
+ *
+ * Entry: UI keyboard Done(return) key hit
+ *
+ * Exit: Keyboard dissapears
+ ************************************************************/
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	
 	[textField resignFirstResponder];

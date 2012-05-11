@@ -45,8 +45,16 @@
     [super dealloc];
 }
 
-//Looks for and opens credentials.txt from the local Document directory
-//Parses data in credentials.txt and uses it to attempt to login automatically
+/************************************************************
+ * Purpose: To attempt to automatically log the user in using
+ *   a credentials.txt file(in the documents directory) to by-pass
+ *   the annoying login screen
+ *
+ * Entry: Called when the LoginViewController didLoad
+ *
+ * Exit: Will end at LoginDidFinished or LoginDidFailed depending
+ *   on server connectivity
+ ************************************************************/
 - (void)AttemptAutoLogin {
 	
     //Get local phone documents directory
@@ -70,8 +78,14 @@
 	}
 }
 
-//Calls the player managers login function using
-//the data from the UI supplied by the user
+/************************************************************
+ * Purpose: Pass data from the UI to the Player manager for 
+ *   logical processing
+ *
+ * Entry: Button pressed from UI
+ *
+ * Exit: After data is sent to Manager
+ ************************************************************/
 - (IBAction)LoginButtonPressed:(id)sender {
 	self._password = _passwordField.text;
 	self._username = _usernameField.text;
@@ -86,7 +100,14 @@
 	
 }
 
-//Handle UI event by pushing the appropriate screen
+/************************************************************
+ * Purpose: Pass data from the UI to the Player manager for 
+ *   logical processing
+ *
+ * Entry: Button pressed from UI
+ *
+ * Exit: After data is sent to Manager
+ ************************************************************/
 - (IBAction)RegisterButtonPressed:(id)sender {
 	
     //Make and push the view(screen)
@@ -97,8 +118,16 @@
 	
 }
 
-//This is a callback for when the LoginViewcontroller is the playerMgr's
-//delegate and information is travelling back up to the UI
+/************************************************************
+ * Purpose: Based on the return message from the manager
+ *   the UI will update to move to the main screen or display
+ *   an error message
+ *
+ * Entry: Called by the playerManager to alert the UI its done
+ *    with its asynchronous process
+ *
+ * Exit: UI has been updated:view pushed or button re-enabled, etc
+ ************************************************************/
 - (void)UICallback:(BOOL)loginSuccess errorMsg:(NSString *)errMsg {
  
     if (loginSuccess) 
@@ -126,14 +155,27 @@
 	_loginIndicator.hidden = TRUE;
 }
 
-//Keyboard dissapears when Return button pressed
+/************************************************************
+ * Purpose: Hide the keyboard when the user is done with it
+ *
+ * Entry: UI keyboard Done(return) key hit
+ *
+ * Exit: Keyboard dissapears
+ ************************************************************/
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
 	[textField resignFirstResponder];
 	return NO;
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/************************************************************
+ * Purpose: Apple event handler - During event we try to attempt
+ *    an auto login
+ *
+ * Entry: The view has loaded(not to be confused with viewWillAppear)
+ *
+ * Exit: view loaded, autologin completed
+ ************************************************************/
 - (void)viewDidLoad {
     [super viewDidLoad];
     self._loginIndicator.hidesWhenStopped = TRUE;
