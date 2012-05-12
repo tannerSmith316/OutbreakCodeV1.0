@@ -41,6 +41,7 @@
 }
 
 - (void)dealloc {
+    [_virusMGR release];
     [super dealloc];
 }
 
@@ -119,6 +120,7 @@
 		[self._virusMGR DeleteVirus:aVirus];
         [aVirus release];
 	}
+    self._virusStatsText.text = @"";
 }
 
 /************************************************************

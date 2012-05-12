@@ -6,6 +6,9 @@
 //  Copyright 2012 Oregon Institute of Technology. All rights reserved.
 //
 
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+
 #import "cInfectViewController.h"
 #import "cMainScreenViewController.h"
 #import "cPlayerSingleton.h"
@@ -15,8 +18,22 @@
 @synthesize _infectScreenButton;
 @synthesize _virusScreenButton;
 @synthesize _infectedWithLabel;
+@synthesize _playerMGR;
+//debug
+@synthesize _healButton;
+
+- (id)init {
+    self = [super init];
+    if (self)
+    {
+        _playerMGR = [[cPlayerManager alloc] init];
+        _playerMGR.delegate = self;
+    }
+    return self;
+}
 
 - (void)dealloc {
+    [_playerMGR release];
     [super dealloc];
 }
 
@@ -30,14 +47,7 @@
  ************************************************************/
 - (void)LogoutBackButton {
 
-	//TODO: CALL PHP LOGOUT SCRIPT
-	
-    //clear playersingleton
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	[player ResetInstance];
-	[player._updateLocationTimer invalidate];
-	//pop viewcontroller
-	[self.navigationController popViewControllerAnimated:YES];
+	[_playerMGR Logout];
 }
 
 /************************************************************
@@ -66,6 +76,14 @@
 	cVirusSelectionViewController *virusview = [[cVirusSelectionViewController alloc] init];
 	virusview.title = @"Viruses";
 	[self.navigationController pushViewController:virusview animated:YES];
+}
+
+- (void)UICallback:(BOOL)success errorMsg:(NSString *)errMsg {
+    
+    if (success)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 /************************************************************
@@ -106,6 +124,45 @@
 		self.view.backgroundColor = [UIColor whiteColor];
 		self._infectedWithLabel.text = nil;
 	}
+}
+
+//debug
+- (IBAction)HealButtonPressed:(id)sender {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    //Get url and method strings
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"InfectionPersister", nil)];
+    NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodCurePlayer", nil)];
+	NSURL *url = [NSURL URLWithString:urlstring];
+	
+    //Set request attributes
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
+	[request setPostValue:player._username forKey:@"username"];
+	
+	[request setDidFinishSelector:@selector(HealDidFinished:)];
+	[request setDidFailSelector:@selector(HealDidFailed:)];
+	[request setDelegate:self];
+    player._infectedWith = nil;
+	[request startAsynchronous];
+}
+
+- (void)HealDidFinished:(ASIHTTPRequest *)request {
+    NSLog(@"Heal did finished:%@", [request responseString]);
+
+    
+}
+
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
+- (void)HealDidFailed:(ASIHTTPRequest *)request {
+	
+    NSLog(@"Heal did failed:%@", [request responseString]);
 }
 
 /********** UNMODIFIED apple view event handlers BELOW ********/

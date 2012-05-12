@@ -269,7 +269,11 @@
         virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
-        virus._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
+        if ([each_virus objectForKey:@"mutation"]) 
+        {
+            virus._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
+        }
+        
         
         //Can only infect a player if they are not sick already
 		if (player._infectedWith == nil)
@@ -298,18 +302,17 @@
 	NSDictionary *hotspots = [jsonDict objectForKey:@"hotspots"];
 	for ( NSDictionary *hotspot in hotspots )
 	{
-		//Eat some data form the dictionary
-		NSString *virusName = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_name"]];
-		NSString *virusOwner = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_owner"]];
-		NSString *virusZonePoints = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"zone_points"]];
-		NSString *mutation = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"mutation"]];
-		
 		//Make a virus with that hotspot data
         cVirus *enemyVirus = [[cVirus alloc] init];
-		enemyVirus._virusName = virusName;
-		enemyVirus._owner = virusOwner;
-		enemyVirus._zonePoints = [NSNumber numberWithInt:[virusZonePoints intValue]];
-        enemyVirus._mutation = [NSNumber numberWithInt:[mutation intValue]];
+		enemyVirus._virusName = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_name"]];
+		enemyVirus._owner = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_owner"]];
+		enemyVirus._zonePoints = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"zone_points"]];
+        enemyVirus._instantPoints = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"instant_points"]];
+        enemyVirus._virusType = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"virus_type"]];
+        if([hotspot objectForKey:@"mutation"]) 
+        {
+            enemyVirus._mutation = [NSString stringWithFormat:@"%@", [hotspot objectForKey:@"mutation"]];
+        }
         
 		//Try to infect the player with hotspot virus
 		if (player._infectedWith == nil)

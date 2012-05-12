@@ -45,12 +45,24 @@
 	//pull defenses
 	//random 0-1
 	//if rand > %
+    
+    //Will attempt infection with enemy virus if the user is infected
+    cVirus *activeVirus;
+    if (player._infectedWith) 
+    {
+        activeVirus = [[cVirus alloc] initWithVirus:player._infectedWith];
+    }
+    else
+    {
+        activeVirus = [[cVirus alloc] initWithVirus:player._currentVirus];
+    }
 	
 	//Simulates 100% infection
 	if (1)
 	{
-		[self PersistInfection:player._currentVirus WithVictim:aVictim];
+		[self PersistInfection:activeVirus WithVictim:aVictim];
 	}
+    [activeVirus release];
 }
 
 /************************************************************
@@ -110,8 +122,8 @@
 	[request setPostValue:aVictim._username forKey:@"victim_id"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:aVirus._owner forKey:@"username"];
-    if ( aVirus._mutation != nil ) {
-        
+    if (aVirus._mutation) 
+    {
         [request setPostValue:aVirus._mutation forKey:@"mutation"];
     }
 	[request setDelegate:self];
@@ -128,7 +140,9 @@
  ************************************************************/
 - (void)InfectionDidFinished:(ASIHTTPRequest *)request {
     NSLog(@"%@", [request responseString]);
+
 }
+
 
 /************************************************************
  * Purpose: Handles the rainy situation when the user has lost 
@@ -195,8 +209,12 @@
 	[request setPostValue:player._latitude forKey:@"latitude"];
 	[request setPostValue:player._longitude forKey:@"longitude"];
 	[request setPostValue:activeVirus._owner forKey:@"username"];
-    [request setPostValue:activeVirus._mutation forKey:@"mutation"];
-
+    
+    if (activeVirus._mutation) 
+    {
+        [request setPostValue:activeVirus._mutation forKey:@"mutation"];
+    }
+    
     //Were done with this guy now
     [activeVirus release];
 

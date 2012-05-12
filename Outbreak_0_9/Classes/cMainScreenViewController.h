@@ -7,23 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "cPlayerManager.h"
 
-
-@interface cMainScreenViewController : UIViewController {
+@interface cMainScreenViewController : UIViewController<AsyncUICallback> {
 
 	IBOutlet UIButton *_infectScreenButton;
 	IBOutlet UIButton *_virusScreenButton;
 	IBOutlet UILabel *_infectedWithLabel;
+    
+    //debug
+    IBOutlet UIButton *_healButton;
+    
+    cPlayerManager *_playerMGR;
 }
 
 @property (nonatomic, retain)UIButton *_infectScreenButton;
 @property (nonatomic, retain)UIButton *_virusScreenButton;
 @property (nonatomic, retain)UILabel *_infectedWithLabel;
+@property (nonatomic, retain)cPlayerManager *_playerMGR;
+
+//debug
+@property (nonatomic, retain)UIButton *_healButton;
 
 //Programmatically handled button event handler
 - (void)LogoutBackButton;
 //Interface builder button event handlers
 - (IBAction)InfectScreenButtonPressed;
 - (IBAction)VirusScreenButtonPressed;
+
+//debug
+- (IBAction)HealButtonPressed:(id)sender;
 
 @end

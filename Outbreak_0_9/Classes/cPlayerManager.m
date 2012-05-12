@@ -227,7 +227,6 @@
         virus._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         virus._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         virus._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
-        //virus._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
 		
 		[viruses addObject:virus];
 		[virus release];
@@ -248,7 +247,13 @@
         infectedWith._instantPoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"instant_points"]];
         infectedWith._zonePoints = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"zone_points"]];
         infectedWith._virusType = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"virus_type"]];
-        infectedWith._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
+        
+        //causes mutation to be nil instead of @"null" if no mutation data sent back
+        if ([each_virus objectForKey:@"mutation"]) 
+        {
+            infectedWith._mutation = [NSString stringWithFormat:@"%@", [each_virus objectForKey:@"mutation"]];
+        }
+        
         
 		//Set playersingleton infectedWith
 		player._infectedWith = infectedWith;
@@ -270,6 +275,54 @@
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	[player ResetInstance];
+
+    //Get url and method strings
+	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"PlayerPersister", nil)];
+    NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodLogout", nil)];
+	NSURL *url = [NSURL URLWithString:urlstring];
+	
+    //Set request attributes
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:webMethod forKey:@"method"];
+	[request setPostValue:player._username forKey:@"username"];
+	
+	[request setDidFinishSelector:@selector(LogoutDidFinished:)];
+	[request setDidFailSelector:@selector(LogoutDidFailed:)];
+	[request setDelegate:self];
+    
+	[request startAsynchronous];
+}
+
+/************************************************************
+ * Purpose: Report to the UI delegate the the server has been
+ *   reached supplying the appropriate message
+ *
+ * Entry: Succesful connection to server, logout request finished
+ *
+ * Exit: delegate is given errorMsg and if the server was connected
+ ************************************************************/
+- (void)LogoutDidFinished:(ASIHTTPRequest *)request {
+	
+    if ([delegate conformsToProtocol:@protocol(AsyncUICallback)]) 
+    {
+        [delegate UICallback:TRUE errorMsg:@""];
+    }
+}
+
+/************************************************************
+ * Purpose: Handles the rainy situation when the user has lost 
+ *  connection
+ *
+ * Entry: Asynchronous request times out, FAILED CONNECTION
+ *
+ * Exit: delegate is alerted of the failed request
+ ************************************************************/
+- (void)LogoutDidFailed:(ASIHTTPRequest *)request {
+	
+	if ([delegate conformsToProtocol:@protocol(AsyncUICallback)]) 
+    {
+        [delegate UICallback:TRUE errorMsg:@""];
+    }
 }
 
 @end

@@ -19,12 +19,13 @@
 	self = [super init];
 	if (self != nil)
 	{
-
+        _virus = [[cVirus alloc] init];
 	}
 	return self;
 }
 
 - (void)dealloc {
+    [_virus release];
     [super dealloc];
 }
 
@@ -152,7 +153,6 @@
 	[request startAsynchronous];
 	//[request startAsynchronous];
 	
-	[aVirus release];
 }
 
 /************************************************************
