@@ -10,6 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "cPlayerSingleton.h"
 #import "cVirusManager.h"
+#import "cConnectionViewController.h"
 
 @implementation cVirusManager
 @synthesize _virus;
@@ -195,11 +196,10 @@
  * Exit: delegate is alerted of the failed request
  ************************************************************/
 - (void)DeleteVirusDidFailed:(ASIHTTPRequest *)request {
-	
-	//CONNECTION FAILED
-	NSLog(@"Delete Error");
-	if([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
-        [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to web server"];
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
 /************************************************************

@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>CodeResources</key>
+		<data>
+		IxrTEjOitSjCzqxQ7uAgRrEIC0E=
+		</data>
+		<key>Localizable.strings</key>
+		<data>
+		Ye0xMskNVf3M0X6pXEFjE/r51ig=
+		</data>
 		<key>MainWindow.nib</key>
 		<data>
 		6gZ1oi8ICHvzU6SVS9P41RpAZCI=
@@ -12,9 +20,13 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>cConnectionViewController.nib</key>
+		<data>
+		eDOQRBbXgnMIe3vbFqU4EQj8fNk=
+		</data>
 		<key>cInfectViewController.nib</key>
 		<data>
-		joCKQvm/QWAfcEF6uA+Qk1dtTc0=
+		JSqJEF8oZ099q0yPeMCbpsiaQzM=
 		</data>
 		<key>cInfectionReportViewController.nib</key>
 		<data>
@@ -26,7 +38,7 @@
 		</data>
 		<key>cMainScreenViewController.nib</key>
 		<data>
-		FI1NiNIAI1emTA7U81BibbpBcMo=
+		Zd477FNgqS1/E9zfNMfvFHm0WhA=
 		</data>
 		<key>cRegisterViewController.nib</key>
 		<data>

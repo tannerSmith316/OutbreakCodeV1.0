@@ -165,7 +165,6 @@
  * Exit: delegate is alerted of the failed request
  ************************************************************/
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
-	
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];

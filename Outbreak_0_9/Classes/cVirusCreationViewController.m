@@ -12,6 +12,7 @@
 #import "cVirus.h"
 #import "cVirusCreationViewController.h"
 #import "cConnectionViewController.h"
+#import "cReconnectViewController.h"
 
 @implementation cVirusCreationViewController
 @synthesize _virusMGR;
@@ -192,7 +193,7 @@
 	else
 	{
 		self._helpTextView.text = errMsg;
-        cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         vc.title = @"Reconnect View";
         [player._appDel.navigationController pushViewController:vc animated:YES];
 	}

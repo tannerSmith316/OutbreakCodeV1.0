@@ -91,6 +91,10 @@
 		72A3B3B215057F8600A4A2AB /* cLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B115057F8600A4A2AB /* cLocationManager.m */; };
 		72A3B3B41505805100A4A2AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A3B3B31505805100A4A2AB /* CoreLocation.framework */; };
 		72A3B3B71505816A00A4A2AB /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3B3B61505816A00A4A2AB /* CoreLocationController.m */; };
+		72A5A56C155FBDCB00AE7016 /* cReconnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A56A155FBDCB00AE7016 /* cReconnectViewController.m */; };
+		72A5A56D155FBDCB00AE7016 /* cReconnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */; };
+		72A5A56E155FBDCB00AE7016 /* cReconnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A56A155FBDCB00AE7016 /* cReconnectViewController.m */; };
+		72A5A56F155FBDCB00AE7016 /* cReconnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */; };
 		72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C4C8581516CBAD00ECACEB /* cVirusManager.m */; };
 		72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E0932B150D9A6000F67811 /* cInfectionManager.m */; };
 		72F4BE5C153D23F60016DD44 /* cPlayerManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 727118AE14FEA2F400EAD166 /* cPlayerManager.h */; };
@@ -206,6 +210,9 @@
 		72A3B3B31505805100A4A2AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		72A3B3B51505816A00A4A2AB /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
 		72A3B3B61505816A00A4A2AB /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
+		72A5A569155FBDCB00AE7016 /* cReconnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cReconnectViewController.h; sourceTree = "<group>"; };
+		72A5A56A155FBDCB00AE7016 /* cReconnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cReconnectViewController.m; sourceTree = "<group>"; };
+		72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cReconnectViewController.xib; sourceTree = "<group>"; };
 		72C4C8571516CBAD00ECACEB /* cVirusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cVirusManager.h; sourceTree = "<group>"; };
 		72C4C8581516CBAD00ECACEB /* cVirusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cVirusManager.m; sourceTree = "<group>"; };
 		72E0932A150D9A6000F67811 /* cInfectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cInfectionManager.h; sourceTree = "<group>"; };
@@ -431,6 +438,9 @@
 				C3FE0EE5155F442F00655A37 /* cConnectionViewController.h */,
 				C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */,
 				C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */,
+				72A5A569155FBDCB00AE7016 /* cReconnectViewController.h */,
+				72A5A56A155FBDCB00AE7016 /* cReconnectViewController.m */,
+				72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */,
 			);
 			name = UIL;
 			sourceTree = "<group>";
@@ -527,6 +537,7 @@
 				72233CB0150C299300DD393D /* cVirusCreationViewController.xib in Resources */,
 				76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */,
 				C3FE0EE9155F443000655A37 /* cConnectionViewController.xib in Resources */,
+				72A5A56D155FBDCB00AE7016 /* cReconnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A5A56F155FBDCB00AE7016 /* cReconnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +601,7 @@
 				C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */,
 				C3FE0EE8155F443000655A37 /* cConnectionViewController.m in Sources */,
 				C300D65F155FAE1F0066EE08 /* cConnectionManager.m in Sources */,
+				72A5A56C155FBDCB00AE7016 /* cReconnectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +669,7 @@
 				72A2E92F153680780024B2D3 /* ASIProgressDelegate.h in Sources */,
 				72A2E9531536848F0024B2D3 /* iPlayerManagerTests.m in Sources */,
 				72A2E9571536851F0024B2D3 /* iVirusManager.m in Sources */,
+				72A5A56E155FBDCB00AE7016 /* cReconnectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

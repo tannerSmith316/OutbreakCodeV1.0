@@ -249,7 +249,7 @@
 	[victims release];
 }
 
-- (void)GetNearbyFailed:(ASIHTTPRequest *)request {
+- (void)GetNearbyDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
