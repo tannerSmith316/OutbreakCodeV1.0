@@ -44,7 +44,7 @@
 - (IBAction)RetryButtonPressed:(id)sender {
     
     [_playerMGR LoginWithUsername:self._username Password:self._password];
-	_retryButton.titleLabel.text = @"";
+	[_retryButton setEnabled:FALSE];
     [self._reconnectIndicator startAnimating];
 }
 
@@ -52,7 +52,7 @@
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     [self._reconnectIndicator stopAnimating];
-    _retryButton.titleLabel.text = @"Retry";
+    _retryButton.enabled = TRUE;
     if (success)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congrats" message:@"Successfully Reconnected" delegate:nil cancelButtonTitle:@"Woot" otherButtonTitles:nil, nil];
@@ -68,13 +68,20 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+
+    self.navigationItem.hidesBackButton = TRUE;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     self._reconnectIndicator.hidesWhenStopped = TRUE;
+   
     [player ResetInstance];
+    [self._retryButton setTitle:@"" forState:UIControlStateDisabled];
     // Do any additional setup after loading the view from its nib.
 }
 

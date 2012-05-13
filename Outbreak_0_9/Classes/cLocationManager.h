@@ -33,4 +33,7 @@
 - (void)GetNearby;
 - (void)PersistLatitude:(NSString *)latitude andLongitude:(NSString *)longitude;
 
+//Internal parsing function to deal with json packet returned form  update location
+- (void)ParseLocationUpdateJson:(NSDictionary *)jsonDict;
+
 @end

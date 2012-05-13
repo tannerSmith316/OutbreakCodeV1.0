@@ -139,7 +139,7 @@
 		NSString *jsonString = [NSString stringWithString:[request responseString]];
 		NSDictionary *deserializedData = [[NSDictionary alloc] init];
 		deserializedData = [jsonString objectFromJSONString];
-		[self parseVirusJson:deserializedData];
+		[self ParseLocationUpdateJson:deserializedData];
 	}
 	//restart timer if player is still logged in
 	if (player._username != nil)
@@ -163,10 +163,25 @@
  ************************************************************/
 - (void)PersistLocationDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+ 
+    BOOL alreadyHandled = FALSE;
+    NSMutableArray *viewStack = [NSMutableArray arrayWithArray:[player._appDel.navigationController viewControllers]];
+    for (id object in viewStack)
+    {
+        if([object isKindOfClass:[cReconnectViewController class]])
+        {
+            alreadyHandled = TRUE;
+            break;
+        }
+    }
     
-    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
-    [player._appDel.navigationController pushViewController:vc animated:YES];
-	
+    //Push rainy day only if similar one doesnt already exist on stack
+    if (!alreadyHandled)
+    {
+        cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        [player._appDel.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 /************************************************************
@@ -252,8 +267,23 @@
 - (void)GetNearbyDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
-    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
-    [player._appDel.navigationController pushViewController:vc animated:YES];
+    BOOL alreadyHandled = FALSE;
+    NSMutableArray *viewStack = [NSMutableArray arrayWithArray:[player._appDel.navigationController viewControllers]];
+    for (id object in viewStack)
+    {
+        if([object isKindOfClass:[cReconnectViewController class]])
+        {
+            alreadyHandled = TRUE;
+            break;
+        }
+    }
+    
+    //Push rainy day only if similar one doesnt already exist on stack
+    if (!alreadyHandled)
+    {
+        cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        [player._appDel.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 /************************************************************
@@ -268,12 +298,21 @@
  * Exit: All data has been saved OR user tries to defend against
  *   a hotspot infection.
  ************************************************************/
-- (void)parseVirusJson:(NSDictionary *)jsonDict {
-	
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+- (void)ParseLocationUpdateJson:(NSDictionary *)jsonDict {
 	
     NSDictionary *infectedWithViruses = [jsonDict objectForKey:@"infections"];
-	for ( NSDictionary *each_virus in infectedWithViruses )
+	[self ParseInfectedWith:infectedWithViruses];
+
+	//Retrieve information from the deserialized json string
+	NSDictionary *hotspots = [jsonDict objectForKey:@"hotspots"];
+    [self ParseHotspotDict:hotspots];
+	
+}
+
+- (void)ParseInfectedWith:(NSDictionary *)infectedWithViruses {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    for ( NSDictionary *each_virus in infectedWithViruses )
 	{
 		
 		//Needs to retrieve more virus info
@@ -318,10 +357,13 @@
         }
         player._infectedWith = nil;
     }
+    
+}
 
-	//Retrieve information from the deserialized json string
-	NSDictionary *hotspots = [jsonDict objectForKey:@"hotspots"];
-	for ( NSDictionary *hotspot in hotspots )
+- (void)ParseHotspotDict:(NSDictionary *)hotspots {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    for ( NSDictionary *hotspot in hotspots )
 	{
 		//Make a virus with that hotspot data
         cVirus *enemyVirus = [[cVirus alloc] init];

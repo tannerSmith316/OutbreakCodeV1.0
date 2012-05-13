@@ -8,7 +8,6 @@
 
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
-#import "cConnectionViewController.h"
 #import "cLoginViewController.h"
 #import "cMainScreenViewController.h"
 #import "cPlayerManager.h"
@@ -106,7 +105,6 @@
         }
         else
         {
-            NSLog(@"POST: Login Succesful");
             self._usernameField.text = nil;
             self._passwordField.text = nil;
             

@@ -11,7 +11,6 @@
 #import "cPlayerSingleton.h"
 #import "cVirus.h"
 #import "cVirusCreationViewController.h"
-#import "cConnectionViewController.h"
 #import "cReconnectViewController.h"
 
 @implementation cVirusCreationViewController

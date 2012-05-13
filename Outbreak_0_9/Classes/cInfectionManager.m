@@ -166,10 +166,24 @@
  ************************************************************/
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-    [player ResetInstance];
     
-    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
-    [player._appDel.navigationController pushViewController:vc animated:YES];
+    BOOL alreadyHandled = FALSE;
+    NSMutableArray *viewStack = [NSMutableArray arrayWithArray:[player._appDel.navigationController viewControllers]];
+    for (id object in viewStack)
+    {
+        if([object isKindOfClass:[cReconnectViewController class]])
+        {
+            alreadyHandled = TRUE;
+            break;
+        }
+    }
+    
+    //Push rainy day only if similar one doesnt already exist on stack
+    if (!alreadyHandled)
+    {
+        cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        [player._appDel.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 /************************************************************
@@ -275,10 +289,24 @@
 
 	//couldnt connect to server
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-    [player ResetInstance];
     
-    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
-    [player._appDel.navigationController pushViewController:vc animated:YES];
+    BOOL alreadyHandled = FALSE;
+    NSMutableArray *viewStack = [NSMutableArray arrayWithArray:[player._appDel.navigationController viewControllers]];
+    for (id object in viewStack)
+    {
+        if([object isKindOfClass:[cReconnectViewController class]])
+        {
+            alreadyHandled = TRUE;
+            break;
+        }
+    }
+    
+    //Push rainy day only if similar one doesnt already exist on stack
+    if (!alreadyHandled)
+    {
+        cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        [player._appDel.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

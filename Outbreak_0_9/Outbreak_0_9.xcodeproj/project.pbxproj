@@ -120,11 +120,8 @@
 		72F4BFC4153E5ADA0016DD44 /* cVirusCreationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAC150C299300DD393D /* cVirusCreationViewController.h */; };
 		72F4BFC5153E5ADA0016DD44 /* cVirusCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAD150C299300DD393D /* cVirusCreationViewController.m */; };
 		76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76F9B593155B5B7E002E7F44 /* Localizable.strings */; };
-		C300D65F155FAE1F0066EE08 /* cConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C300D65E155FAE1F0066EE08 /* cConnectionManager.m */; };
 		C39450E21547B08D006F390C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C39450E11547B08D006F390C /* libz.dylib */; };
 		C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C39450E41548B6E4006F390C /* cHotspotTimer.m */; };
-		C3FE0EE8155F443000655A37 /* cConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */; };
-		C3FE0EE9155F443000655A37 /* cConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,14 +216,9 @@
 		72E0932B150D9A6000F67811 /* cInfectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cInfectionManager.m; sourceTree = "<group>"; };
 		76F9B593155B5B7E002E7F44 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Outbreak_0_9-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C300D65D155FAE1F0066EE08 /* cConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cConnectionManager.h; sourceTree = "<group>"; };
-		C300D65E155FAE1F0066EE08 /* cConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cConnectionManager.m; sourceTree = "<group>"; };
 		C39450E11547B08D006F390C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C39450E31548B6E4006F390C /* cHotspotTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cHotspotTimer.h; sourceTree = "<group>"; };
 		C39450E41548B6E4006F390C /* cHotspotTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cHotspotTimer.m; sourceTree = "<group>"; };
-		C3FE0EE5155F442F00655A37 /* cConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cConnectionViewController.h; sourceTree = "<group>"; };
-		C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cConnectionViewController.m; sourceTree = "<group>"; };
-		C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cConnectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,8 +393,6 @@
 				72C4C8581516CBAD00ECACEB /* cVirusManager.m */,
 				C39450E31548B6E4006F390C /* cHotspotTimer.h */,
 				C39450E41548B6E4006F390C /* cHotspotTimer.m */,
-				C300D65D155FAE1F0066EE08 /* cConnectionManager.h */,
-				C300D65E155FAE1F0066EE08 /* cConnectionManager.m */,
 			);
 			name = BOL;
 			sourceTree = "<group>";
@@ -410,6 +400,7 @@
 		729F7036150087FC0046355F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */,
 				72233CAE150C299300DD393D /* cVirusCreationViewController.xib */,
 				727118A214FEA1F300EAD166 /* cLoginViewController.xib */,
 				72233BF7150C115900DD393D /* cVirusSelectionViewController.xib */,
@@ -435,12 +426,8 @@
 				72233BF6150C115900DD393D /* cVirusSelectionViewController.m */,
 				72233CAC150C299300DD393D /* cVirusCreationViewController.h */,
 				72233CAD150C299300DD393D /* cVirusCreationViewController.m */,
-				C3FE0EE5155F442F00655A37 /* cConnectionViewController.h */,
-				C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */,
-				C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */,
 				72A5A569155FBDCB00AE7016 /* cReconnectViewController.h */,
 				72A5A56A155FBDCB00AE7016 /* cReconnectViewController.m */,
-				72A5A56B155FBDCB00AE7016 /* cReconnectViewController.xib */,
 			);
 			name = UIL;
 			sourceTree = "<group>";
@@ -536,7 +523,6 @@
 				72233BF9150C115900DD393D /* cVirusSelectionViewController.xib in Resources */,
 				72233CB0150C299300DD393D /* cVirusCreationViewController.xib in Resources */,
 				76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */,
-				C3FE0EE9155F443000655A37 /* cConnectionViewController.xib in Resources */,
 				72A5A56D155FBDCB00AE7016 /* cReconnectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,8 +585,6 @@
 				72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */,
 				72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */,
 				C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */,
-				C3FE0EE8155F443000655A37 /* cConnectionViewController.m in Sources */,
-				C300D65F155FAE1F0066EE08 /* cConnectionManager.m in Sources */,
 				72A5A56C155FBDCB00AE7016 /* cReconnectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

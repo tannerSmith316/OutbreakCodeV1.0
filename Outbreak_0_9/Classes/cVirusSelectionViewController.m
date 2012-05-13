@@ -14,7 +14,6 @@
 #import "ASIFormDataRequest.h"
 #import "cPlayerManager.h"
 
-#import "cConnectionViewController.h"
 
 @implementation cVirusSelectionViewController
 
@@ -174,11 +173,6 @@
 	self._deleteVirusButton.enabled = TRUE;
 	self._selectVirusButton.enabled = TRUE;
     
-    if (!asyncSuccess) 
-    {
-        cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
-        [player._appDel.navigationController pushViewController:vc animated:YES];
-    }
 }
 
 /********************NEEDED UITableView Functions BELOW***************/
