@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "cPlayerManager.h"
 
-@interface cReconnectViewController : UIViewController {
+@interface cReconnectViewController : UIViewController<AsyncUICallback> {
 
 	cPlayerManager *_playerMGR;
     IBOutlet UIButton *_retryButton;

@@ -49,6 +49,7 @@
 }
 
 - (void)UICallback:(BOOL)success errorMsg:(NSString *)errMsg {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     [self._reconnectIndicator stopAnimating];
     _retryButton.titleLabel.text = @"Retry";
@@ -57,7 +58,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congrats" message:@"Successfully Reconnected" delegate:nil cancelButtonTitle:@"Woot" otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
-        [self.navigationController popViewControllerAnimated:YES];
+        [player._appDel.navigationController popViewControllerAnimated:YES];
     }
     else
     {

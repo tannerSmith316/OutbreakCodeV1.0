@@ -10,7 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "cPlayerSingleton.h"
 #import "cVirusManager.h"
-#import "cConnectionViewController.h"
+#import "cReconnectViewController.h"
 
 @implementation cVirusManager
 @synthesize _virus;
@@ -119,10 +119,11 @@
  ************************************************************/
 - (void)CreationDidFailed:(ASIHTTPRequest *)request {
 	
-	if ([delegate conformsToProtocol:@protocol(UIVirusAsyncDelegate)])
-    {
-        [delegate UpdateCallback:FALSE errMsg:@"Cannot connect to server"];
-    }
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player ResetInstance];
+    
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
 /************************************************************
@@ -197,8 +198,9 @@
  ************************************************************/
 - (void)DeleteVirusDidFailed:(ASIHTTPRequest *)request {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player ResetInstance];
     
-    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
     [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 

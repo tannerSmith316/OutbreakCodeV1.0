@@ -214,13 +214,13 @@
     
     // Release any cached data, images, etc. that aren't in use.
 }
-/*
+
 - (void)viewWillDisappear:(BOOL)animated {
     self._cooldownProgress.progress = 0;
     self._timerCount =0;
     [self._virusCDTimer invalidate];
     self._virusCooldown = FALSE; 
-}*/
+}
 
 - (void)viewDidUnload {
     

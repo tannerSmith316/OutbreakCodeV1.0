@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/cVirusManager.m"
-         timestampString = "358589641.160997"
+         timestampString = "358600534.531274"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "162"
+         endingLineNumber = "162"
          landmarkName = "@implementation cVirusManager"
          landmarkType = "3">
       </FileBreakpoint>
@@ -274,6 +274,19 @@
          startingLineNumber = "46"
          endingLineNumber = "46"
          landmarkName = "-RetryButtonPressed:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/cLocationManager.m"
+         timestampString = "358600554.349283"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "167"
+         endingLineNumber = "167"
+         landmarkName = "-PersistLocationDidFailed:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

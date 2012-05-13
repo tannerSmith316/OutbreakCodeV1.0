@@ -11,7 +11,7 @@
 #import "cInfectionManager.h"
 #import "cPlayerSingleton.h"
 
-#import "cConnectionViewController.h"
+#import "cReconnectViewController.h"
 
 @implementation cInfectionManager
 @synthesize _hotspotTimer;
@@ -166,8 +166,9 @@
  ************************************************************/
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player ResetInstance];
     
-    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
     [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
@@ -274,8 +275,9 @@
 
 	//couldnt connect to server
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player ResetInstance];
     
-    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
     [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 

@@ -14,7 +14,7 @@
 #import "cVictim.h"
 #import "JSONKit.h"
 
-#import "cConnectionViewController.h"
+#import "cReconnectViewController.h"
 
 @implementation cLocationManager
 @synthesize CLController;
@@ -164,7 +164,7 @@
 - (void)PersistLocationDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
-    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
     [player._appDel.navigationController pushViewController:vc animated:YES];
 	
 }
@@ -252,7 +252,7 @@
 - (void)GetNearbyDidFailed:(ASIHTTPRequest *)request {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
-    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
     [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 

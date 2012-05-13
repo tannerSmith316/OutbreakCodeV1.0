@@ -25,7 +25,7 @@
 "MINSITTIME" = "5"; //30
 "MAXSITTIME" = "300"; //300
 "MAXMOVEDSIT" = "20"; //20
-"UPDATETIMERINTERVAL" = "30"; //30
+"UPDATETIMERINTERVAL" = "10"; //30
 
 "PlayerPersister" = "cPlayerPersister.php";
 "MethodLogin" = "Login";

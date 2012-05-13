@@ -80,8 +80,8 @@ static cPlayerSingleton *_player = nil;
 		self._longitude =nil;
 		self._password =nil;
 		self._username =nil;
-        [_player._infectionMGR._hotspotTimer._hotspotTimer invalidate];
-        [_player._updateLocationTimer invalidate];
+        [self._infectionMGR._hotspotTimer._hotspotTimer invalidate];
+        [self._updateLocationTimer invalidate];
 	}
 }
 
