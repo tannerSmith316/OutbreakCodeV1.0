@@ -8,6 +8,7 @@
 
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
+#import "cConnectionViewController.h"
 #import "cLoginViewController.h"
 #import "cMainScreenViewController.h"
 #import "cPlayerManager.h"
@@ -145,6 +146,8 @@
     else 
     {
         self._loginError.text = @"Bad login credentials";
+        cConnectionViewController *connVC = [[cConnectionViewController alloc] init];
+        [self.navigationController pushViewController:connVC animated:YES];
     }
     
     //Re-enable UI regardless of success

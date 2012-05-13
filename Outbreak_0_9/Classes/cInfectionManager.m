@@ -60,7 +60,11 @@
 	//Simulates 100% infection
 	if (1)
 	{
-		[self PersistInfection:activeVirus WithVictim:aVictim];
+        int minTime = [NSLocalizedString(@"MININFECTIONTIME", nil) intValue];
+        int maxTime = [NSLocalizedString(@"MAXINFECTIONTIME", nil) intValue];
+        int theTime = ([activeVirus._instantPoints floatValue] / 100) * (maxTime - minTime) + minTime;
+        
+		[self PersistInfection:activeVirus WithVictim:aVictim WithTime:theTime];
 	}
     [activeVirus release];
 }
@@ -90,7 +94,11 @@
         {
             //Set the infection
             player._infectedWith = enemyVirus;
-            [self PersistInfection:enemyVirus WithVictim:myself];
+            int minTime = [NSLocalizedString(@"MININFECTIONTIME", nil) intValue];
+            int maxTime = [NSLocalizedString(@"MAXINFECTIONTIME", nil) intValue];
+            int theTime = ([enemyVirus._zonePoints floatValue] / 100) * (maxTime - minTime) + minTime;
+            
+            [self PersistInfection:enemyVirus WithVictim:myself WithTime:theTime];
             
             //Alert the user of the bad news
             UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"INFECTED!" message:[NSString stringWithFormat:@"You have been infect with:%@, by:%@",enemyVirus._virusName, enemyVirus._owner] delegate:nil cancelButtonTitle:@"Ouch!" otherButtonTitles:nil] autorelease];
@@ -108,13 +116,14 @@
  *
  * Exit: POST request sent
  ************************************************************/
-- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim {
+- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim WithTime:(int)timeIntervals {
 
+    NSString *timeInterval = [NSString stringWithFormat:@"%d", timeIntervals];
 	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"InfectionPersister", nil)];
 	NSURL *url = [NSURL URLWithString:urlstring];
 	NSString  *webMethod = [NSString stringWithFormat:@"%@", NSLocalizedString(@"MethodInfectPlayer", nil)];
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-
+    
 
 	[request setDidFinishSelector:@selector(InfectionDidFinished:)];
 	[request setDidFailSelector:@selector(InfectionDidFailed:)];
@@ -122,6 +131,7 @@
 	[request setPostValue:aVictim._username forKey:@"victim_id"];
 	[request setPostValue:aVirus._virusName forKey:@"virus_name"];
 	[request setPostValue:aVirus._owner forKey:@"username"];
+    [request setPostValue:timeInterval forKey:@"time"];
     if (aVirus._mutation) 
     {
         [request setPostValue:aVirus._mutation forKey:@"mutation"];

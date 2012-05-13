@@ -118,6 +118,8 @@
 		76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76F9B593155B5B7E002E7F44 /* Localizable.strings */; };
 		C39450E21547B08D006F390C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C39450E11547B08D006F390C /* libz.dylib */; };
 		C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C39450E41548B6E4006F390C /* cHotspotTimer.m */; };
+		C3FE0EE8155F443000655A37 /* cConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */; };
+		C3FE0EE9155F443000655A37 /* cConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +214,9 @@
 		C39450E11547B08D006F390C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C39450E31548B6E4006F390C /* cHotspotTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cHotspotTimer.h; sourceTree = "<group>"; };
 		C39450E41548B6E4006F390C /* cHotspotTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cHotspotTimer.m; sourceTree = "<group>"; };
+		C3FE0EE5155F442F00655A37 /* cConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cConnectionViewController.h; sourceTree = "<group>"; };
+		C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cConnectionViewController.m; sourceTree = "<group>"; };
+		C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cConnectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +423,9 @@
 				72233BF6150C115900DD393D /* cVirusSelectionViewController.m */,
 				72233CAC150C299300DD393D /* cVirusCreationViewController.h */,
 				72233CAD150C299300DD393D /* cVirusCreationViewController.m */,
+				C3FE0EE5155F442F00655A37 /* cConnectionViewController.h */,
+				C3FE0EE6155F442F00655A37 /* cConnectionViewController.m */,
+				C3FE0EE7155F443000655A37 /* cConnectionViewController.xib */,
 			);
 			name = UIL;
 			sourceTree = "<group>";
@@ -513,6 +521,7 @@
 				72233BF9150C115900DD393D /* cVirusSelectionViewController.xib in Resources */,
 				72233CB0150C299300DD393D /* cVirusCreationViewController.xib in Resources */,
 				76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */,
+				C3FE0EE9155F443000655A37 /* cConnectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +582,7 @@
 				72E0932C150D9A6000F67811 /* cInfectionManager.m in Sources */,
 				72C4C8591516CBAD00ECACEB /* cVirusManager.m in Sources */,
 				C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */,
+				C3FE0EE8155F443000655A37 /* cConnectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,18 +12,26 @@
 
 @implementation cInfectViewController
 @synthesize _victimArray;
+@synthesize _virusCooldown;
+@synthesize _virusCDTimer;
+@synthesize _timerCount;
+@synthesize _cooldownProgress;
+@synthesize _victimToInfect;
+@synthesize _cooldownLabel;
 
 - (id)init {
 	self = [super init];
 	if (self)
 	{
 		_victimArray = [[NSMutableArray alloc] init];
+        
 	}
 	return self;
 }
 
 - (void)dealloc {
     [_victimArray release];
+    [self._virusCDTimer invalidate];
     [super dealloc];
 }
 
@@ -84,11 +92,57 @@
  *
  * Exit: Vicitm data has been sent to the infection manager
  ************************************************************/
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-    //Send victim info to the manager for logical computations
-	[player._infectionMGR AttemptInstant:[_victimArray objectAtIndex:indexPath.row]];
+    
+    if(self._virusCooldown)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"Virus is on Cooldown" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+    }
+    else 
+    {
+        //Send victim info to the manager for logical computations
+        self._victimToInfect = [_victimArray objectAtIndex:indexPath.row];
+        [self StartCooldownTimer];
+    }
+}
+
+- (void)StartCooldownTimer {
+    
+    self._virusCooldown = TRUE;
+    self._cooldownLabel.hidden = FALSE;
+    //Get time based on virus stats
+    self._virusCDTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(CDTimerFired) userInfo:nil repeats:YES];
+}
+
+- (void)CDTimerFired {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    int minCooldown = [NSLocalizedString(@"MINCOOLDOWN", nil) intValue];
+    int maxCooldown = [NSLocalizedString(@"MAXCOOLDOWN", nil) intValue];
+    
+    int virusCooldown = ([player._currentVirus._instantPoints floatValue] / 100) * (minCooldown - maxCooldown) + maxCooldown;
+    
+    _timerCount = _timerCount + 1;
+    if(_timerCount == virusCooldown)//Change hard value to timer instant points
+    {
+        self._cooldownLabel.hidden = TRUE;
+        [_virusCDTimer invalidate];
+        self._virusCooldown = FALSE;
+        [self._cooldownProgress setProgress:0 animated:YES];
+        _timerCount = 0;
+        
+        [player._infectionMGR AttemptInstant:self._victimToInfect];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Infection Sent" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release]; 
+    }
+    else 
+    {
+        double aProgress = (double)_timerCount * ((double)1/(double)virusCooldown);
+        [self._cooldownProgress setProgress:aProgress animated:YES];
+    }
 }
 
 /************************************************************
@@ -109,13 +163,16 @@
 	
 }
 
-/******* UNMODIFIED view event handlers BELOW **********/
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self._cooldownProgress.progress = 0;
+    self._cooldownLabel.hidden = TRUE;
 	
 }
+
+/******* UNMODIFIED view event handlers BELOW **********/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

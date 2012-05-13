@@ -23,6 +23,6 @@
 - (void)AttemptInstant:(cVictim *)aVictim;
 - (void)DefendInfection:(cVirus *)enemyVirus;
 - (void)LayHotspot;
-- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim;
+- (void)PersistInfection:(cVirus *)aVirus WithVictim:(cVictim *)aVictim WithTime:(int)timeIntervals;
  
 @end
