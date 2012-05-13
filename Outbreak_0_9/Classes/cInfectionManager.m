@@ -11,6 +11,8 @@
 #import "cInfectionManager.h"
 #import "cPlayerSingleton.h"
 
+#import "cConnectionViewController.h"
+
 @implementation cInfectionManager
 @synthesize _hotspotTimer;
 
@@ -164,6 +166,10 @@
  ************************************************************/
 - (void)InfectionDidFailed:(ASIHTTPRequest *)request {
 	
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
 /************************************************************
@@ -268,6 +274,10 @@
 - (void)HotspotDidFailed:(ASIHTTPRequest *)request {
 
 	//couldnt connect to server
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
 @end

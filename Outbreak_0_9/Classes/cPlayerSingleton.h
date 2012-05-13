@@ -10,9 +10,11 @@
 #import "cVirus.h"
 #import "cLocationManager.h"
 #import "cInfectionManager.h"
+#import "Outbreak_0_9AppDelegate.h"
 
 //This is a player singleton class that holds data needed App wide
 @interface cPlayerSingleton : NSObject {
+    Outbreak_0_9AppDelegate *appDel;
 
     //login username
 	NSString *_username;
@@ -42,6 +44,7 @@
 	cInfectionManager *_infectionMGR;
 }
 
+@property (nonatomic, retain)Outbreak_0_9AppDelegate *_appDel;
 @property (nonatomic, retain)NSMutableArray *_viruses;
 @property (nonatomic, retain)cVirus *_infectedWith;
 @property (nonatomic, retain)cVirus *_currentVirus;

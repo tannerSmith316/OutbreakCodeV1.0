@@ -23,6 +23,7 @@ static cPlayerSingleton *_player = nil;
 @synthesize _username;
 @synthesize _locationMGR;
 @synthesize _infectionMGR;
+@synthesize _appDel;
 
 - (id)init {
 	if (self = [super init])

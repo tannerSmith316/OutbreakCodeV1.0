@@ -14,6 +14,8 @@
 #import "cVictim.h"
 #import "JSONKit.h"
 
+#import "cConnectionViewController.h"
+
 @implementation cLocationManager
 @synthesize CLController;
 @synthesize delegate;
@@ -120,7 +122,7 @@
  * Exit: parseVirusJson has begun
  ************************************************************/	
 - (void)PersistLocationDidFinished:(ASIHTTPRequest *)request {
-	
+    
 	NSLog(@"POST: UpdateLocation Succesful");
 	//set infected with
 	
@@ -148,6 +150,7 @@
 	{
 		NSLog(@"Timer stopped - Invalid Username");
 	}
+     
 }
 
 /************************************************************
@@ -159,6 +162,10 @@
  * Exit: 
  ************************************************************/
 - (void)PersistLocationDidFailed:(ASIHTTPRequest *)request {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 	
 }
 
@@ -240,6 +247,13 @@
     }
 	
 	[victims release];
+}
+
+- (void)GetNearbyFailed:(ASIHTTPRequest *)request {
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+    [player._appDel.navigationController pushViewController:vc animated:YES];
 }
 
 /************************************************************

@@ -8,8 +8,8 @@
 
 //"KEY" = "CONTENT";
 
-"URLSERVER" = "http://66.189.145.171/";
-//"URLSERVER" = "http://192.168.10.200/";
+//"URLSERVER" = "http://66.189.145.171/";
+"URLSERVER" = "http://192.168.10.200/";
 
 "MAXPLAYERVIRUSES" = "5";
 "MINCOOLDOWN" = "10";

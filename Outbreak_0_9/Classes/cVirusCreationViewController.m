@@ -194,7 +194,7 @@
 		self._helpTextView.text = errMsg;
         cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
         vc.title = @"Reconnect View";
-        [self.navigationController pushViewController:vc animated:YES];
+        [player._appDel.navigationController pushViewController:vc animated:YES];
 	}
 
 }

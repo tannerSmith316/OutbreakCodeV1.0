@@ -21,6 +21,7 @@
     
 }
 
+@property (nonatomic, retain)UIButton *_retryButton;
 @property (nonatomic, retain)cPlayerManager *_playerMGR;
 @property (nonatomic, retain)NSString *_username;
 @property (nonatomic, retain)NSString *_password;

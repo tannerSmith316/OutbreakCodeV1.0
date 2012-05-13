@@ -16,6 +16,7 @@
 @synthesize _password;
 @synthesize _username;
 @synthesize _playerMGR;
+@synthesize _retryButton;
 
 - (id)initWithUsername:(NSString *)username WithPassword:(NSString *)password {
     self = [super init];
@@ -35,20 +36,22 @@
 }
 
 - (IBAction)QuitButtonPressed:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    [player._appDel.navigationController popToRootViewControllerAnimated:YES];
     
 }
 
 - (IBAction)RetryButtonPressed:(id)sender {
     
     [_playerMGR LoginWithUsername:self._username Password:self._password];
-	
+	_retryButton.titleLabel.text = @"";
     [self._reconnectIndicator startAnimating];
 }
 
 - (void)UICallback:(BOOL)success errorMsg:(NSString *)errMsg {
     
     [self._reconnectIndicator stopAnimating];
+    _retryButton.titleLabel.text = @"Retry";
     if (success)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congrats" message:@"Successfully Reconnected" delegate:nil cancelButtonTitle:@"Woot" otherButtonTitles:nil, nil];

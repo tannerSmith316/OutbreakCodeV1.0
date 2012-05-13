@@ -8,6 +8,7 @@
 
 #import "Outbreak_0_9AppDelegate.h"
 #import "cLoginViewController.h"
+#import "cPlayerSingleton.h"
 
 
 
@@ -21,6 +22,8 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    player._appDel = self;
     
     // Override point for customization after application launch.
 	cLoginViewController *loginVC = [[cLoginViewController alloc]init];

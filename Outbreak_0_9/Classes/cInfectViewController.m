@@ -48,7 +48,17 @@
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	
 	player._locationMGR.delegate = self;
-	[player._locationMGR GetNearby];
+    if (player._currentVirus || player._infectedWith) 
+    {
+        [player._locationMGR GetNearby];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Need a Virus" message:@"No active virus for infections" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+    }
+	
 }
 
 /************** UITABLEVIEW DELEGATE REQUIRED FUNCTIONS **********/
@@ -192,7 +202,19 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    self._cooldownProgress.progress = 0;
+    self._timerCount =0;
+    [self._virusCDTimer invalidate];
+    self._virusCooldown = FALSE; 
+}
+
 - (void)viewDidUnload {
+    
+    self._cooldownProgress.progress = 0;
+    self._timerCount =0;
+    [self._virusCDTimer invalidate];
+    self._virusCooldown = FALSE;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
