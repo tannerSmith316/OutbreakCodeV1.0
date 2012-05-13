@@ -38,9 +38,7 @@
 @property (nonatomic, retain)NSString *_password;
 @property (nonatomic, retain)cPlayerManager *_playerMGR;
 
-//Attempts to automatically log the user in
-//To avoid annoying login screen
-- (void)AttemptAutoLogin;
+
 //Tied to UI Actions through Interface Builder
 - (IBAction)LoginButtonPressed:(id)sender;
 - (IBAction)RegisterButtonPressed:(id)sender;

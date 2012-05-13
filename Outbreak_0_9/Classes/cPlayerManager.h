@@ -27,6 +27,9 @@
 
 @property (nonatomic, assign) id delegate;
 
+//Attempts to automatically log the user in
+//To avoid annoying login screen
+- (void)AttemptAutoLogin;
 //Parses the playerData from the json Dict and saves
 //it to the player singleton
 - (void)ParsePlayerJson:(NSDictionary *)playerDict;

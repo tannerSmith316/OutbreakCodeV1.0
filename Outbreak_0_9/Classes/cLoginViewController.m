@@ -47,39 +47,6 @@
 }
 
 /************************************************************
- * Purpose: To attempt to automatically log the user in using
- *   a credentials.txt file(in the documents directory) to by-pass
- *   the annoying login screen
- *
- * Entry: Called when the LoginViewController didLoad
- *
- * Exit: Will end at LoginDidFinished or LoginDidFailed depending
- *   on server connectivity
- ************************************************************/
-- (void)AttemptAutoLogin {
-	
-    //Get local phone documents directory
-	NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    //Retrieve the document containing auto-login credentials
-	NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
-	NSString *myFileContents = [NSString stringWithContentsOfFile:myFilePath encoding:NSUTF8StringEncoding error:nil];
-	NSLog(@"Attempting AutoLogin");
-    
-    //If the file contains data, use it for logging in.
-	if( [myFileContents length] != 0 )
-	{
-		NSArray *credentials = [myFileContents componentsSeparatedByString:@"\n"]; 
-		self._usernameField.text = [credentials objectAtIndex:0];
-		self._passwordField.text = [credentials objectAtIndex:1];
-		self._username = [credentials objectAtIndex:0];
-		self._password = [credentials objectAtIndex:1];
-		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", self._username, self._password);
-		
-		[_playerMGR LoginWithUsername:[credentials objectAtIndex:0] Password:[credentials objectAtIndex:1]];
-	}
-}
-
-/************************************************************
  * Purpose: Pass data from the UI to the Player manager for 
  *   logical processing
  *
@@ -133,21 +100,29 @@
  
     if (loginSuccess) 
     {
-        NSLog(@"POST: Login Succesful");
-        self._usernameField.text = nil;
-        self._passwordField.text = nil;
-        
-        cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
-        mainScreen.title = @"Main";
-        [self.navigationController pushViewController:mainScreen animated:YES];
-        //Navigation retained its on copy on push, so release ours
-        [mainScreen release];
+        if (errMsg) 
+        {
+            self._loginError.text = errMsg;
+        }
+        else
+        {
+            NSLog(@"POST: Login Succesful");
+            self._usernameField.text = nil;
+            self._passwordField.text = nil;
+            
+            cMainScreenViewController *mainScreen = [[cMainScreenViewController alloc] init];
+            mainScreen.title = @"Main";
+            [self.navigationController pushViewController:mainScreen animated:YES];
+            //Navigation retained its on copy on push, so release ours
+            [mainScreen release];
+        }
     }
     else 
     {
-        self._loginError.text = @"Bad login credentials";
-        cConnectionViewController *connVC = [[cConnectionViewController alloc] init];
-        [self.navigationController pushViewController:connVC animated:YES];
+        self._loginError.text = @"Cannot connect to server";
+        //pushing this view Crashes simulator only not phone
+        //cConnectionViewController *connVC = [[cConnectionViewController alloc] init];
+        //[self.navigationController pushViewController:connVC animated:YES];
     }
     
     //Re-enable UI regardless of success
@@ -185,7 +160,7 @@
     
     //Try and log player in automatically to avoid
     //annoying login screen when it loads
-	[self AttemptAutoLogin];
+	[self._playerMGR AttemptAutoLogin];
 }
 
 /*****  UNMODIFIED NEEDED APPLE STUFF BELOW *********/

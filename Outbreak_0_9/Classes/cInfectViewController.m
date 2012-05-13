@@ -94,7 +94,6 @@
  * Exit: Vicitm data has been sent to the infection manager
  ************************************************************/
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
     if(self._virusCooldown)
     {

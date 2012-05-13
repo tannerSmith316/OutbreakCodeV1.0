@@ -11,6 +11,7 @@
 #import "cPlayerSingleton.h"
 #import "cVirus.h"
 #import "cVirusCreationViewController.h"
+#import "cConnectionViewController.h"
 
 @implementation cVirusCreationViewController
 @synthesize _virusMGR;
@@ -181,7 +182,7 @@
  * Exit: view is popped or error message is displayed
  ************************************************************/
 - (void)UpdateCallback:(BOOL)asyncSuccess errMsg:(NSString *)errMsg {
-
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	self._createButton.enabled = TRUE;
 	if (asyncSuccess)
 	{
@@ -191,6 +192,9 @@
 	else
 	{
 		self._helpTextView.text = errMsg;
+        cConnectionViewController *vc = [[cConnectionViewController alloc] initWithUsername:player._username WithPassword:player._password];
+        vc.title = @"Reconnect View";
+        [self.navigationController pushViewController:vc animated:YES];
 	}
 
 }

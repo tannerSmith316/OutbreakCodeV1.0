@@ -25,6 +25,37 @@
 }
 
 /************************************************************
+ * Purpose: To attempt to automatically log the user in using
+ *   a credentials.txt file(in the documents directory) to by-pass
+ *   the annoying login screen
+ *
+ * Entry: Called when the LoginViewController didLoad
+ *
+ * Exit: Will end at LoginDidFinished or LoginDidFailed depending
+ *   on server connectivity
+ ************************************************************/
+- (void)AttemptAutoLogin {
+	
+    //Get local phone documents directory
+	NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    //Retrieve the document containing auto-login credentials
+	NSString *myFilePath = [docDir stringByAppendingPathComponent:@"credentials.txt"];
+	NSString *myFileContents = [NSString stringWithContentsOfFile:myFilePath encoding:NSUTF8StringEncoding error:nil];
+	NSLog(@"Attempting AutoLogin");
+    
+    //If the file contains data, use it for logging in.
+	if( [myFileContents length] != 0 )
+	{
+		NSArray *credentials = [myFileContents componentsSeparatedByString:@"\n"]; 
+		NSString *usernameFromFile = [credentials objectAtIndex:0];
+		NSString *passwordFromFile = [credentials objectAtIndex:1];
+		NSLog(@"AutoLogin Credentials, Username:%@ ; Password:%@", usernameFromFile, passwordFromFile);
+		
+		[self LoginWithUsername:usernameFromFile Password:passwordFromFile];
+	}
+}
+
+/************************************************************
  * Purpose: Send a POST request to web server requesting a login
  *   with the username and password parameters
  *
@@ -84,6 +115,7 @@
 		//Load JSON data into singleton
 		NSString *jsonString = [NSString stringWithString:[request responseString]];
 		//Parse the json
+        NSLog(@"Login succes with %@ - %@", player._username, player._password);
 		NSLog(@"Login Succesful Return Packet: %@", jsonString);
 		NSDictionary *deserializedData = [[NSDictionary alloc] init];
 		deserializedData = [jsonString objectFromJSONString];
@@ -109,7 +141,7 @@
 		NSLog(@"Invalid Login Credentials");
 		if ([delegate conformsToProtocol:@protocol(AsyncUICallback)])
 		{
-			[delegate UICallback:FALSE errorMsg:@"Invalid Login Credentials"];
+			[delegate UICallback:TRUE errorMsg:@"Invalid Login Credentials"];
 		}
 		
 	}
