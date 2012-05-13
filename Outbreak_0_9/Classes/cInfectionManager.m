@@ -244,13 +244,15 @@
 	NSLog(@"%@", [request responseString]);
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     
+    cVirus *activeVirus = [[cVirus alloc] init];
+    activeVirus = (player._infectedWith ? player._infectedWith : player._currentVirus);
     //Restart hotspot timer
     [player._infectionMGR._hotspotTimer ResetTimer];
     
     //Alert the user
     if ([[request responseString] isEqualToString:@"TRUE"]) 
     {
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Hotspot Laid!"] delegate:nil cancelButtonTitle:@"Ok!" otherButtonTitles:nil] autorelease];
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Virus:%@", activeVirus._virusName] message:@"Hotspot Laid!" delegate:nil cancelButtonTitle:@"Ok!" otherButtonTitles:nil] autorelease];
         [alert show];
     }
 }

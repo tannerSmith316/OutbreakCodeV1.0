@@ -17,6 +17,7 @@
 	IBOutlet UITableView *_victimTable;
     IBOutlet UIProgressView *_cooldownProgress;
     IBOutlet UILabel *_cooldownLabel;
+    IBOutlet UILabel *_activeVirusLabel;
     //Array thats used to fill UITableView with data
 	NSMutableArray *_victimArray;
     cVictim *_victimToInfect;
@@ -26,6 +27,7 @@
     BOOL _virusCooldown;
 }
 
+@property (nonatomic, retain)UILabel *_activeVirusLabel;
 @property (nonatomic, retain)UILabel *_cooldownLabel;
 @property (nonatomic, retain)cVictim *_victimToInfect;
 @property (nonatomic, assign)int _timerCount;

@@ -18,6 +18,7 @@
 @synthesize _cooldownProgress;
 @synthesize _victimToInfect;
 @synthesize _cooldownLabel;
+@synthesize _activeVirusLabel;
 
 - (id)init {
 	self = [super init];
@@ -166,8 +167,19 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    if(player._infectedWith)
+    {
+        self._activeVirusLabel.text = [NSString stringWithFormat:@"Active Virus:%@(Foreign)",player._infectedWith._virusName];
+    }
+    else
+    {
+        self._activeVirusLabel.text = [NSString stringWithFormat:@"Active Virus:%@",player._currentVirus._virusName];
+    }
     self._cooldownProgress.progress = 0;
     self._cooldownLabel.hidden = TRUE;
+    
 	
 }
 

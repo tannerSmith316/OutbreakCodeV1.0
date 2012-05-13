@@ -19,6 +19,7 @@
 @synthesize _virusScreenButton;
 @synthesize _infectedWithLabel;
 @synthesize _playerMGR;
+@synthesize _enemyStatsView;
 //debug
 @synthesize _healButton;
 
@@ -101,6 +102,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(LogoutBackButton)];
     self.navigationItem.leftBarButtonItem = backButton;
     [backButton release];
+    self._enemyStatsView.text = @"";
 }
 
 /************************************************************
@@ -118,11 +120,13 @@
     {
 		self.view.backgroundColor = [UIColor redColor];
 		self._infectedWithLabel.text = [NSString stringWithFormat:@"infected with %@ - %@", player._infectedWith._virusName, player._infectedWith._owner];
+        self._enemyStatsView.text = [player._infectedWith GetStats];
 	}
 	else
 	{
 		self.view.backgroundColor = [UIColor whiteColor];
 		self._infectedWithLabel.text = nil;
+        self._enemyStatsView.text = nil;
 	}
 }
 

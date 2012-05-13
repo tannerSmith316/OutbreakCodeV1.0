@@ -295,6 +295,13 @@
 	//before running hotspot checks
     if([infectedWithViruses count] == 0)
     {
+        //If they are losing an infection alert them
+        if (player._infectedWith)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Virus has Perished" message:@"You feel better" delegate:nil cancelButtonTitle:@"Cool" otherButtonTitles:nil, nil];
+            [alert show];
+            [alert release];
+        }
         player._infectedWith = nil;
     }
 
@@ -317,7 +324,11 @@
 		//Try to infect the player with hotspot virus
 		if (player._infectedWith == nil)
 		{
-			[player._infectionMGR DefendInfection:enemyVirus];
+            //If someone is logged in(Hopefully fixes alert view showing while logged out)
+            if (player._username)
+            {
+                [player._infectionMGR DefendInfection:enemyVirus];
+            }
 		}
         [enemyVirus release];
 	}

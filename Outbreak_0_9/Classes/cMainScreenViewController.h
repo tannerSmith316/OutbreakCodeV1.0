@@ -14,6 +14,7 @@
 	IBOutlet UIButton *_infectScreenButton;
 	IBOutlet UIButton *_virusScreenButton;
 	IBOutlet UILabel *_infectedWithLabel;
+    IBOutlet UITextView *_enemyStatsView;
     
     //debug
     IBOutlet UIButton *_healButton;
@@ -21,6 +22,7 @@
     cPlayerManager *_playerMGR;
 }
 
+@property (nonatomic, retain)UITextView *_enemyStatsView;
 @property (nonatomic, retain)UIButton *_infectScreenButton;
 @property (nonatomic, retain)UIButton *_virusScreenButton;
 @property (nonatomic, retain)UILabel *_infectedWithLabel;
