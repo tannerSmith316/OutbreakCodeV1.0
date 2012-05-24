@@ -20,6 +20,7 @@
 @synthesize _infectedWithLabel;
 @synthesize _playerMGR;
 @synthesize _enemyStatsView;
+@synthesize _tokenLabel;
 //debug
 @synthesize _healButton;
 
@@ -115,6 +116,7 @@
  ************************************************************/
 - (void)viewWillAppear:(BOOL)animated {
     
+    self._enemyStatsView.editable = FALSE;
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
 	if( player._infectedWith != nil ) 
     {
@@ -128,6 +130,7 @@
 		self._infectedWithLabel.text = nil;
         self._enemyStatsView.text = nil;
 	}
+    self._tokenLabel.text = [NSString stringWithFormat:@"Tokens:%@", player._tokens];
 }
 
 //debug

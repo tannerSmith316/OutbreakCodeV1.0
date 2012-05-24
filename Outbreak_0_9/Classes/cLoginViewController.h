@@ -26,8 +26,11 @@
     
     //Class thats sent messages for BOL operations
 	cPlayerManager *_playerMGR;
+    
+    BOOL _didAttemptAutoLogin;
 }
 
+@property (nonatomic, assign)BOOL _didAttemptAutoLogin;
 @property (nonatomic, retain)UITextField *_usernameField;
 @property (nonatomic, retain)UITextField *_passwordField;
 @property (nonatomic, retain)UIButton *_loginButton;

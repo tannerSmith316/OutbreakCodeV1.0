@@ -21,8 +21,10 @@
 	//Apple Core Location Manager
     CLLocationManager *locMgr;
 	id delegate;
+    BOOL _needsUpdate;
 }
 
+@property (nonatomic, assign)BOOL _needsUpdate;
 @property (nonatomic, retain) CLLocationManager *locMgr;
 @property (nonatomic, assign) id delegate;
 

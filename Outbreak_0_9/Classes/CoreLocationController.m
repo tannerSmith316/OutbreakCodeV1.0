@@ -1,10 +1,12 @@
 
 #import "CoreLocationController.h"
+#import "cPlayerSingleton.h"
 
 
 @implementation CoreLocationController
 
 @synthesize locMgr, delegate;
+@synthesize _needsUpdate;
 
 - (id)init {
 	self = [super init];
@@ -12,6 +14,7 @@
 	if(self != nil) {
 		self.locMgr = [[[CLLocationManager alloc] init] autorelease];
 		self.locMgr.delegate = self;
+        self._needsUpdate = TRUE;
 		//self.locMgr.desiredAccuracy = kCLLocationAccuracyBest;
 	}
 	return self;
@@ -36,10 +39,13 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	if([self.delegate conformsToProtocol:@protocol(CoreLocationControllerDelegate)]) 
     {
-		//if (newLocation.horizontalAccuracy < 30.0)
+		if(self._needsUpdate)
 		{
 			//Manager restarts after all the data has been processed
-			[manager stopUpdatingLocation];
+            self._needsUpdate = FALSE;
+			[self.locMgr stopUpdatingLocation];
+            [self.locMgr stopMonitoringSignificantLocationChanges];
+            [self.locMgr stopUpdatingHeading];
 			[self.delegate locationUpdate:newLocation];
 		}
 		

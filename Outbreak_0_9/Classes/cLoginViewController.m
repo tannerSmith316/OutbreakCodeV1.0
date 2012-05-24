@@ -26,6 +26,7 @@
 @synthesize _registerButton;
 @synthesize _username;
 @synthesize _password;
+@synthesize _didAttemptAutoLogin;
 
 
 - (id)init {
@@ -35,6 +36,7 @@
 		//Create the manager and set its delegate for UI update callbacks
 		_playerMGR = [[cPlayerManager alloc]init];
 		_playerMGR.delegate = self;
+        self._didAttemptAutoLogin = FALSE;
 	}
 	
 	return self;
@@ -156,10 +158,17 @@
     [super viewDidLoad];
     self._loginIndicator.hidesWhenStopped = TRUE;
     
-    //Try and log player in automatically to avoid
-    //annoying login screen when it loads
-	[self._playerMGR AttemptAutoLogin];
+    
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    if(!_didAttemptAutoLogin)
+    {
+        self._didAttemptAutoLogin = TRUE;
+        [self._playerMGR AttemptAutoLogin];
+    }
+}
+
 
 /*****  UNMODIFIED NEEDED APPLE STUFF BELOW *********/
 

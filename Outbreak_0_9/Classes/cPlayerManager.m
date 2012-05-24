@@ -306,7 +306,7 @@
 - (void)Logout {
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	[player ResetInstance];
+	
 
     //Get url and method strings
 	NSString *urlstring = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"URLSERVER", nil),NSLocalizedString(@"PlayerPersister", nil)];
@@ -321,6 +321,7 @@
 	[request setDidFinishSelector:@selector(LogoutDidFinished:)];
 	[request setDidFailSelector:@selector(LogoutDidFailed:)];
 	[request setDelegate:self];
+    [player ResetInstance];
     
 	[request startAsynchronous];
 }

@@ -36,6 +36,8 @@
 	
 	//this variable holds the server ip adress
 	NSString *_serverIP;
+    
+    NSNumber *_tokens;
 	
 	NSTimer *_updateLocationTimer;
 	
@@ -44,6 +46,7 @@
 	cInfectionManager *_infectionMGR;
 }
 
+@property (nonatomic, retain)NSNumber *_tokens;
 @property (nonatomic, retain)Outbreak_0_9AppDelegate *_appDel;
 @property (nonatomic, retain)NSMutableArray *_viruses;
 @property (nonatomic, retain)cVirus *_infectedWith;

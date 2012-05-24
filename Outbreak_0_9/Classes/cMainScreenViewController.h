@@ -16,12 +16,15 @@
 	IBOutlet UILabel *_infectedWithLabel;
     IBOutlet UITextView *_enemyStatsView;
     
+    IBOutlet UILabel *_tokenLabel;
+    
     //debug
     IBOutlet UIButton *_healButton;
     
     cPlayerManager *_playerMGR;
 }
 
+@property (nonatomic, retain)IBOutlet UILabel *_tokenLabel;
 @property (nonatomic, retain)UITextView *_enemyStatsView;
 @property (nonatomic, retain)UIButton *_infectScreenButton;
 @property (nonatomic, retain)UIButton *_virusScreenButton;

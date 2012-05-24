@@ -144,6 +144,7 @@
 	//restart timer if player is still logged in
 	if (player._username != nil)
 	{
+        CLController._needsUpdate = TRUE;
 		[player StartUpdateTimer];
 	}
 	else
@@ -299,13 +300,17 @@
  *   a hotspot infection.
  ************************************************************/
 - (void)ParseLocationUpdateJson:(NSDictionary *)jsonDict {
-	
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+    
+    NSString *_tokenString = [NSString stringWithString:[jsonDict objectForKey:@"money"]];
+    player._tokens = [NSNumber numberWithInt:[_tokenString intValue]];
     NSDictionary *infectedWithViruses = [jsonDict objectForKey:@"infections"];
 	[self ParseInfectedWith:infectedWithViruses];
 
 	//Retrieve information from the deserialized json string
 	NSDictionary *hotspots = [jsonDict objectForKey:@"hotspots"];
     [self ParseHotspotDict:hotspots];
+    
 	
 }
 
