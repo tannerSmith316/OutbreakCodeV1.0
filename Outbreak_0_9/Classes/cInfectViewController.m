@@ -140,7 +140,7 @@
         self._cooldownLabel.hidden = TRUE;
         [_virusCDTimer invalidate];
         self._virusCooldown = FALSE;
-        //[self._cooldownProgress setProgress:0 animated:YES];
+        [self._cooldownProgress setProgress:0];
         _timerCount = 0;
         
         [player._infectionMGR AttemptInstant:self._victimToInfect];
@@ -152,6 +152,8 @@
     {
         double aProgress = (double)_timerCount * ((double)1/(double)virusCooldown);
         //[self._cooldownProgress setProgress:aProgress animated:YES];
+		[self._cooldownProgress setProgress:aProgress];
+		
     }
 }
 
