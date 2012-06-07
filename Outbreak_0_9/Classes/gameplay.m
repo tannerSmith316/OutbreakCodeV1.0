@@ -294,7 +294,7 @@
 -(void)reset{
     
     
-    
+    /*
     totalmoney=50;
     moneywon.text=[[NSString alloc] initWithFormat:@""];        
     currentmoney.text=[[NSString alloc] initWithFormat:@"You Have Total"];
@@ -303,7 +303,7 @@
     num2.text=@"1";
     num3.text=@"1";
     playbuttom.enabled=YES;
-
+*/
 }
 
 -(void)volumeonoff
@@ -318,18 +318,11 @@
 - (void)viewDidLoad
 {
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
-	startMoney = [player._tokens intValue];
+	startMoney = [player._tokens intValue] + [player._deltaTokens intValue];
     
 	totalmoney = startMoney;
 
-    //[spath2 release];
-    //[oopss release];
-   // [yipeee release];
-   // [jackpots release];
     
-   
-   // audio.delegate=self;
-    //audio.numberOfLoops=0;//negative infinite loops
     UIImage *image11 = [UIImage imageNamed:@"one.png"];
 	UIImage *image22 = [UIImage imageNamed:@"two.png"];
 	UIImage *image33 = [UIImage imageNamed:@"three.png"];
@@ -424,6 +417,7 @@
     currentmoney.lineBreakMode = UILineBreakModeWordWrap;
     currentmoney.numberOfLines = 2;
     
+    /*
     UIButton *resetbutton=[UIButton buttonWithType:UIButtonTypeCustom];
     resetbutton.frame=CGRectMake(5, 400, 65 , 65);
     [resetbutton setTitle:@"" forState:UIControlStateNormal];
@@ -435,7 +429,7 @@
   //  [resetbutt release];
     //[resetbutton release];
 
-    
+    */
     
    
     

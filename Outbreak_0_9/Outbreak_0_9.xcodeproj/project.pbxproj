@@ -135,6 +135,7 @@
 		72F4BFC4153E5ADA0016DD44 /* cVirusCreationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAC150C299300DD393D /* cVirusCreationViewController.h */; };
 		72F4BFC5153E5ADA0016DD44 /* cVirusCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72233CAD150C299300DD393D /* cVirusCreationViewController.m */; };
 		76F9B594155B5B7E002E7F44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76F9B593155B5B7E002E7F44 /* Localizable.strings */; };
+		C35589211581175A00CA2F7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35589201581175A00CA2F7D /* AVFoundation.framework */; };
 		C39450E21547B08D006F390C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C39450E11547B08D006F390C /* libz.dylib */; };
 		C39450E51548B6E4006F390C /* cHotspotTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C39450E41548B6E4006F390C /* cHotspotTimer.m */; };
 /* End PBXBuildFile section */
@@ -247,6 +248,7 @@
 		72E0932B150D9A6000F67811 /* cInfectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cInfectionManager.m; sourceTree = "<group>"; };
 		76F9B593155B5B7E002E7F44 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Outbreak_0_9-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Outbreak_0_9-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C35589201581175A00CA2F7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C39450E11547B08D006F390C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C39450E31548B6E4006F390C /* cHotspotTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cHotspotTimer.h; sourceTree = "<group>"; };
 		C39450E41548B6E4006F390C /* cHotspotTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cHotspotTimer.m; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35589211581175A00CA2F7D /* AVFoundation.framework in Frameworks */,
 				72A2E932153680A80024B2D3 /* CoreLocation.framework in Frameworks */,
 				72A2E933153680BC0024B2D3 /* MobileCoreServices.framework in Frameworks */,
 				72A2E934153680D40024B2D3 /* CFNetwork.framework in Frameworks */,
@@ -314,6 +317,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C35589201581175A00CA2F7D /* AVFoundation.framework */,
 				C39450E11547B08D006F390C /* libz.dylib */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -769,7 +773,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -788,6 +792,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = InterfaceUnitTests;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};

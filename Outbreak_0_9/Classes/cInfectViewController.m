@@ -131,8 +131,18 @@
     cPlayerSingleton *player = [cPlayerSingleton GetInstance];
     int minCooldown = [NSLocalizedString(@"MINCOOLDOWN", nil) intValue];
     int maxCooldown = [NSLocalizedString(@"MAXCOOLDOWN", nil) intValue];
+    cVirus *activeVirus = [[cVirus alloc] init];
     
-    int virusCooldown = ([player._currentVirus._instantPoints floatValue] / 100) * (minCooldown - maxCooldown) + maxCooldown;
+    if(player._infectedWith)
+    {
+        activeVirus = player._infectedWith;
+    }
+    else
+    {
+        activeVirus = player._currentVirus;
+    }
+    
+    int virusCooldown = ([activeVirus._instantPoints floatValue] / 100) * (minCooldown - maxCooldown) + maxCooldown;
     
     _timerCount = _timerCount + 1;
     if(_timerCount == virusCooldown)//Change hard value to timer instant points

@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/cInfectViewController.m"
-         timestampString = "358594528.546904"
+         timestampString = "360796403.247442"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "148"
+         endingLineNumber = "148"
          landmarkName = "-CDTimerFired"
          landmarkType = "5">
       </FileBreakpoint>
@@ -329,7 +329,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/CoreLocationController.m"
@@ -430,6 +430,32 @@
          startingLineNumber = "306"
          endingLineNumber = "306"
          landmarkName = "-ParseLocationUpdateJson:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/CoreLocationController.m"
+         timestampString = "360790936.428335"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/CoreLocationController.m"
+         timestampString = "360790938.420425"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
