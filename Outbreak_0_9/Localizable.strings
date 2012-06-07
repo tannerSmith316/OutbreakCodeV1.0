@@ -9,15 +9,15 @@
 //"KEY" = "CONTENT";
 
 //"URLSERVER" = "http://66.189.145.171/";
-"URLSERVER" = "http://192.168.10.200/";
+"URLSERVER" = "http://192.168.0.16/";
 
 "MAXPLAYERVIRUSES" = "5";
 "MINCOOLDOWN" = "10";
 "MAXCOOLDOWN" = "60";
 "MINDISTANCE" = "100"; //100
-"MAXDISTANCE" = "1000"; //1000
+"MAXDISTANCE" = "500000"; //1000
 "MININFECTIONTIME" = "2"; //Value in update intervals 
-"MAXINFECTIONTIME" = "15"; //Value in update intervals(not seconds)
+"MAXINFECTIONTIME" = "6"; //Value in update intervals(not seconds)
 "MINTIME" = "300"; //300
 "MAXTIME" = "7200"; //7200
 "MINHOTSPOTRANGE" = "10"; //10

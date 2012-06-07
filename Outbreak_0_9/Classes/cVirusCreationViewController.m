@@ -146,6 +146,7 @@
 		self._createButton.enabled = FALSE;
 		//post call
 		[_virusMGR CreateVirus:aVirus]; 
+		[aVirus release];
 	}
 }
 
@@ -195,6 +196,7 @@
         cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         vc.title = @"Reconnect View";
         [player._appDel.navigationController pushViewController:vc animated:YES];
+		[vc release];
 	}
 
 }

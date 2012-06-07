@@ -15,6 +15,7 @@
 	IBOutlet UIButton *_virusScreenButton;
 	IBOutlet UILabel *_infectedWithLabel;
     IBOutlet UITextView *_enemyStatsView;
+	IBOutlet UIButton *_slotsButton;
     
     IBOutlet UILabel *_tokenLabel;
     
@@ -27,6 +28,7 @@
 @property (nonatomic, retain)IBOutlet UILabel *_tokenLabel;
 @property (nonatomic, retain)UITextView *_enemyStatsView;
 @property (nonatomic, retain)UIButton *_infectScreenButton;
+@property (nonatomic, retain)UIButton *_slotsButton;
 @property (nonatomic, retain)UIButton *_virusScreenButton;
 @property (nonatomic, retain)UILabel *_infectedWithLabel;
 @property (nonatomic, retain)cPlayerManager *_playerMGR;
@@ -39,6 +41,7 @@
 //Interface builder button event handlers
 - (IBAction)InfectScreenButtonPressed;
 - (IBAction)VirusScreenButtonPressed;
+- (IBAction)SlotsButtonPressed;
 
 //debug
 - (IBAction)HealButtonPressed:(id)sender;

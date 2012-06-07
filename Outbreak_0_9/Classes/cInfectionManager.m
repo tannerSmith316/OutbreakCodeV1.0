@@ -107,6 +107,7 @@
             [alert addButtonWithTitle:@"Quit it"];
             [alert show];
         }
+		[myself release];
 	}
 }
 
@@ -183,6 +184,7 @@
     {
         cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         [player._appDel.navigationController pushViewController:vc animated:YES];
+		[vc release];
     }
 }
 
@@ -275,6 +277,7 @@
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Virus:%@", activeVirus._virusName] message:@"Hotspot Laid!" delegate:nil cancelButtonTitle:@"Ok!" otherButtonTitles:nil] autorelease];
         [alert show];
     }
+	[activeVirus release];
 }
 
 /************************************************************
@@ -306,6 +309,7 @@
     {
         cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         [player._appDel.navigationController pushViewController:vc animated:YES];
+		[vc release];
     }
 }
 

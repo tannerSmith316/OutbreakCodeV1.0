@@ -102,6 +102,7 @@
 	[request setPostValue:latitude forKey:@"latitude"];
 	[request setPostValue:longitude forKey:@"longitude"];
 	[request setPostValue:player._username forKey:@"username"];
+	[request setPostValue:player._deltaTokens forKey:@"delta_tokens"];
 	
 	[request setDidFinishSelector:@selector(PersistLocationDidFinished:)];
 	[request setDidFailSelector:@selector(PersistLocationDidFailed:)];
@@ -127,6 +128,7 @@
 	//set infected with
 	
 	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	player._deltaTokens = [NSNumber numberWithInt:0];
 	NSLog(@"%@",[request responseString]);
 	if( [[request responseString] isEqualToString:@"FALSE"] )
 	{

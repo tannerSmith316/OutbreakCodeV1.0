@@ -137,6 +137,7 @@
     {
         cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         [player._appDel.navigationController pushViewController:vc animated:YES];
+		[vc release];
     }
 }
 
@@ -229,6 +230,7 @@
     {
         cReconnectViewController *vc = [[cReconnectViewController alloc] initWithUsername:player._username WithPassword:player._password];
         [player._appDel.navigationController pushViewController:vc animated:YES];
+		[vc release];
     }
 }
 

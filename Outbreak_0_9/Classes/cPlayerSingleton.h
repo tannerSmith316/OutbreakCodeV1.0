@@ -39,6 +39,9 @@
     
     NSNumber *_tokens;
 	
+	//Number of tokens used playing slots to be sent with next updateLocation
+	NSNumber *_deltaTokens;
+	
 	NSTimer *_updateLocationTimer;
 	
     //Managers for handling logical computations
@@ -46,6 +49,7 @@
 	cInfectionManager *_infectionMGR;
 }
 
+@property (nonatomic, retain)NSNumber *_deltaTokens;
 @property (nonatomic, retain)NSNumber *_tokens;
 @property (nonatomic, retain)Outbreak_0_9AppDelegate *_appDel;
 @property (nonatomic, retain)NSMutableArray *_viruses;

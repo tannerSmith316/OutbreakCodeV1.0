@@ -13,6 +13,7 @@
 #import "cMainScreenViewController.h"
 #import "cPlayerSingleton.h"
 #import "cVirusSelectionViewController.h"
+#import "gameplay.h"
 
 @implementation cMainScreenViewController
 @synthesize _infectScreenButton;
@@ -21,6 +22,7 @@
 @synthesize _playerMGR;
 @synthesize _enemyStatsView;
 @synthesize _tokenLabel;
+@synthesize _slotsButton;
 //debug
 @synthesize _healButton;
 
@@ -37,6 +39,16 @@
 - (void)dealloc {
     [_playerMGR release];
     [super dealloc];
+}
+
+- (IBAction)SlotsButtonPressed {
+	cPlayerSingleton *player = [cPlayerSingleton GetInstance];
+	gameplay *slotsVC = [[[gameplay alloc] init] autorelease];
+	slotsVC.title = @"Slots";
+
+	
+	[self presentModalViewController:slotsVC animated:YES];
+
 }
 
 /************************************************************
@@ -104,6 +116,13 @@
     self.navigationItem.leftBarButtonItem = backButton;
     [backButton release];
     self._enemyStatsView.text = @"";
+	
+	/*
+	UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainback.jpg"]];
+    [self.view addSubview:backgroundImage];
+    [self.view sendSubviewToBack:backgroundImage];
+    [backgroundImage release]; 
+	 */
 }
 
 /************************************************************
@@ -130,7 +149,7 @@
 		self._infectedWithLabel.text = nil;
         self._enemyStatsView.text = nil;
 	}
-    self._tokenLabel.text = [NSString stringWithFormat:@"Tokens:%@", player._tokens];
+    self._tokenLabel.text = [NSString stringWithFormat:@"Tokens:%d", ([player._tokens intValue] + [player._deltaTokens intValue])];
 }
 
 //debug

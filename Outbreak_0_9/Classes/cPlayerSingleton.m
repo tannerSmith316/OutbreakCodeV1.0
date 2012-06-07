@@ -25,6 +25,7 @@ static cPlayerSingleton *_player = nil;
 @synthesize _infectionMGR;
 @synthesize _appDel;
 @synthesize _tokens;
+@synthesize _deltaTokens;
 
 - (id)init {
 	if (self = [super init])
