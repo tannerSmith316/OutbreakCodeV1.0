@@ -151,7 +151,10 @@
     else 
     {
         double aProgress = (double)_timerCount * ((double)1/(double)virusCooldown);
+		
+		//XCODE 4.0 progress
         //[self._cooldownProgress setProgress:aProgress animated:YES];
+		//XCODE 3.0 progress
 		[self._cooldownProgress setProgress:aProgress];
 		
     }
